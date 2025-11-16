@@ -1,0 +1,7 @@
+docling
+pymupdf
+unstructured
+python-magic
+pytesseract
+pdf2image
+Pillow
