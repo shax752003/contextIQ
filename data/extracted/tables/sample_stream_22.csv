@@ -1,0 +1,8 @@
+"18","","A. Boudribila, A. Tajer and Z. Boulghasoul / Data in Brief 62 (2025) 111938","","","","","","",""
+"Table 16","","","","","","","","",""
+"","Performance Comparison of Transformer Models Fine-Tuned on the AutoFactory Dataset.","","","","","","","",""
+"Model","Epochs","Learning","Batch","Eval","F1","Precision","Recall","Training","Duration"
+"","","Rate","Size","Loss","","","","Time (s)",""
+"BERT-Base","3","5,00E-05","16","0.3342","0.8039","0.7877","0.8208","1840.37","00:30:40"
+"BERT-Large","3","5,00E-05","16","0.3757","0.80 0 0","0.7967","0.8034","2857.11","00:47:37"
+"DistilBERT-Base","3","5,00E-05","16","0.0983","0.9505","0.9476","0.9534","1804.41","00:30:04"

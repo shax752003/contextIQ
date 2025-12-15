@@ -5,3 +5,7 @@ python-magic
 pytesseract
 pdf2image
 Pillow
+langchain
+langchain-community
+chromadb
+sentence-transformers

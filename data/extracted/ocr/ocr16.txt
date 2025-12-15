@@ -1,0 +1,46 @@
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 5
+
+in
+
+80%
+
+Training Set Validation Set Test Set
+
+Fig. 1. Dataset Split - Training, Validation, and Test Sets.
+
+Table 2
+
+Summary Statistics of Specifications, Tokens, and Named Entities in AutoFactory.
+Dataset Specifications Sentences Tokens Actuators Pre-Actuators Sensors Effectors Others
+Training 1886 13,686 223,003 15,838 4645 20,492 21,133 160,895
+Validation 236 1728 28,759 2030 684 2634 2785 20,626
+Test 236 1720 28,068 1983 584 2569 2722 20,210
+Total 2358 17,134 279,830 19,851 5913 25,695 26,640 201,731
+
+Table 2 summarizes the dataset’s structure and semantic annotations. It includes 2358
+requirement specifications, segmented into 17,134 sentences and comprising 279,830 tokens.
+Among these tokens, 7.09 % are labeled as ACTUATOR, 2.11 % as PRE-ACTUATOR, 9.18 % as SEN-
+SOR, and 9.52 % as EFFECTOR. The remaining 72.09 % of tokens are labeled as OTHER, indicating
+they do not refer to system components but contribute to grammatical structure and contextual
+clarity. These proportions reflect the natural language composition of industrial specifications,
+where functional terms are embedded within descriptive text.
+
+To further illustrate the component distribution, Fig. 2 visualizes the relative frequency of
+each label category. Actuator and sensor mentions are most prevalent, consistent with their key
+role in control system logic. Pre-actuators and effectors appear less frequently but remain essen-
+tial for modeling system transitions.
+
+The AutoFactory dataset is designed not only for engineers in industrial automation but
+also for researchers, developers, and students working in natural language processing and Al.
+It serves as a high-quality benchmark for tasks such as named entity recognition, information
+extraction, and the automatic generation of control logic from textual specifications. The dataset
+offers a structured, modular format that is both accessible and extensible, making it suitable for
+academic research and industrial applications alike.
+
+Despite significant progress in Named Entity Recognition (NER), existing datasets have not
+addressed the specific challenges of understanding requirement specifications in industrial au-
+tomation. Most NER corpora, such as CoNLL-2003 [6], FabNER [7], and MS-NERC [8], focus on
+general-purpose or scientific language, but none are structured to represent how engineers de-
+scribe the behavior of components in manufacturing systems. AutoFactory fills this gap by pro-
+
+Fig. 2. Distribution of Labeled Entities in the AutoFactory Dataset.

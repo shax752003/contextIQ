@@ -1,0 +1,47 @@
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 17
+
+Model Comparison Across Evaluation Metrics
+Evaluation Loss | Precision |
+20
+
+Evaluation Loss
+
+oso 1000 ~—~v6o0 «ooo —=«500~—=—« OO a  )
+Training Step Training Step
+Fi Score
+
+° a woo 16002000 P wooo 1600 ato
+Training Step Training Step
+
+—s- tenbarteseurenieg —o— tenberistopuncases banshee sed
+
+Fig. 8. Model Performance Comparison Across Evaluation Metrics.
+
+Bost Evaluation Metrics Across Models
+
+Ft Sere Predeon Recall Evalustion Loss
+
+Fig. 9. Evaluation of Transformer Models Based on Best F1-Scores.
+
+dataset using a Named Entity Recognition (NER) framework. The task involved classifying each
+token into one of five predefined categories: Actuator, Pre-actuator, Sensor, Effector, or Others,
+using the BIO tagging scheme. Fine-tuning was conducted on a consistent experimental setup to
+allow fair comparison.
+
+All models were trained for three epochs with a learning rate of 5e-5 and a batch size of 16.
+The optimization objective was to minimize the cross-entropy loss between the predicted and
+true token-level labels. Evaluation was performed on a held-out test set representing 10 % of
+the dataset. Metrics used for performance assessment included Precision, Recall, F1 Score, and
+Evaluation Loss. These metrics were selected to reflect both the correctness and completeness of
+entity detection, which are critical for downstream automation tasks.
+
+The results clearly demonstrate that DistiIBERT-Base achieved the highest performance across
+all evaluation metrics, with an F1 score of 0.9505, precision of 0.9476, and recall of 0.9534. De-
+spite being the smallest model in terms of parameters, it outperformed the larger BERT models
+not only in accuracy but also in training stability and convergence. These findings are visually
+summarized in Figs. 8, 9 and Table 16.
+
+The results confirm that the AutoFactory dataset is well-suited for training transformer mod-
+els to recognize key control components in industrial requirement specifications. The fine-tuned
+models achieved high accuracy and demonstrated the potential for integrating such approaches
+into intelligent automation workflows.

@@ -1,0 +1,44 @@
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 7
+
+Fig. 3. Histogram of Sentence Lengths (in Tokens) Across the AutoFactory Dataset.
+
+Table 4
+POS Tag Sequence Diversity Across Individual Systems and the Full Dataset.
+Metric System 1 System 2 System 3 AutoFactory (All)
+Total Sentences 5335 5168 6602 17,134
+Unique POS Sequences 1791 1108 1883 4778
+Diversity Ratio (%) 33.57 % 21.44 % 28.52 % 27.89 %
+Table 5
+N-gram Diversity and Entropy Across Individual Systems and the Full Dataset.
+N-gram Metric System 1 System 2 System 3 AutoFactory (All)
+Unique Bigrams 1734 1086 1620 3300
+Bigram Entropy 8.4113 7.8143 8.5357 9.1402
+Unique Trigrams 3883 2144 3527 8078
+Trigram Entropy 9.7597 8.8655 9.5719 10.5591
+
+the number of unique POS patterns identified across the three systems and the full dataset. Aut-
+oFactory contains 4778 distinct POS tag sequences across 17,134 sentences, corresponding to a
+diversity ratio of 27.89 %. This metric reflects the proportion of unique syntactic structures rel-
+ative to total sentences. System 1 and System 3 show particularly high diversity, with ratios
+exceeding 28 %, indicating greater variability in how requirements are phrased. These findings
+confirm that the dataset includes a wide range of grammatical constructions, which can help Al
+models learn robust generalizations across different linguistic forms of technical specifications.
+
+To further evaluate lexical variability, we measured n-gram diversity and entropy across the
+dataset. Table 5 reports the number of unique bigrams and trigrams, as well as their corre-
+sponding entropy scores. The full AutoFactory dataset contains 8078 distinct trigrams and 3300
+bigrams, with trigram entropy reaching 10.56. These values indicate a high level of lexical diver-
+sity and reduced repetition across specifications. Among individual systems, System 3 exhibits
+the highest bigram and trigram entropy, consistent with its longer and more structurally varied
+sentences. High entropy values suggest that the dataset avoids rigid or repetitive phrasing, offer-
+ing a broader lexical space for training models to generalize across different ways of expressing
+functional requirements.
+
+To assess lexical diversity, we computed the type-token ratio (TTR) and distinct-n metrics,
+which measure vocabulary variety and repetition. As shown in Table 6, AutoFactory contains
+279,830 tokens and 629 unique token types, resulting in a TTR of 0.00225. These values are
+consistent with the dataset’s current structure, which includes only 3 out of the 21 Factory I/O
+systems. Each reformulated specification describes the same system using a consistent set of
+component names. As a result, the vocabulary reflects technical consistency rather than linguis-
+tic redundancy. The distinct-1 and distinct-2 scores further confirm that the dataset maintains
+meaningful variation in phrasing across reformulations. As additional Factory I/O systems are in-
