@@ -1,0 +1,50 @@
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 15
+
+Fig. 7. User Interface of Our Custom Labeling Tool.
+
+Table 12
+
+Token Counts per NER Label Across 300 Reviewed Requirement Specifications.
+Label Annotator 1 Annotator 2 Annotator 3 Total
+oO 7078 7162 6975 21,215
+B-EFFECTOR 597 585 618 1800
+I-EFFECTOR 492 485 539 1516
+B-ACTUATOR 480 502 473 1455
+I-ACTUATOR 343 369 355 1067
+B-SENSOR 457 463 457 1377
+I-SENSOR 630 633 618 1881
+B-PREACTUATOR 116 136 116 368
+I-PREACTUATOR 126 154 136 416
+Total Tokens 10,319 10,489 10,287 31,095
+
+Table 13
+
+Inter-annotator agreement scores (Cohen's Kappa).
+Annotator Pair Kappa Score
+Annotator 1 & 2 0.856
+Annotator 2 & 3 0.789
+Annotator 1 & 3 0.924
+Average 0.856
+
+cedure was implemented. Annotator 1 reviewed 100 examples from Annotator 2, Annotator 2
+reviewed 100 from Annotator 3, and Annotator 3 reviewed 100 from Annotator 1. This process
+supported consistency checking across the team.
+
+This review process helped identify disagreements and guided harmonization of annotation
+practices. Using this shared subset, Cohen’s Kappa was computed to measure inter-annotator
+agreement. The final average kappa score was 0.856, which indicates strong agreement.
+
+The distribution of token-level annotations within the reviewed sample is provided in
+Table 12, while Table 13 presents the computed inter-annotator agreement scores.
+
+This manual annotation process transformed the dataset from unstructured text into a la-
+beled resource suitable for training Al systems to identify and extract relevant entities (Table 14).
+The NER labels directly support the detection of input and output components in requirement
+specifications, which is essential for downstream applications in control logic synthesis and in-
+dustrial automation.
+
+This initial version of the AutoFactory dataset represents a significant contribution to the field
+of AI for manufacturing. By releasing it to the research community, the objective is to accelerate
+progress in systems that can interpret natural language requirement specifications and convert
+them into executable control logic. The next stage involves fine-tuning large language models
+
