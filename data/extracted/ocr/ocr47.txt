@@ -1,0 +1,63 @@
+Evaluation Loss
+sop RP Pp ge
+Be» FS uo Ss
+
+©
+
+©
+6
+
+08
+
+06
+
+Recall
+
+04
+
+02
+
+Model Comparison Across Evaluation Metrics
+
+Evaluation Loss | 10 Precision t
++= bert bert base uncased “
+—»— bert bert large uncased 08 .
+—e~ distilbert distlbert base cased 08 x SO ne a)
+o7
+§
+S06
+S05
+«
+04
+03 === bert bert base uncased
+eBags apg gti agnte hate tT 02 —*— bert bert large uncased
+ih hm ial atc ai i —e~ distiber distibert base cased
+0 500 1000 1500 2000 += 2500-3000 500 1000 1500-2000 2500 3000
+Training Step Training Step
+Recall + F1 Score t
+a aera PNUD eS CES TY oe
+stQeen chy 08
+o7
+S06
+8
+— 08
+i
+04
+‘=*— bert bert base uncased 03 === bert bert base uncased
+<= bert bert large uncased 02 += bert bert large uncased
+~ distiber distlbert base cased —e~ distiber distlbert base cased
+on
+
+0 500 1000 1500 2000 2500 3000
+
+Training Step
+
+bert bert base uncased
+
+—e— bert bert large uncased —*— di
+
+500 1000 1500 2000 2500 3000
+Training Step
+
+tilbert distilbert base cased
+

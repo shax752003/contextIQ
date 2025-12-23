@@ -1,107 +1,47 @@
-‘Tre abie.actng ents cares 9 SB RAANANE. The cinder owes ova i each be FLRRMSAE acen eacts ohe GLE
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 17
 
-‘he coneyor bet system varspotsmateals om ene porta acter Bi cooky
+Model Comparison Across Evaluation Metrics
+Evaluation Loss | Precision |
+20
 
-‘eva setae. causng he betta mow Pres be
+Evaluation Loss
 
-Tee es creda
-‘fe ae ngpyandteracong te cnt
+oso 1000 ~—~v6o0 «ooo —=«500~—=—« OO a  )
+Training Step Training Step
+Fi Score
 
-Terantanany sem cessing tet corte a a Sema Thence mae oar techs FLSA een es
+° a woo 16002000 P wooo 1600 ato
+Training Step Training Step
 
-Scars Raa
+—s- tenbarteseurenieg —o— tenberistopuncases banshee sed
 
-presse, taciaiesa fat rgaes ot KM, cua conveyor Bett ben moma. CON
-cutng power omar and bing te conver betta ha
+Fig. 8. Model Performance Comparison Across Evaluation Metrics.
 
-datas
+Bost Evaluation Metrics Across Models
 
-corto 9
-"nen
+Ft Sere Predeon Recall Evalustion Loss
 
-Toggesees am eae cone et ered
-cove
+Fig. 9. Evaluation of Transformer Models Based on Best F1-Scores.
 
-‘Tre gytemtcanes ogee:
+dataset using a Named Entity Recognition (NER) framework. The task involved classifying each
+token into one of five predefined categories: Actuator, Pre-actuator, Sensor, Effector, or Others,
+using the BIO tagging scheme. Fine-tuning was conducted on a consistent experimental setup to
+allow fair comparison.
 
-inde and eenat wel traces
+All models were trained for three epochs with a learning rate of 5e-5 and a batch size of 16.
+The optimization objective was to minimize the cross-entropy loss between the predicted and
+true token-level labels. Evaluation was performed on a held-out test set representing 10 % of
+the dataset. Metrics used for performance assessment included Precision, Recall, F1 Score, and
+Evaluation Loss. These metrics were selected to reflect both the correctness and completeness of
+entity detection, which are critical for downstream automation tasks.
 
-‘etactiobe BLAMED
+The results clearly demonstrate that DistiIBERT-Base achieved the highest performance across
+all evaluation metrics, with an F1 score of 0.9505, precision of 0.9476, and recall of 0.9534. De-
+spite being the smallest model in terms of parameters, it outperformed the larger BERT models
+not only in accuracy but also in training stability and convergence. These findings are visually
+summarized in Figs. 8, 9 and Table 16.
 
-ast
-|e neues mat MT, scp Be bet
-
-Te onder exes traces te FERRER when De olen ae acted and eva De
-nurpzes ecole abowingjas to oconaie cen Presse SEB BMA
-
-raters om one lation te ante. This stem seperated sig a
-
-3» SEBAES Pressing te SE eerie ote
-
-enn BARBIE presse, sleoi ae is ewrpze, sowing ao Bow io te
-is pressed he sour vave's earuied, cog fe at app andeacany De Gd
-
-double-actng cylinder {ACTUATOR] (Tokens: 2)(1.4-1.26)
-Sr2-way solenoid valve [PREACTUATOR] (Tokens: 3) (1.46-1.68)
-FL it switeh [SENSOR] (Tokens: 3) (1.1181.133)
-
-BL limit switch [SENSOR] (Tokens: 3) (1.159-1.174)
-
-start push button [SENSOR] (Tokens: 3) (3.95-3.112)
-
-‘stop push button [SENSOR] (Tokens: 3) (3.119-3.135)
-
-‘start button [SENSOR] (Tokens: 2) (3.150-9.162)
-
-KM (ACTUATOR] (Tokens: 1) (3.170-3.182)
-
-‘contactor [PREACTUATOR] (Tokens: 1) (3.189-3.198)
-
-‘stop bution [SENSOR] (Tokens: 2) (9.239-3.250)
-
-KM (ACTUATOR] (Tokens: 1) (3.270-3.273)
-
-‘single-acting cylinder {ACTUATOR] (Tokens: 2) (5.45.26)
-3/2-way solenoid valve [PREACTUATOR] (Tokens: 2)(5.46-5.68)
-FL imt switch [SENSOR] (Tokens: 3) (5.112-5.127)
-
-BL iit switeh [SENSOR] (Tokens: 3) (5.185-5 200)
-
-start button [SENSOR] (Tokens: 2) (6.232524)
-
-‘stop button [SENSOR] (Tokens: 2) (6.325-5.336)
-
-<ouble-actng cylinder [ACTUATOR] (Tokens: 2)(7.36-7 58)
-Sr2-way solenoid vale [PREACTUATOR] (Tokens: 3)(7.75-7.87)
-FL imit switch [SENSOR] (Tokens: 3) (7.147-7.162)
-
-BL limit switch [SENSOR] (Tokens: 3) (7.188-7.203)
-
-start push button [SENSOR] (Tokens: 3) (2.144-9.161)
-
-stop push button [SENSOR] (Tokens: 3) (9.168-9.164)
-
-‘art button [SENSOR] (Tokens: 2)(0.195-9.207)
-
-‘contactor (PREACTUATOR] (Tokens: 1) (9.236-8.244)
-
-KM [ACTUATOR] (Tokens: 1) (9.266-9.269)
-
-‘stop button [SENSOR] (Tokens: 2) (9.399-0.350)
-
-‘contactor (PREACTUATOR] (Tokens: 1) (9.367-9.376)
-
-KM ACTUATOR] (Tokens: 1) (@.401-9.404)
-
-‘ingle-acting cylinder (ACTUATOR] (Tokens: 2)(11.22-11.44)
-Si2-way solenoid valve [PREACTUATOR] (Tokens: 3) (11.61-11.8,
-start button [SENSOR] (Tokens: 2) (11.04-11.106)
-
-FL imit switch [SENSOR] (Tokens: 3) (11,226-11.241)
-
-“top button [SENSOR] (Tokens: 2) (11.252-11.263)
-
-Bi limit etch [SENSOR (Tokens: 20(44 389-14 287)
-
-ee as)
-
+The results confirm that the AutoFactory dataset is well-suited for training transformer mod-
+els to recognize key control components in industrial requirement specifications. The fine-tuned
+models achieved high accuracy and demonstrated the potential for integrating such approaches
+into intelligent automation workflows.

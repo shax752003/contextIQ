@@ -1,66 +1,81 @@
-A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 al
+16
 
-Table 9
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938
 
-Baseline Requirement Specifications for Selected Factory I/O Systems.
-System Name Requirement Specification
-Single Conveyor The system consists of a conveyor belt driven by an electric motor. A normally open
-Belt Transport start button is used to initiate the transport cycle. When the start button is pressed,
-System. the start light is turned on and the conveyor motor is activated. A photoelectric exit
+Table 14
 
-sensor is installed at the end of the conveyor. When the sensor detects the presence of
-a box, the conveyor motor stops and the start light turns off. The system waits for the
-next press of the start button to repeat the cycle.
+Sample of NER-Annotated Requirements with POS Tags and Tokenization.
+Sentences Tokens Part of speech tags NER labels
+The system operates [‘The’, ‘system’, ‘operates’, [‘DT’,, ‘NN’, ‘VBZ’, ‘IN’, [‘0’, ‘0’, ‘O’”, ‘B-EFFECTOR’,
+with two conveyor ‘with’, ‘two’, ‘conveyor’, ‘CD’, ‘NN’, ‘NNS’, “ ‘I-EFFECTOR’, ‘I-EFFECTOR’, ‘0’,
+belts, named Conveyor ‘belts’, *’, ‘named’, “VBN', ‘NNP’, ‘CD’, ‘CC’, ‘O’", ‘B-EFFECTOR’, ‘I-EFFECTOR’,
+One and Conveyor Two, ‘Conveyor’, ‘One’, ‘and’, “‘NNP’, ‘CD’, ‘’, ‘DT’, ‘O’”, ‘B-EFFECTOR’, ‘I-EFFECTOR’,
+each driven by an ‘Conveyor’, ‘Two’, ‘’, ‘each’, ‘VBN’, ‘IN’, ‘DT’, ‘JJ’, ‘0’, ‘0’, 0’, ‘0’, ‘O’",
+electric motor. ‘driven’, ‘by’, ‘an’, ‘electric’, ‘NN’, “’] “B-ACTUATOR’, ‘I-ACTUATOR’,
 
-Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor: Conveyor
+‘motor’, ‘."] ‘O'}
+The cycle is initiated by [‘The’, ‘cycle’, ‘is’, ‘initiated’, [‘DT’, ‘NN’, ‘VBZ’, ‘VBN’, __[‘O’, ‘0’, ‘0’, ‘0’, ‘0’, ‘0’, ‘0’,
+pressing the start ‘by’, ‘pressing’, ‘the’, ‘start’, ‘IN’, ‘VBG’, ‘DT’, ‘NN’, *B-SENSOR’, ‘I-SENSOR’, ‘O']
+button. ‘button’, *.’] ‘NN’, “"]
+This causes the start [‘This’, ‘causes’, ‘the’, ‘start’, [‘DT’, ‘VBZ’, ‘DT’, ‘NN’, [‘0’, ‘0’, ‘0’, ‘B-ACTUATOR’,
+light to come on and ‘light’, ‘to’, ‘come’, ‘on’, ‘NN’, ‘TO’, ‘VB’, ‘IN’, ‘CC’, ‘I-ACTUATOR’, ‘0’, ‘0’, ‘0’,
+Conveyor One to begin ‘and’, ‘Conveyor’, ‘One’, ‘to’, ‘NNP’, ‘NNP’, ‘TO’, ‘VB’, ‘B-EFFECTOR’, ‘I-EFFECTOR’, ‘0’,
+moving. ‘begin’, ‘moving’, ‘.’] “VBG’, “."] ‘0’, ‘0’, ‘0']
+The box moves along [‘The’, ‘box’, ‘moves’, [‘DT, ‘NN’, ‘VBZ’, ‘RB’, [‘0’, ‘O’, ‘O’, ‘O’, ‘B-EFFECTOR’,
+Conveyor One until it is ‘along’, ‘Conveyor’, ‘One’, ‘NNP’, ‘CD’, ‘IN’, ‘PRP’, *[-EFFECTOR'
+detected by Sensor A. ‘until’, ‘it’, ‘is’, ‘detected’, ‘VBZ’, ‘VBN’, ‘IN’, ‘NNP’,  ‘B-SENSOR’, ‘I-SENSOR’, ‘O']
+‘by’, ‘Sensor’, ‘A’, ‘.’] ‘NNP’, “']
+When Sensor A [‘When’, ‘Sensor’, ‘A’, [‘WRB’, ‘NNP’, ‘NNP’, [‘0’", ‘B-SENSOR’, ‘I-SENSOR’, ‘0’,
+triggers, Conveyor One ‘triggers’, ‘,’, ‘Conveyor’, “‘NNS’, ‘’, ‘NNP’, ‘NNP’, ‘O’”, ‘B-EFFECTOR’, ‘I-EFFECTOR’,
+stops and Conveyor ‘One’, ‘stops’, ‘and’, ‘NN’, ‘CC’, ‘NNP’, ‘CD’, ‘O’”, ‘0’, ‘B-EFFECTOR’,
+Two is started. ‘Conveyor’, ‘Two’, “VBZ’, ‘VBN’, *.’] ‘I-EFFECTOR’, ‘O’, ‘0’, ‘O"]
+‘started’, ‘
+Table 15
+Architectural Comparison of the Transformer Models.
+Model Configuration Parameters Layers Hidden Size Attention Heads Developed By
+BERT Base 110M 12 768 12 Google Al
+Large 340M 24 1024 16
+DistilIBERT Base 66M 6 768 12 Hugging Face
 
-Transport System One and Conveyor Two. A start button is used to initiate the cycle. When the start
-button is pressed, the start light turns on, and Conveyor One is activated. The box
-moves forward until it reaches Sensor A. Once Sensor A is triggered, Conveyor One
-stops, and Conveyor Two is activated. The box continues moving until it reaches
-Sensor B, which stops Conveyor Two. The start light then turns off. The system is now
-idle and waits for the next press of the start button to repeat the cycle.
+(LLMs) on this labeled data to evaluate their ability to extract components and understand sys-
+tem behavior from natural language.
 
-Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor and
-System with controlled by contactors KM1 and KM2. A double-acting cylinder is used to transfer
-Transfer Cylinder boxes between the conveyors. The cylinder is controlled by a 5/2-way solenoid valve. A
+10.1. Benchmarking and Model Fine-tuning
 
-start button is used to initiate the cycle. When the start button is pressed, the start
-light turns on. At the same time, Conveyor One and Conveyor Two are both activated.
-The box on Conveyor One moves forward until it reaches the entry sensor. Once the
-entry sensor is triggered, Conveyor One stops. The double-acting cylinder then extends
-forward. It continues moving until it activates the front limit switch. When the front
-limit switch is triggered, the solenoid valve is reversed, and the cylinder retracts. The
-cylinder moves back until the back limit switch is triggered. Conveyor Two continues
-running during the entire process. When the exit sensor detects the presence of the
-box at the end of Conveyor Two, and the cylinder has fully retracted, the system
-restarts the cycle. Conveyor One is activated again to bring the next box forward.
+The transformer models selected for this study were chosen to provide a representative sam-
 
-tors, electric motors, photoelectric sensors, and double-acting cylinders. Each system reflects
-realistic operational logic typically implemented in programmable logic controller (PLC)-based
-environments.
+ciency on d
 
-Each requirement specification captures the functional behavior of a complete manufactur-
-ing system. The descriptions include triggering conditions, sequences of component activations,
-and terminal states. This structure ensures that the specifications not only reflect the vocabu-
-lary of industrial automation but also convey the relationships between sensors, actuators, pre-
-actuators, and effectors within each operational cycle. Such modeling is essential for training Al
-systems to identify entities and understand control logic in natural language.
+heads, amo
+with 1024
+In contrast,
 
-To illustrate the nature of the specifications, Table 9 provides examples of the baseline manu-
-facturing systems included in the dataset. Each specification offers a coherent narrative describ-
-ing how the system responds to external inputs and internal conditions to achieve its intended
-functionality.
+heads, yield
+These di!
 
-Each system is also accompanied by its Factory I/O scene file, tag documentation, and multi-
-angle screenshots to support reproducibility. These baseline specifications serve as the core data
-from which further linguistic variants are generated in the following stage.
+imited.
 
-7. Prompt Design
+ple of architectures commonly used in sequence labeling tasks (Table 15). Three models were
+evaluated: BERT-Base, BERT-Large, and DistilIBERT-Base. These models differ in size, depth, and
+computational requirements, allowing for a comparative analysis of performance versus effi-
 
-To train AI models that can understand requirement specifications, it is important to provide
-them with a large amount of varied data. In real industrial settings, different engineers often
-describe the same system in different ways. They may use different words, sentence structures,
-or levels of detail, depending on their experience and writing style. These differences do not
-change the meaning but affect how the information is presented. For Al models to perform well,
-they must be trained on examples that reflect this diversity.
+lomain-specific Named Entity Recognition (NER) tasks.
+
+BERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention
+
+unting to 110 million parameters. BERT-Large expands this architecture to 24 layers
+hidden units and 16 attention heads, resulting in a total of 340 million parameters.
+DistiIBERT-Base is a lighter model designed for faster training and inference. It com-
+
+presses BERT-Base to 6 layers while retaining the same hidden size and number of attention
+
+ing a total of 66 million parameters.
+fferences provide useful contrasts when assessing model suitability for industrial lan-
+
+guage processing, especially in scenarios where deployment constraints or training resources are
+
+To enab!
+
+le automatic identification of control components from natural language requirement
+
+specifications, the selected transformer models were fine-tuned on the annotated AutoFactory
