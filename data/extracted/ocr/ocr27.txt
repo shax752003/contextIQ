@@ -1,120 +1,60 @@
-Phase 1: Data Generation Phase 2: Requirement Labeling Phase 3: Dataset Export
+14 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938
 
-Baseline Data Creation
+9. Data Post-processing
 
-In the first step, different requirement specifications are manually
-written to describe the behavior of components commonly used
-jn automated monufacturing systems. These specifications ore
-created following the best practices and documentation
-standards of industry leaders such as Siemens, Schneider
-Electric, and Allen-Bradley. This baseline dataset provides a solid
-foundation that will later be expanded through automatic
-‘generation using large language models,
+After generating multiple versions of the requirement specifications using large language
+models (LLMs), a post-processing step was necessary to ensure the quality and consistency of
+the dataset. This phase aimed to remove duplicated content, correct potential inconsistencies,
+and prepare the data for annotation.
 
-Prompt Design
-In this step. prompts are designed to guide large language
-‘models in rewriting the baseline requirement specications. The
-‘prompt clearly instructs the model te keep the same technical
-Content while expressing it differently by changing the wording.
-sentence structures, and style. This method ensures thot the
-‘meaning remains identical while generating new variations of
-the original specifications
+LLMs sometimes produce identical or nearly identical outputs, and in some cases, introduce
+small errors, unclear phrasing, or deviations from the original specification. To address this, we
+applied an automated filtering step to remove exact and near-duplicate texts. A Python script
+was used to compare all generated outputs and retain only unique formulations, helping pre-
+serve linguistic diversity while eliminating unnecessary repetition.
 
-Large Language Model (LLM) Selection
+In addition to duplication, some generated specifications included errors or deviated from
+the required format. To resolve this, a manual review was conducted on a representative sample
+of the dataset. Three domain experts reviewed the selected entries to check that each require-
+ment specification was grammatically correct, followed the intended structure, and accurately
+described the system behavior. Any texts containing unclear descriptions, factual errors, or for-
+matting issues were either corrected or excluded.
 
-After designing the prompts, large language models are selected
-to rewrite the requirement specifications while keeping their
-technical meaning unchanged. We choose high-quality models
-such as ChatGPT Pro, Claude Pro, and Mistral Pro because they
-con produce accurate, well-structured variations without altering
-the original information. Using multiple LLMs helps to envich the
-dotaset by introducing natural diversity in writing styles.
+To verify that the LLM-generated specifications remained semantically aligned with the orig-
+inal descriptions, we also performed a quantitative analysis using cosine similarity on sentence
+embeddings. Table 11 summarizes the similarity scores across the three systems and the over-
+all dataset. The average similarity was 0.9275, with a minimum of 0.7105 and a maximum of
+0.9924, indicating that the rewritten specifications preserved the original meaning while intro-
+ducing useful variation.
 
-Data Post-Processing
+After filtering and reviewing the generated texts, the dataset was clean and diverse but re-
+mained unstructured. Although each requirement specification described the full behavior of a
+manufacturing system, it did not explicitly indicate which terms referred to specific components.
+To make the data suitable for supervised learning, a final step was required to add structure
+through annotation. This involved identifying and labeling relevant terms so that AI models
+could learn to detect them automatically. The next section explains how this was done using
+Named Entity Recognition (NER) to assign labels to key elements within each specification.
 
-‘After generation, « Python scripts used to automatically remove
-duplicate requirement specifications. To ensure the quaity of the
-dotaset, sampling approach is applied, where a selected
-portion of the generated data is manually reviewed to verity
-‘occurocy, consistency, and techaicol correctness. This process
-combines automation and human validation to deliver @ clean
-Cond reliable dataset forthe labeling phose.
+10. Data Labeling
 
-Dataset Importation into the Labeling Tool
+To make the dataset usable for supervised learning, each requirement specification must be
+structured in a way that allows machines to detect and classify key elements, such as the in-
+put and output components of a manufacturing system. Although the generated texts describe
+system behavior clearly, they do not explicitly indicate which words refer to physical compo-
+nents. To address this, we manually labeled the dataset using Named Entity Recognition (NER),
+following a consistent and interpretable annotation format.
 
-After post-processing, the validated requirement specifications
-‘re imported into @ custom offine labeling tool developed
-specifically for this project The tool is designed to support
-‘manual annotation while ensuring data privacy and flexibility in
-creating domain-specific labels. Organizing the dataset within
-the tool prepares it for systematic component identification and
-precise labeling,
+Annotation was carried out by our research team, composed of three domain experts. The
+process was conducted entirely manually using our offline labeling tool, AutoLabel-NER, devel-
+oped to support annotation of technical texts. As shown in Fig. 7, the tool provides a simple
+interface that allows annotators to assign a label to each token in a requirement specification.
+Each token is categorized into one of five NER classes: Sensor, Actuator, Pre-actuator, Effector, or
+Others. To ensure structural clarity, we used the standard BIO tagging scheme, where multi-word
+component names such as double acting cylinder are encoded as B-ACTUATOR, I-ACTUATOR, I-
+ACTUATOR. This format is widely used in NER applications to distinguish the beginning and
+continuation of entity spans.
 
-Component Identification and Tagging
-
-At this stage, the requirement specifications are still
-Unstructured, containing descriptions without explicit
-identification of components. Through manual labeling, key
-elements such os actuators, pre-actuators, ond sensors ore
-identified and tagged within the text. This transformation from
-Unstructured to structured data is essential to prepare the
-dataset for training Al models capable of recognizing and
-‘extracting technical components cutomaticelly,
-
-Application of the BIO Tagging Scheme
-
-To stondordize the labeling process, the BIO (Begin, Inside,
-Outside) tagging scheme is applied to al icentified components.
-Each word in the texts assigned a tag indicating whether itis ct
-the beginning of a component name, insce a component name,
-or outside any labeled entity. Using the 810 format ensures that
-the dataset is compatible with standard Nomed Entity
-Recognition models used in Al
-
-Manual Annotation Verification
-
-To ensure the quaity of the annotations, a human validation
-step is opplied after automatic labeling. A selected portion of the
-dataset is manually reviewed to verity that each component is
-correctly labeled according to Its roe in the system. This human
-intervention is essentil to quorantee that the final dataset is not
-Purely synthetic, but combines automated generation with
-expert manual verification.
-
-Dataset Splitting
-Once the labeling process is completed, the dataset is divided
-into three subsets: troining, validation, ond testing, This step
-ensures thot Al models can leam from one port of the date,
-‘ogjust their settings with another port, and finally be evaluated
-con new data they have never seen before. Spitting the dataset
-in this way is important to train models that work correctly and
-avoid overfiting.
-
-Data Formatting
-
-Aer splitting, the dataset is formotted following the CoNLL-
-2003 standard. which is commonly used for Named Entity
-Recognition tasks. This format organizes each word. its
-corresponding label, and its position in the text in a clear and.
-structured way. Formatting the dataset ensures that it can be
-easily used with standard Al models ond natural language
-processing frameworks,
-
-Documentation Preparation
-
-‘A dear ond detoiled documentation is prepared to explain how
-the dataset was created, labeled, ond formatted. It also gives
-instructions on how to use the dataset correctly for research and,
-industrial applications. To make it easly accessible, the dataset
-cond its documentation are shared openly with the research,
-community on the Hugging Face platform.
-
-Final Dataset Export
-
-In the final step. the labeled dataset and its documentation are
-{grouped together and prepared for sharing. Using our labeling
-‘ool, the dataset can be exported in several formats, including
-CSV, JSON, Excel XLSX), and TXT, to make it easier for itferent
-users, The complete version is then mode openly aveiloble $0
-thot researchers ond engineers can directly use it for Al model
-developmentin manufacturing systems.
+The full dataset includes 2358 annotated requirement specifications. To ensure a manage-
+able and high-quality review process, a subset of 300 specifications was selected for cross-
+verification. The dataset was equally divided among the three annotators. Each expert labeled
+approximately one-third of the total (around 786 specifications), and a rotational review pro-

@@ -1,0 +1,1948 @@
+[
+  {
+    "chunk_id": "sample_docling_0",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "AutoFactory Dataset to Support AI in Manufacturing Systems"
+  },
+  {
+    "chunk_id": "sample_docling_1",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Abderrahmane Boudribila a , b , \u2217 , Abdelouahed Tajer a , Zakaria Boulghasoul a"
+  },
+  {
+    "chunk_id": "sample_docling_2",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "a Systems Engineering and Applications Laboratory, Cadi Ayyad University, ENSA, BP 2390, Marrakech, 40 0 0 0,"
+  },
+  {
+    "chunk_id": "sample_docling_3",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "b LAMIGEP, Moroccan School of Engineering Sciences, Avenue Hassan II, Marrakech, 40 0 0 0, Marrakech-Safi, Morocco"
+  },
+  {
+    "chunk_id": "sample_docling_4",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "a r t i c l e i n f o"
+  },
+  {
+    "chunk_id": "sample_docling_5",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Received 3 April 2025"
+  },
+  {
+    "chunk_id": "sample_docling_6",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Accepted 23 July 2025 Available online 31 July 2025"
+  },
+  {
+    "chunk_id": "sample_docling_7",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "AutoFactory (Original data)"
+  },
+  {
+    "chunk_id": "sample_docling_8",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Keywords: Artificial intelligence Named entity recognition Manufacturing systems Dataset development Code automation Large language models"
+  },
+  {
+    "chunk_id": "sample_docling_9",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Automating code generation in manufacturing systems requires Artificial Intelligence (AI) models capable of interpreting textual requirement specifications. One of the main challenges is the absence of publicly available, domainspecific datasets suitable for training such models. This article presents AutoFactory, an open-source dataset that includes manually written and LLM-augmented requirement specifications, annotated by domain experts for Named Entity Recognition (NER) tasks using the BIO format."
+  },
+  {
+    "chunk_id": "sample_docling_10",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "AutoFactory enables the extraction and classification of key industrial components, including actuators, pre-actuators, sensors, effectors, and others. These elements correspond to real-world input and output signals in manufacturing systems. The dataset is grounded in realistic scenarios built with Factory I/O and includes 3D scenes, tag tables, and screenshots captured from multiple camera perspectives. To enhance linguistic diversity while preserving semantic intent, all specifications were expanded using large language models and evaluated through semantic similarity analysis (average cosine similarity above 0.92), complemented by manual validation to ensure consistency."
+  },
+  {
+    "chunk_id": "sample_docling_11",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "\u2217 Corresponding author. E-mail address: a.boudribila.ced@uca.ac.ma (A. Boudribila) . Social media: @Boudribila97 (A. Boudribila)"
+  },
+  {
+    "chunk_id": "sample_docling_12",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "Contents lists available at"
+  },
+  {
+    "chunk_id": "sample_docling_13",
+    "source": "sample.pdf",
+    "page": 1,
+    "type": "text",
+    "content": "www.elsevier.com/locate/dib"
+  },
+  {
+    "chunk_id": "sample_docling_14",
+    "source": "sample.pdf",
+    "page": 2,
+    "type": "text",
+    "content": "The dataset provides clearly annotated manufacturing requirements specifications, addressing the absence of publicly available datasets for industrial automation. This allows researchers to train AI models capable of interpreting manufacturing instructions and supports research into methods for generating control logic, with the potential to reduce human intervention."
+  },
+  {
+    "chunk_id": "sample_docling_15",
+    "source": "sample.pdf",
+    "page": 2,
+    "type": "text",
+    "content": "To facilitate the annotation process, a custom labeling tool was developed. It runs locally to preserve data privacy and provides a user-friendly interface. The tool is adaptable to a wide range of NER tasks and allows researchers to customize labels for different domains by adding or modifying tags. To assess the practical value of the dataset, transformerbased models such as BERT and DistilBERT were fine-tuned on the annotated requirement specifications. The highestperforming model reached an F1-score of 0.95, confirming the dataset's ability to support accurate identification of key components in manufacturing systems."
+  },
+  {
+    "chunk_id": "sample_docling_16",
+    "source": "sample.pdf",
+    "page": 2,
+    "type": "text",
+    "content": "This combination of human expertise and AI-based augmentation provides a robust foundation for training AI systems to interpret manufacturing behaviors from text. AutoFactory contributes to ongoing research effort s aimed at enabling intelligent systems to assist in generating control code from requirement specifications, reducing reliance on manual programming in industrial automation."
+  },
+  {
+    "chunk_id": "sample_docling_17",
+    "source": "sample.pdf",
+    "page": 2,
+    "type": "text",
+    "content": "\u00a9 2025 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY license"
+  },
+  {
+    "chunk_id": "sample_docling_18",
+    "source": "sample.pdf",
+    "page": 2,
+    "type": "text",
+    "content": "( http://creativecommons.org/licenses/by/4.0/ )"
+  },
+  {
+    "chunk_id": "sample_docling_19",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "Researchers can reuse these data to build models that identify critical components, such as actuators, pre-actuators, sensors, and effectors, enabling more effective transformation of textual specifications into executable control programs."
+  },
+  {
+    "chunk_id": "sample_docling_20",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "Annotations use the standard BIO tagging format (Begin, Inside, Outside), ensuring compatibility with widely adopted NLP and machine learning frameworks, and simplifying integration into existing pipelines."
+  },
+  {
+    "chunk_id": "sample_docling_21",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "The dataset includes scenes of 3D real manufacturing systems built using Factory I/O, a simulation platform for industrial automation. Each system is accompanied by tag tables and screenshots from multiple camera angles, as well as the corresponding 3D scene file, the baseline requirement specification, its augmented versions, and a similarity analysis using sentence embeddings to ensure both linguistic diversity and semantic consistency."
+  },
+  {
+    "chunk_id": "sample_docling_22",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "The dataset serves as a reliable benchmark to evaluate and compare AI methodologies. It includes realistic manufacturing examples originally written or reviewed by domain experts then reformulated using large language models (ChatGPT Pro, Claude Pro, Mistral Pro) to introduce controlled linguistic diversity while preserving technical meaning."
+  },
+  {
+    "chunk_id": "sample_docling_23",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "All annotations were reviewed and validated by human experts during the labeling process, ensuring high accuracy and reliability. This makes the dataset suitable for both academic research and industrial applications."
+  },
+  {
+    "chunk_id": "sample_docling_24",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "The dataset is hosted publicly on Hugging Face with a permanent DOI, ensuring long-term access for researchers, developers and educators."
+  },
+  {
+    "chunk_id": "sample_docling_25",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "Automated manufacturing systems rely on Programmable Logic Controllers (PLCs) to control and monitor industrial processes [ 1 ]. In practice, engineers use two main strategies to program PLCs. The first is a heuristic approach [ 2 , 3 ], where engineers read the requirement specifications and directly write the control program based on their experience and intuition. The second is a formal approach [ 2 ], where engineers first create mathematical models of the system behavior and its operational constraints before generating the program. Although both methods are well established, they are time-consuming, prone to human error, and require strong technical expertise."
+  },
+  {
+    "chunk_id": "sample_docling_26",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "In our work, we aim to move beyond these traditional methods by using artificial intelligence (AI) to automate the generation of PLC programs directly from textual requirement specifications. However, during a pilot study, we found that no public datasets existed to train AI models for this specific task. To overcome this challenge, we manually wrote realistic requirement specifications based on systems modeled in Factory I/O. We then expanded these specifications using large language models (LLMs), rewriting them with different words while keeping the original meaning"
+  },
+  {
+    "chunk_id": "sample_docling_27",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": ". Each version was verified by human experts to ensure accuracy, and similarity metrics were used to confirm that the reformulations preserved the original intent."
+  },
+  {
+    "chunk_id": "sample_docling_28",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "This dataset complements our previous research [ 4 ] and provides a structured, domainspecific resource for advancing AI-based automation in manufacturing."
+  },
+  {
+    "chunk_id": "sample_docling_29",
+    "source": "sample.pdf",
+    "page": 3,
+    "type": "text",
+    "content": "In automated manufacturing systems, engineers, students, and system designers often describe the intended behavior of machines using natural language before writing any control code. These requirement specifications typically indicate what the system should do (e.g., extend a cylinder), what it must avoid (e.g., exceed a safety limit), and which components are involved (e.g., sensors, valves, or actuators). The purpose of the AutoFactory dataset is to enable machines to take such natural language as input, understand its meaning, identify the key components mentioned, and then support the automatic generation of control logic that would normally be written manually by engineers."
+  },
+  {
+    "chunk_id": "sample_docling_30",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Table 1 Example of Token-Level Annotation in the AutoFactory Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_31",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "To support this goal, AutoFactory [ 5 ] provides 2358 manually annotated requirement specifications based on realistic industrial scenarios modeled in Factory I/O. Each specification represents a complete industrial process, including operation sequences, safety conditions and interactions between system components. The dataset consists of 17,134 segmented sentences and a total of 279,830 tokens. Each token is annotated and structured into five columns, following a format adapted from the CoNLL-2003 standard for Named Entity Recognition (NER) tasks:"
+  },
+  {
+    "chunk_id": "sample_docling_32",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Token text: the word or punctuation (e.g., Cylinder, Controlled)"
+  },
+  {
+    "chunk_id": "sample_docling_33",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "POS tag: the part-of-speech label (e.g., noun [NN], verb [VB], determiner [DT])"
+  },
+  {
+    "chunk_id": "sample_docling_34",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "POS index: the numeric code for the POS tag (e.g., NN = 10)"
+  },
+  {
+    "chunk_id": "sample_docling_35",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "NER label: the named entity tag identifying the component type (e.g., ACTUATOR, SENSOR)"
+  },
+  {
+    "chunk_id": "sample_docling_36",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "NER index: the numeric code for the NER label (e.g., B-ACTUATOR = 1)"
+  },
+  {
+    "chunk_id": "sample_docling_37",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "The NER labels follow the BIO tagging scheme:"
+  },
+  {
+    "chunk_id": "sample_docling_38",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "B (Beginning): marks the first word of an entity (e.g., B-ACTUATOR)"
+  },
+  {
+    "chunk_id": "sample_docling_39",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "I (Inside): marks the continuation of the same entity (e.g., I-ACTUATOR)"
+  },
+  {
+    "chunk_id": "sample_docling_40",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "O (Outside): indicates tokens that do not belong to any labeled entity"
+  },
+  {
+    "chunk_id": "sample_docling_41",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "This format allows the model to recognize multi-word technical components. For example, in the phrase 'double-acting cylinder,' 'double-acting' is labeled as B-ACTUATOR and 'cylinder' as I-ACTUATOR, forming a single entity."
+  },
+  {
+    "chunk_id": "sample_docling_42",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Table 1 shows an example of a token-level annotation from a requirement specification in the dataset."
+  },
+  {
+    "chunk_id": "sample_docling_43",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Each requirement specification consists of multiple sentences, with empty lines marking sentence boundaries. All annotations were created and reviewed manually by domain experts to ensure accuracy and consistency. The dataset includes both POS and NER labels, each mapped to a numeric index for compatibility with standard machine learning frameworks. The POS tagging helps models understand grammatical structure, and NER labeling helps identify technical components, such as ACTUATOR (e.g., cylinders, motors), PREACTUATOR (e.g., valves, contactors), SENSOR (e.g., limit switches, detectors), EFFECTOR (e.g., conveyor belt, lights), and OTHER (tokens not linked to physical control elements)."
+  },
+  {
+    "chunk_id": "sample_docling_44",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "The dataset is provided in both Excel (.xlsx) and CSV (.csv) formats, encoded in UTF-8 to ensure compatibility with standard natural language processing and machine learning frameworks. It follows a conventional 80-10-10 split: 80 % of the data is allocated to the training set, 10 % to the validation set, and 10 % to the test set. Fig. 1 illustrates this partitioning."
+  },
+  {
+    "chunk_id": "sample_docling_45",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Training Set (80 %): used to train the models"
+  },
+  {
+    "chunk_id": "sample_docling_46",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Validation Set (10 %): used for hyperparameter tuning"
+  },
+  {
+    "chunk_id": "sample_docling_47",
+    "source": "sample.pdf",
+    "page": 4,
+    "type": "text",
+    "content": "Test Set (10 %): used for final model evaluation"
+  },
+  {
+    "chunk_id": "sample_docling_48",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "Fig. 1. Dataset Split - Training, Validation, and Test Sets."
+  },
+  {
+    "chunk_id": "sample_docling_49",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "Table 2 Summary Statistics of Specifications, Tokens, and Named Entities in AutoFactory."
+  },
+  {
+    "chunk_id": "sample_docling_50",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "Table 2 summarizes the dataset's structure and semantic annotations. It includes 2358 requirement specifications, segmented into 17,134 sentences and comprising 279,830 tokens. Among these tokens, 7.09 % are labeled as ACTUATOR, 2.11 % as PRE-ACTUATOR, 9.18 % as SENSOR, and 9.52 % as EFFECTOR. The remaining 72.09 % of tokens are labeled as OTHER, indicating they do not refer to system components but contribute to grammatical structure and contextual clarity. These proportions reflect the natural language composition of industrial specifications, where functional terms are embedded within descriptive text."
+  },
+  {
+    "chunk_id": "sample_docling_51",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "To further illustrate the component distribution, Fig. 2 visualizes the relative frequency of each label category. Actuator and sensor mentions are most prevalent, consistent with their key role in control system logic. Pre-actuators and effectors appear less frequently but remain essential for modeling system transitions."
+  },
+  {
+    "chunk_id": "sample_docling_52",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "The AutoFactory dataset is designed not only for engineers in industrial automation but also for researchers, developers, and students working in natural language processing and AI. It serves as a high-quality benchmark for tasks such as named entity recognition, information extraction, and the automatic generation of control logic from textual specifications. The dataset offers a structured, modular format that is both accessible and extensible, making it suitable for academic research and industrial applications alike."
+  },
+  {
+    "chunk_id": "sample_docling_53",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "Despite significant progress in Named Entity Recognition (NER), existing datasets have not addressed the specific challenges of understanding requirement specifications in industrial automation. Most NER corpora, such as CoNLL-2003 [ 6 ], FabNER [ 7 ], and MS-NERC [ 8 ], focus on general-purpose or scientific language, but none are structured to represent how engineers describe the behavior of components in manufacturing systems. AutoFactory fills this gap by pro-"
+  },
+  {
+    "chunk_id": "sample_docling_54",
+    "source": "sample.pdf",
+    "page": 5,
+    "type": "text",
+    "content": "Fig. 2. Distribution of Labeled Entities in the AutoFactory Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_55",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": "Table 3 Comparison of AutoFactory with existing domain-specific and general-purpose NER datasets."
+  },
+  {
+    "chunk_id": "sample_docling_56",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": "viding fine-grained annotations aligned with how control engineers express system behavior. Each annotated specification represents a full operational scenario modeled in Factory I/O, covering input/output components, event sequences, and safety constraints. This alignment with executable industrial scenarios enables researchers to train models that not only recognize entities, but also learn to infer control logic structures from language."
+  },
+  {
+    "chunk_id": "sample_docling_57",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": "As shown in Table 3 , AutoFactory is currently the only open-access dataset that provides linguistically and semantically annotated manufacturing requirements grounded in system behavior modeled using Factory I/O. This contributes to developing AI models that can interpret requirement specifications and support the generation of control code in industrial automation."
+  },
+  {
+    "chunk_id": "sample_docling_58",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": "To evaluate the structural complexity of the dataset, we analyzed sentence length across all annotated specifications. Sentence length provides a basic yet informative indicator of linguistic variation and syntactic richness. As shown in Fig. 3 , lengths range from 5 to over 40 tokens, with a concentration around 14 to 16 tokens. While many sentences are relatively short, the distribution includes a substantial number of longer sequences, reflecting more detailed or compound requirement descriptions"
+  },
+  {
+    "chunk_id": "sample_docling_59",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": ". This variation supports the development of models that can process both simple and complex expressions of control behavior, and it demonstrates that the dataset captures the range of natural language found in real industrial contexts."
+  },
+  {
+    "chunk_id": "sample_docling_60",
+    "source": "sample.pdf",
+    "page": 6,
+    "type": "text",
+    "content": "In addition to sentence length, we examined the diversity of part-of-speech (POS) tag sequences to assess structural variability beyond surface-level token counts. Table 4 summarizes"
+  },
+  {
+    "chunk_id": "sample_docling_61",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "Sentence Length (Tokens)"
+  },
+  {
+    "chunk_id": "sample_docling_62",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "Fig. 3. Histogram of Sentence Lengths (in Tokens) Across the AutoFactory Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_63",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "Table 4 POS Tag Sequence Diversity Across Individual Systems and the Full Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_64",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "Table 5 N-gram Diversity and Entropy Across Individual Systems and the Full Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_65",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "the number of unique POS patterns identified across the three systems and the full dataset. AutoFactory contains 4778 distinct POS tag sequences across 17,134 sentences, corresponding to a diversity ratio of 27.89 %. This metric reflects the proportion of unique syntactic structures relative to total sentences. System 1 and System 3 show particularly high diversity, with ratios exceeding 28 %, indicating greater variability in how requirements are phrased. These findings confirm that the dataset includes a wide range of grammatical constructions, which can help AI models learn robust generalizations across different linguistic forms of technical specifications."
+  },
+  {
+    "chunk_id": "sample_docling_66",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "To further evaluate lexical variability, we measured n-gram diversity and entropy across the dataset. Table 5 reports the number of unique bigrams and trigrams, as well as their corresponding entropy scores. The full AutoFactory dataset contains 8078 distinct trigrams and 3300 bigrams, with trigram entropy reaching 10.56. These values indicate a high level of lexical diversity and reduced repetition across specifications. Among individual systems, System 3 exhibits the highest bigram and trigram entropy, consistent with its longer and more structurally varied sentences"
+  },
+  {
+    "chunk_id": "sample_docling_67",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": ". High entropy values suggest that the dataset avoids rigid or repetitive phrasing, offering a broader lexical space for training models to generalize across different ways of expressing functional requirements."
+  },
+  {
+    "chunk_id": "sample_docling_68",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": "To assess lexical diversity, we computed the type-token ratio (TTR) and distinct-n metrics, which measure vocabulary variety and repetition. As shown in Table 6 , AutoFactory contains 279,830 tokens and 629 unique token types, resulting in a TTR of 0.00225. These values are consistent with the dataset's current structure, which includes only 3 out of the 21 Factory I/O systems. Each reformulated specification describes the same system using a consistent set of component names. As a result, the vocabulary reflects technical consistency rather than linguistic redundancy"
+  },
+  {
+    "chunk_id": "sample_docling_69",
+    "source": "sample.pdf",
+    "page": 7,
+    "type": "text",
+    "content": ". As a result, the vocabulary reflects technical consistency rather than linguistic redundancy. The distinct-1 and distinct-2 scores further confirm that the dataset maintains meaningful variation in phrasing across reformulations. As additional Factory I/O systems are in-"
+  },
+  {
+    "chunk_id": "sample_docling_70",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "Table 6 Token Diversity Metrics Across Individual Systems and the Full Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_71",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "Table 7 Self-BLEU Evaluation Across Individual Systems and the Full Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_72",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "Table 8 Syntactic parse tree depth statistics Across Individual Systems and the Full Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_73",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "corporated, we expect greater lexical diversity due to the introduction of new components and system behaviors."
+  },
+  {
+    "chunk_id": "sample_docling_74",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "To further evaluate linguistic diversity, we measured Self-BLEU scores across the dataset. SelfBLEU quantifies how similar each sentence is to others within the same set, with lower scores indicating higher diversity. As shown in Table 7 , the average Self-BLEU score for AutoFactory is 0.9984, with a minimum of 0.9510 and a standard deviation of 0.0045. These high values reflect the dataset's design, where each set of specifications reformulates the same base scenario using consistent technical components. Despite this structural consistency, LLM-generated reformulations still produce varied sentence constructions, preserving diversity in expression"
+  },
+  {
+    "chunk_id": "sample_docling_75",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": ". As AutoFactory expands to include more Factory I/O systems, the range of sentence patterns and inter-sentence variability is expected to increase accordingly."
+  },
+  {
+    "chunk_id": "sample_docling_76",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "To assess syntactic complexity, we measured the depth of syntactic parse trees for each sentence. A deeper tree generally indicates a more complex sentence structure. As shown in Table 8 , the average parse depth in AutoFactory is 22.51, with System 3 having the highest average at 33.36. The depth ranges from 11 to 59, showing that the dataset includes both simple and complex sentence constructions. These variations reflect the natural differences in how requirements can be expressed, even when describing the same system. The inclusion of multiple sentence types supports the development of models that can handle a range of syntactic forms"
+  },
+  {
+    "chunk_id": "sample_docling_77",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": ". As more systems are added in future versions, the variety of sentence structures is expected to grow further."
+  },
+  {
+    "chunk_id": "sample_docling_78",
+    "source": "sample.pdf",
+    "page": 8,
+    "type": "text",
+    "content": "The AutoFactory dataset combines consistent semantic content with diverse linguistic expressions grounded in real Factory I/O scenarios. Although this initial version includes only 3 out of 21 available systems, it already reflects a wide range of sentence structures, grammatical patterns, and technical components. This variation is not the result of random or superficial reformulation, but reflects the different ways engineers naturally express similar control behaviors."
+  },
+  {
+    "chunk_id": "sample_docling_79",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "* Phase 1: Data Generation"
+  },
+  {
+    "chunk_id": "sample_docling_80",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "In the first step, different requirement specifications are manually written to describe the behavior of components commonly used"
+  },
+  {
+    "chunk_id": "sample_docling_81",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "in automated manufocturing systems. These specifications are created following the best practices and documentation"
+  },
+  {
+    "chunk_id": "sample_docling_82",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "standards of industry leaders such as Siemens. Schneider"
+  },
+  {
+    "chunk_id": "sample_docling_83",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Electric, and Allen-Brodley. This baseline dataset provides a solid foundation that will later be expanded through automatic"
+  },
+  {
+    "chunk_id": "sample_docling_84",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "generation using large language models."
+  },
+  {
+    "chunk_id": "sample_docling_85",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "In this step. prompts are designed to guide large language models in rewriting the baseline requirement specifications. The"
+  },
+  {
+    "chunk_id": "sample_docling_86",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "prompt clearly instructs the model to keep the some technicol content while expressing i differently by changing the wording."
+  },
+  {
+    "chunk_id": "sample_docling_87",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "sentence structures, and style. This method ensures that the meaning remains identical while generating new variations of"
+  },
+  {
+    "chunk_id": "sample_docling_88",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "the original specifications."
+  },
+  {
+    "chunk_id": "sample_docling_89",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Large Language Model (LLM) Selection such as ChatGPT Pro. Claude Pro, and Mistral Pro because they"
+  },
+  {
+    "chunk_id": "sample_docling_90",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "can produce accurate, well-structured variations without oltering the original information. Using multiple LLMs helps to enrich the"
+  },
+  {
+    "chunk_id": "sample_docling_91",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dataset by introducing natural diversity in writing styles."
+  },
+  {
+    "chunk_id": "sample_docling_92",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "After generation, a Python script is used to automatically remove duplicate requirement specifications. To ensure the quality of the"
+  },
+  {
+    "chunk_id": "sample_docling_93",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dataset, a sampling approach is applied, where a selected portion of the generated data is manually reviewed to verity"
+  },
+  {
+    "chunk_id": "sample_docling_94",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "accuracy, consistency, and technical correctness. This process combines automation and human volidation to deliver a clean"
+  },
+  {
+    "chunk_id": "sample_docling_95",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "and reliable dotoset for the labeling phase"
+  },
+  {
+    "chunk_id": "sample_docling_96",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "* Phase 2: Requirement Labeling are imported into a custom offline labeling tool developed"
+  },
+  {
+    "chunk_id": "sample_docling_97",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "nonual arnotation while enduring date privacy and fixbity in specifically for this project. The tool is designed to support"
+  },
+  {
+    "chunk_id": "sample_docling_98",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "At this unstructured,"
+  },
+  {
+    "chunk_id": "sample_docling_99",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "* Phase 3: Dataset Export into three subsets: training, volidation, and testing. This step"
+  },
+  {
+    "chunk_id": "sample_docling_100",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "ensures that Al models can leom from one port of the data."
+  },
+  {
+    "chunk_id": "sample_docling_101",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "odjust their settings with another part, and finally be evaluoted"
+  },
+  {
+    "chunk_id": "sample_docling_102",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Fig. 4. Structured Workflow for the Construction of the AutoFactory Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_103",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "creating domain-specific labels. Organizing the dotaset within"
+  },
+  {
+    "chunk_id": "sample_docling_104",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "the tool prepares it for systematic component identification and"
+  },
+  {
+    "chunk_id": "sample_docling_105",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Component Identification and Tagging"
+  },
+  {
+    "chunk_id": "sample_docling_106",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "oge. the requirement spectications are"
+  },
+  {
+    "chunk_id": "sample_docling_107",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "staining descriptions withou"
+  },
+  {
+    "chunk_id": "sample_docling_108",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dentification of components. Through manual labeling, key"
+  },
+  {
+    "chunk_id": "sample_docling_109",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "elements such os actuators, pre-octuctors, and sensors ore"
+  },
+  {
+    "chunk_id": "sample_docling_110",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dentified and togged within the text. This transformation from"
+  },
+  {
+    "chunk_id": "sample_docling_111",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "unstructured to structured data is essential to prepare the"
+  },
+  {
+    "chunk_id": "sample_docling_112",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dataset for training Al models copoble of recognizing and"
+  },
+  {
+    "chunk_id": "sample_docling_113",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "extracting technical components outomatically"
+  },
+  {
+    "chunk_id": "sample_docling_114",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Application of the BIO Tagging Scheme"
+  },
+  {
+    "chunk_id": "sample_docling_115",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "To standardize the labeling process, the BRO (Begin, Inside."
+  },
+  {
+    "chunk_id": "sample_docling_116",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Outside) tagging scheme is appled to all identified components."
+  },
+  {
+    "chunk_id": "sample_docling_117",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Each word in the text is assigned a tog indicoting whether it is ot"
+  },
+  {
+    "chunk_id": "sample_docling_118",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "ox curite ony labeled enty. Using the BO format enures ev"
+  },
+  {
+    "chunk_id": "sample_docling_119",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "the dotaset is compotible with standard Named Entity"
+  },
+  {
+    "chunk_id": "sample_docling_120",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Recognition models used in AL."
+  },
+  {
+    "chunk_id": "sample_docling_121",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Manual Annotation Verification"
+  },
+  {
+    "chunk_id": "sample_docling_122",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "To ensure the quality of the arnotations, a human validation"
+  },
+  {
+    "chunk_id": "sample_docling_123",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "step is appled after outomatic labeling. A selected portion of the"
+  },
+  {
+    "chunk_id": "sample_docling_124",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "dataset is manualy reviewed to verity that coch component is"
+  },
+  {
+    "chunk_id": "sample_docling_125",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "correctly labeled according to its role in the system. This human"
+  },
+  {
+    "chunk_id": "sample_docling_126",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "intervention is essential to guarantee that the final dotoset is not"
+  },
+  {
+    "chunk_id": "sample_docling_127",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "purely synthetic. but combines automated generotion with"
+  },
+  {
+    "chunk_id": "sample_docling_128",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "export manuol verification."
+  },
+  {
+    "chunk_id": "sample_docling_129",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "on new data they have never seen before. Splitting the dataset"
+  },
+  {
+    "chunk_id": "sample_docling_130",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "In this way is important to train models that work correctly and"
+  },
+  {
+    "chunk_id": "sample_docling_131",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "After splitting, the datoset is formotted following the CoNLL-"
+  },
+  {
+    "chunk_id": "sample_docling_132",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "2003 standard, which is commonly used for Named Entity"
+  },
+  {
+    "chunk_id": "sample_docling_133",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Recognition tasks. This format organizes each word. its"
+  },
+  {
+    "chunk_id": "sample_docling_134",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "corresponding label, and its position in the text in a clear and"
+  },
+  {
+    "chunk_id": "sample_docling_135",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "structured way. Formatting the dataset ensures that it can be"
+  },
+  {
+    "chunk_id": "sample_docling_136",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "casay usca with sionaara a moots and notural languags"
+  },
+  {
+    "chunk_id": "sample_docling_137",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "processing frameworks."
+  },
+  {
+    "chunk_id": "sample_docling_138",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Documentation Preparation"
+  },
+  {
+    "chunk_id": "sample_docling_139",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "A clear and detoiled documentation is prepared to explain how"
+  },
+  {
+    "chunk_id": "sample_docling_140",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "the dotaset was created, labeled, and formatted. It olso gives"
+  },
+  {
+    "chunk_id": "sample_docling_141",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "Instructan on now to use the cataser correcy for researon one"
+  },
+  {
+    "chunk_id": "sample_docling_142",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "industrial applications. To make it easily occessible, the dataset"
+  },
+  {
+    "chunk_id": "sample_docling_143",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "and its documentation are shared openly with the research"
+  },
+  {
+    "chunk_id": "sample_docling_144",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "community on the Hugging Face plotform."
+  },
+  {
+    "chunk_id": "sample_docling_145",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "In the tina Step. the labeled dataser and as documentaton are"
+  },
+  {
+    "chunk_id": "sample_docling_146",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "grouped together and prepared for sharing. Using our labeling"
+  },
+  {
+    "chunk_id": "sample_docling_147",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "tool, the dotoset con be exported in several formats, including"
+  },
+  {
+    "chunk_id": "sample_docling_148",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "SV. JSON, Excel PLSX), and TXT, to make it easier for different"
+  },
+  {
+    "chunk_id": "sample_docling_149",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "users. The complete version is then made openly avoilable so"
+  },
+  {
+    "chunk_id": "sample_docling_150",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "that researchers and engineers can directly use it for Al model"
+  },
+  {
+    "chunk_id": "sample_docling_151",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "development in manufocturing systems."
+  },
+  {
+    "chunk_id": "sample_docling_152",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "The dataset integrates multiple layers of annotation including part-of-speech tags, named entity labels and syntactic parse depth which support both surface-level and structural language analysis. These features make AutoFactory a valuable resource for developing models that can understand and extract control-relevant information from textual specifications. To further validate this potential, the next section presents baseline experiments for named entity recognition using transformer-based models."
+  },
+  {
+    "chunk_id": "sample_docling_153",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "4. Experimental Design, Materials and Methods"
+  },
+  {
+    "chunk_id": "sample_docling_154",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "The AutoFactory dataset was developed to address a pressing limitation in the field of artificial intelligence for industrial automation. While recent advances in automation have transformed manufacturing systems, there remains a lack of publicly available datasets that support the automatic interpretation of requirement specifications and the generation of Programmable Logic Controller (PLC) code. Most existing natural language processing datasets are designed for general-purpose tasks, such as recognizing names, locations, or organizations"
+  },
+  {
+    "chunk_id": "sample_docling_155",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": ". These resources are insufficient for industrial applications, which require the identification and interpretation of technical components, including actuators, valves, sensors, and control behaviors. AutoFactory was created to fill this gap by offering a domain-specific, annotated dataset grounded in realistic manufacturing scenarios."
+  },
+  {
+    "chunk_id": "sample_docling_156",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "The dataset construction followed a structured three-phase methodology: specification generation, component annotation, and dataset preparation. The complete process is illustrated in Fig. 4 ."
+  },
+  {
+    "chunk_id": "sample_docling_157",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "In the first phase, a set of initial requirement specifications was manually written to describe the behavior of three manufacturing systems modeled in Factory I/O. These specifications were then expanded using large language models to produce linguistically diverse variants that preserve the same functional meaning. In the second phase, domain experts manually annotated the specifications using a BIO tagging scheme to identify key industrial components, including actuators, pre-actuators, sensors, and effectors"
+  },
+  {
+    "chunk_id": "sample_docling_158",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": ". In the third phase, the annotated data was structured and exported in multiple formats (CSV, XLSX), ensuring compatibility with machine learning tools and facilitating its use for training and evaluating AI models in industrial automation tasks."
+  },
+  {
+    "chunk_id": "sample_docling_159",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "5. Dataset Construction"
+  },
+  {
+    "chunk_id": "sample_docling_160",
+    "source": "sample.pdf",
+    "page": 9,
+    "type": "text",
+    "content": "To train AI systems that can understand requirement specifications, it is important to have data that reflects how real manufacturing systems are described. However, there are currently no"
+  },
+  {
+    "chunk_id": "sample_docling_161",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "Fig. 5. Example of a manufacturing system: Sorting Station composed of multiple components working together."
+  },
+  {
+    "chunk_id": "sample_docling_162",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "public datasets built for this purpose. Without such data, it becomes difficult to develop models that can detect and classify the main components used in automated systems."
+  },
+  {
+    "chunk_id": "sample_docling_163",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "To solve this problem, the AutoFactory dataset was built using a structured approach based on industrial systems modeled in Factory I/O. These virtual systems simulate realistic automation scenarios and were used as a starting point to write clear and complete requirement specifications. Each specification was manually written to describe the behavior of machines in these scenes."
+  },
+  {
+    "chunk_id": "sample_docling_164",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "To increase variety in how requirements are expressed, large language models were used to generate different versions of each original specification. These versions were reviewed by domain experts to make sure they kept the same meaning and were technically accurate. Finally, the data was cleaned and organized to remove duplicates and fix any small errors, resulting in a well-structured and high-quality dataset for research in industrial automation."
+  },
+  {
+    "chunk_id": "sample_docling_165",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "6. Baseline Data Creation"
+  },
+  {
+    "chunk_id": "sample_docling_166",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "The first step in creating the dataset is to write baseline requirement specifications for components commonly found in automated production systems. These specifications serve as the foundation of the dataset and provide clear and structured descriptions of how different manufacturing components operate. Since there are no publicly available datasets for this purpose, we manually create these specifications, following the best practices and documentation standards used by leading global companies in industrial automation, such as Siemens (Germany), Schneider Electric (France), and Allen-Bradley (USA)."
+  },
+  {
+    "chunk_id": "sample_docling_167",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "Automated manufacturing systems are made up of many parts, or components, that work together to complete tasks. For example, a system may have cylinders, conveyor belts, sensors, and motors. Each of these components has its own role, and together they form a complex system (see Fig. 5 )."
+  },
+  {
+    "chunk_id": "sample_docling_168",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "A sorting station, is an example of such a system. It consists of different com ponents, such as conveyors, vision sensors, and sorting mechanisms, that work together to classify and transport items. Each component plays a distinct role in the process, contributing to the overall system functionality."
+  },
+  {
+    "chunk_id": "sample_docling_169",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "To capture this, each baseline requirement specification represents the full functional logic of a selected manufacturing system, combining multiple components into a coherent operational flow. Rather than isolating components, the specification explains how actuators (e.g., doubleacting cylinders, electric motors), pre-actuators (e.g., contactors, solenoid valves), sensors (e.g., inductive sensors, limit switches), and effectors (e.g., conveyor belts, pop-up sorters) interact to perform specific tasks."
+  },
+  {
+    "chunk_id": "sample_docling_170",
+    "source": "sample.pdf",
+    "page": 10,
+    "type": "text",
+    "content": "This version of the dataset includes three representative manufacturing systems modeled in Factory I/O: a single conveyor belt transport system, a dual conveyor belt system, and a dual conveyor system with a transfer cylinder. These systems were selected because they contain a wide range of commonly used industrial components, such as start buttons, contac-"
+  },
+  {
+    "chunk_id": "sample_docling_171",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "Table 9 Baseline Requirement Specifications for Selected Factory I/O Systems."
+  },
+  {
+    "chunk_id": "sample_docling_172",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "tors, electric motors, photoelectric sensors, and double-acting cylinders. Each system reflects realistic operational logic typically implemented in programmable logic controller (PLC)-based environments."
+  },
+  {
+    "chunk_id": "sample_docling_173",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "Each requirement specification captures the functional behavior of a complete manufacturing system. The descriptions include triggering conditions, sequences of component activations, and terminal states. This structure ensures that the specifications not only reflect the vocabulary of industrial automation but also convey the relationships between sensors, actuators, preactuators, and effectors within each operational cycle. Such modeling is essential for training AI systems to identify entities and understand control logic in natural language."
+  },
+  {
+    "chunk_id": "sample_docling_174",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "To illustrate the nature of the specifications, Table 9 provides examples of the baseline manufacturing systems included in the dataset. Each specification offers a coherent narrative describing how the system responds to external inputs and internal conditions to achieve its intended functionality."
+  },
+  {
+    "chunk_id": "sample_docling_175",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "Each system is also accompanied by its Factory I/O scene file, tag documentation, and multiangle screenshots to support reproducibility. These baseline specifications serve as the core data from which further linguistic variants are generated in the following stage."
+  },
+  {
+    "chunk_id": "sample_docling_176",
+    "source": "sample.pdf",
+    "page": 11,
+    "type": "text",
+    "content": "To train AI models that can understand requirement specifications, it is important to provide them with a large amount of varied data. In real industrial settings, different engineers often describe the same system in different ways. They may use different words, sentence structures, or levels of detail, depending on their experience and writing style. These differences do not change the meaning but affect how the information is presented. For AI models to perform well, they must be trained on examples that reflect this diversity."
+  },
+  {
+    "chunk_id": "sample_docling_177",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "To introduce this variation, large language models (LLMs) are used to rewrite each baseline requirement specification into multiple versions. The goal is to generate linguistically diverse examples while preserving the original technical meaning. LLMs have demonstrated strong capabilities across various domains, including engineering, and can be guided to produce high-quality paraphrases when given clear instructions."
+  },
+  {
+    "chunk_id": "sample_docling_178",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "For each baseline requirement specification, the model is asked to produce three distinct formulations. To ensure consistency and accuracy, the generation process is guided by a structured prompt:"
+  },
+  {
+    "chunk_id": "sample_docling_179",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "\"Rewrite the following requirement specification in three different ways. Keep the technical details the same, but use different wording and sentence structures.\""
+  },
+  {
+    "chunk_id": "sample_docling_180",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "This prompt encourages the model to retain the functional content of the specification while varying its surface form. By applying this method, the dataset captures the natural variability in how requirement specifications are written. This enhances the model's ability to understand technical content expressed in different ways, making it more robust when applied to real-world industrial texts."
+  },
+  {
+    "chunk_id": "sample_docling_181",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "8. Large Language Model (LLM) Selection"
+  },
+  {
+    "chunk_id": "sample_docling_182",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "Once the prompts were designed, the next step involved selecting large language models capable of rewriting requirement specifications while preserving their technical meaning. The reliability and usefulness of the dataset depend directly on the ability of these models to produce accurate and readable variants of the original specifications. Not all language models meet these criteria. Some may omit key details, alter the intended logic, or produce output that lacks technical clarity. It is therefore essential to carefully select models that can maintain both syntactic coherence and semantic fidelity."
+  },
+  {
+    "chunk_id": "sample_docling_183",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "To address this, we selected three high-performance models: ChatGPT Pro, Claude Pro, and Mistral Pro. These models were chosen for their ability to generate structured and technically accurate language. Unlike basic paraphrasing tools that rely on synonym replacement, these advanced models can restructure entire sentences and vary lexical choices while preserving the core information. This capacity is essential for building a dataset that reflects the natural variability observed in how different engineers describe the same system."
+  },
+  {
+    "chunk_id": "sample_docling_184",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "Each model was applied to the same set of baseline specifications to produce multiple reformulations. The outputs were collected and organized as unlabeled text variants to increase linguistic diversity in the dataset. By using multiple models, we reduce the risk of stylistic bias and improve the generalizability of future AI systems trained on this data."
+  },
+  {
+    "chunk_id": "sample_docling_185",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "Table 10 presents an example of a baseline requirement specification followed by three rewritten versions generated by the selected LLMs. These examples illustrate how the same technical content can be expressed differently across models while preserving its meaning and structure."
+  },
+  {
+    "chunk_id": "sample_docling_186",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "To make sure that the requirement specifications generated by large language models (LLMs) keep the same meaning as the original ones, we performed a similarity check. This is an important step, because while the goal is to create different versions using new words and sentence structures, the meaning of the requirement must not change. In industrial systems, even small changes in meaning can lead to incorrect behavior, so it is essential to verify that the information is still correct."
+  },
+  {
+    "chunk_id": "sample_docling_187",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "We used cosine similarity to compare each rewritten specification to the original. This method works by converting sentences into numbers (called embeddings) and then measuring how close they are. A high score means that the two sentences are very similar in meaning, even if they are written differently."
+  },
+  {
+    "chunk_id": "sample_docling_188",
+    "source": "sample.pdf",
+    "page": 12,
+    "type": "text",
+    "content": "The results show that the rewritten specifications are very close to the original ones. Across the entire dataset, the average similarity score was 0.9275, and the median score was 0.9389. Even the lowest score was 0.7105, which means that no rewritten version introduced major"
+  },
+  {
+    "chunk_id": "sample_docling_189",
+    "source": "sample.pdf",
+    "page": 13,
+    "type": "text",
+    "content": "Table 10 Reformulated Requirement Specifications Generated by LLMs."
+  },
+  {
+    "chunk_id": "sample_docling_190",
+    "source": "sample.pdf",
+    "page": 13,
+    "type": "text",
+    "content": "Table 11 Semantic Similarity Metrics between Original and Augmented Specifications."
+  },
+  {
+    "chunk_id": "sample_docling_191",
+    "source": "sample.pdf",
+    "page": 13,
+    "type": "text",
+    "content": "Fig. 6. Distribution of similarity scores across all rewritten requirement specifications."
+  },
+  {
+    "chunk_id": "sample_docling_192",
+    "source": "sample.pdf",
+    "page": 13,
+    "type": "text",
+    "content": "changes. These findings are summarized in Table 11 , and the distribution of similarity scores is visualized in Fig. 6 ."
+  },
+  {
+    "chunk_id": "sample_docling_193",
+    "source": "sample.pdf",
+    "page": 13,
+    "type": "text",
+    "content": "These results confirm that the rewritten requirement specifications maintain the original meaning while introducing variation in wording and sentence structure. This validation step is essential to ensure that the augmented data is both diverse and technically accurate. Such consistency is necessary to support effective training of AI models on real-world industrial instructions."
+  },
+  {
+    "chunk_id": "sample_docling_194",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "9. Data Post-processing"
+  },
+  {
+    "chunk_id": "sample_docling_195",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "After generating multiple versions of the requirement specifications using large language models (LLMs), a post-processing step was necessary to ensure the quality and consistency of the dataset. This phase aimed to remove duplicated content, correct potential inconsistencies, and prepare the data for annotation."
+  },
+  {
+    "chunk_id": "sample_docling_196",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "LLMs sometimes produce identical or nearly identical outputs, and in some cases, introduce small errors, unclear phrasing, or deviations from the original specification. To address this, we applied an automated filtering step to remove exact and near-duplicate texts. A Python script was used to compare all generated outputs and retain only unique formulations, helping preserve linguistic diversity while eliminating unnecessary repetition."
+  },
+  {
+    "chunk_id": "sample_docling_197",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "In addition to duplication, some generated specifications included errors or deviated from the required format. To resolve this, a manual review was conducted on a representative sample of the dataset. Three domain experts reviewed the selected entries to check that each requirement specification was grammatically correct, followed the intended structure, and accurately described the system behavior. Any texts containing unclear descriptions, factual errors, or formatting issues were either corrected or excluded."
+  },
+  {
+    "chunk_id": "sample_docling_198",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "To verify that the LLM-generated specifications remained semantically aligned with the original descriptions, we also performed a quantitative analysis using cosine similarity on sentence embeddings. Table 11 summarizes the similarity scores across the three systems and the overall dataset. The average similarity was 0.9275, with a minimum of 0.7105 and a maximum of 0.9924, indicating that the rewritten specifications preserved the original meaning while introducing useful variation."
+  },
+  {
+    "chunk_id": "sample_docling_199",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "After filtering and reviewing the generated texts, the dataset was clean and diverse but remained unstructured. Although each requirement specification described the full behavior of a manufacturing system, it did not explicitly indicate which terms referred to specific components. To make the data suitable for supervised learning, a final step was required to add structure through annotation. This involved identifying and labeling relevant terms so that AI models could learn to detect them automatically. The next section explains how this was done using Named Entity Recognition (NER) to assign labels to key elements within each specification. To make the dataset usable for supervised learning, each requirement specification must be structured in a way that allows machines to detect and classify key elements, such as the input and output components of a manufacturing system. Although the generated texts describe system behavior clearly, they do not explicitly indicate which words refer to physical components. To address this, we manually labeled the dataset using Named Entity Recognition (NER), following a consistent and interpretable annotation format."
+  },
+  {
+    "chunk_id": "sample_docling_200",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "Annotation was carried out by our research team, composed of three domain experts. The process was conducted entirely manually using our offline labeling tool, AutoLabel-NER, developed to support annotation of technical texts. As shown in Fig. 7 , the tool provides a simple interface that allows annotators to assign a label to each token in a requirement specification. Each token is categorized into one of five NER classes: Sensor, Actuator, Pre-actuator, Effector, or Others. To ensure structural clarity, we used the standard BIO tagging scheme, where multi-word component names such as double acting cylinder are encoded as B-ACTUATOR, I-ACTUATOR, IACTUATOR"
+  },
+  {
+    "chunk_id": "sample_docling_201",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": ". This f ormat is widely used in NER applications to distinguish the beginning and continuation of entity spans."
+  },
+  {
+    "chunk_id": "sample_docling_202",
+    "source": "sample.pdf",
+    "page": 14,
+    "type": "text",
+    "content": "The full dataset includes 2358 annotated requirement specifications. To ensure a manageable and high-quality review process, a subset of 300 specifications was selected for crossverification. The dataset was equally divided among the three annotators. Each expert labeled approximately one-third of the total (around 786 specifications), and a rotational review pro-"
+  },
+  {
+    "chunk_id": "sample_docling_203",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "the double-acing cylinder is concied by a bely Scenard wile. the cylinder hoves told with leaches the the Santo and the leads to the be lit See stem includes a doutie-acting cylnder controled by a 522-asy solencidale. The Cylnder moves forward uti treaches the Elt Satch and Then retacts"
+  },
+  {
+    "chunk_id": "sample_docling_204",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "double-acting cylinder [ACTUATOR] (Tokens: 2) (1.4-1.26)"
+  },
+  {
+    "chunk_id": "sample_docling_205",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "start push button [SENSOR) (Tokens: 3) (3.95-3.112)) start button (SENSOR) (Tokens: 2) (3.150-3.162) \u2022 button (SENSOR) (Tokens: 2) (3.239-3.250)"
+  },
+  {
+    "chunk_id": "sample_docling_206",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "I ACTUATOR) (Tokens: 1) (3.270-3273)"
+  },
+  {
+    "chunk_id": "sample_docling_207",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "single-acting cylinder [ACTUATOR) (Tokens: 2) (5.4-5.26)|"
+  },
+  {
+    "chunk_id": "sample_docling_208",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "3/2-way solenoid valve [PREACTUATOR) (Tokens: 3) (5.40-5.68)"
+  },
+  {
+    "chunk_id": "sample_docling_209",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "FL limit switch [SENSOR] (Tokens: 3) (5.112-5.127)"
+  },
+  {
+    "chunk_id": "sample_docling_210",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "mit switch [SENSOR) (Tokens: 3) (5.185-5.200)"
+  },
+  {
+    "chunk_id": "sample_docling_211",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "start button [SENSOR) (Tokens: 2) (5.232-5.244)"
+  },
+  {
+    "chunk_id": "sample_docling_212",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "der [ACTUATOR) (Tokens: 2) (7.36-7.58)"
+  },
+  {
+    "chunk_id": "sample_docling_213",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "\u2022 (PREACTUATOR) (Tokens: 3) (7.75-7.97)"
+  },
+  {
+    "chunk_id": "sample_docling_214",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "DOR, (Tokens: 3)(1.19/-1-102)"
+  },
+  {
+    "chunk_id": "sample_docling_215",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "(Tokens: 3) (7.188-7.203)"
+  },
+  {
+    "chunk_id": "sample_docling_216",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "ORg (Tokens: 3) (9.144-9.161)"
+  },
+  {
+    "chunk_id": "sample_docling_217",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "ens: 1) (9.235-9.244)"
+  },
+  {
+    "chunk_id": "sample_docling_218",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "REACTUATOR) (Tokens: 1) (9.367-9.376)"
+  },
+  {
+    "chunk_id": "sample_docling_219",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "KM1 [ACTUATOR) (Tokens: 1) (9.401-9.404)"
+  },
+  {
+    "chunk_id": "sample_docling_220",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "ler [ACTUATOR) (Tokens: 2) (11.22-11.44)"
+  },
+  {
+    "chunk_id": "sample_docling_221",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "3/2-way solenoid valve (PREACTUATOR| (Tokens: 3) (11.61.11.81"
+  },
+  {
+    "chunk_id": "sample_docling_222",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "start button [SENSOR) (Tokens: 2) (11.94-11.106)|"
+  },
+  {
+    "chunk_id": "sample_docling_223",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "FL. Imit switch [SENSOR) (Tokens: 3) (11.226-11.241)|"
+  },
+  {
+    "chunk_id": "sample_docling_224",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "RI Imit switch ISFNSORI /Tokene: 31/11 389-11.397)"
+  },
+  {
+    "chunk_id": "sample_docling_225",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "KM1 [ACTUATOR) (Tokens: 1) (3.179-3.182)"
+  },
+  {
+    "chunk_id": "sample_docling_226",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "Fig. 7. User Interface of Our Custom Labeling Tool."
+  },
+  {
+    "chunk_id": "sample_docling_227",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "Table 12 Token Counts per NER Label Across 300 Reviewed Requirement Specifications."
+  },
+  {
+    "chunk_id": "sample_docling_228",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "Table 13 Inter-annotator agreement scores (Cohen's Kappa)."
+  },
+  {
+    "chunk_id": "sample_docling_229",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "cedure was implemented. Annotator 1 reviewed 100 examples from Annotator 2, Annotator 2 reviewed 100 from Annotator 3, and Annotator 3 reviewed 100 from Annotator 1. This process supported consistency checking across the team."
+  },
+  {
+    "chunk_id": "sample_docling_230",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "This review process helped identify disagreements and guided harmonization of annotation practices. Using this shared subset, Cohen's Kappa was computed to measure inter-annotator agreement. The final average kappa score was 0.856, which indicates strong agreement."
+  },
+  {
+    "chunk_id": "sample_docling_231",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "The distribution of token-level annotations within the reviewed sample is provided in Table 12 , while Table 13 presents the computed inter-annotator agreement scores."
+  },
+  {
+    "chunk_id": "sample_docling_232",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "This manual annotation process transformed the dataset from unstructured text into a labeled resource suitable for training AI systems to identify and extract relevant entities ( Table 14 ). The NER labels directly support the detection of input and output components in requirement specifications, which is essential for downstream applications in control logic synthesis and industrial automation."
+  },
+  {
+    "chunk_id": "sample_docling_233",
+    "source": "sample.pdf",
+    "page": 15,
+    "type": "text",
+    "content": "This initial version of the AutoFactory dataset represents a significant contribution to the field of AI for manufacturing. By releasing it to the research community, the objective is to accelerate progress in systems that can interpret natural language requirement specifications and convert them into executable control logic. The next stage involves fine-tuning large language models"
+  },
+  {
+    "chunk_id": "sample_docling_234",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "Sample of NER-Annotated Requirements with POS Tags and Tokenization."
+  },
+  {
+    "chunk_id": "sample_docling_235",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "Table 15 Architectural Comparison of the Transformer Models."
+  },
+  {
+    "chunk_id": "sample_docling_236",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "(LLMs) on this labeled data to evaluate their ability to extract components and understand system behavior from natural language."
+  },
+  {
+    "chunk_id": "sample_docling_237",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "10.1. Benchmarking and Model Fine-tuning"
+  },
+  {
+    "chunk_id": "sample_docling_238",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "The transformer models selected for this study were chosen to provide a representative sample of architectures commonly used in sequence labeling tasks ( Table 15 ). Three models were evaluated: BERT-Base, BERT-Large, and DistilBERT-Base. These models differ in size, depth, and computational requirements, allowing for a comparative analysis of performance versus efficiency on domain-specific Named Entity Recognition (NER) tasks."
+  },
+  {
+    "chunk_id": "sample_docling_239",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "BERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention heads, amounting to 110 million parameters. BERT-Large expands this architecture to 24 layers with 1024 hidden units and 16 attention heads, resulting in a total of 340 million parameters. In contrast, DistilBERT-Base is a lighter model designed for faster training and inference. It compresses BERT-Base to 6 layers while retaining the same hidden size and number of attention heads, yielding a total of 66 million parameters."
+  },
+  {
+    "chunk_id": "sample_docling_240",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "These differences provide useful contrasts when assessing model suitability for industrial language processing, especially in scenarios where deployment constraints or training resources are limited."
+  },
+  {
+    "chunk_id": "sample_docling_241",
+    "source": "sample.pdf",
+    "page": 16,
+    "type": "text",
+    "content": "To enable automatic identification of control components from natural language requirement specifications, the selected transformer models were fine-tuned on the annotated AutoFactory"
+  },
+  {
+    "chunk_id": "sample_docling_242",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "Best Evaluation Metrics Across Models Model Comparison Across Evaluation Metrics"
+  },
+  {
+    "chunk_id": "sample_docling_243",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert large uncased distilbert distibert base cased"
+  },
+  {
+    "chunk_id": "sample_docling_244",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "Fig. 8. Model Performance Comparison Across Evaluation Metrics."
+  },
+  {
+    "chunk_id": "sample_docling_245",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert base uncased"
+  },
+  {
+    "chunk_id": "sample_docling_246",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert large uncased"
+  },
+  {
+    "chunk_id": "sample_docling_247",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "distilbert distibert base cased"
+  },
+  {
+    "chunk_id": "sample_docling_248",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "- bert bert base uncased"
+  },
+  {
+    "chunk_id": "sample_docling_249",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "\u2022 bert bert large uncased"
+  },
+  {
+    "chunk_id": "sample_docling_250",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "stilbert distibert base cased"
+  },
+  {
+    "chunk_id": "sample_docling_251",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert base uncased"
+  },
+  {
+    "chunk_id": "sample_docling_252",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert large uncased"
+  },
+  {
+    "chunk_id": "sample_docling_253",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "distilbert distilbert base cased"
+  },
+  {
+    "chunk_id": "sample_docling_254",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert base uncased"
+  },
+  {
+    "chunk_id": "sample_docling_255",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "bert bert large uncased"
+  },
+  {
+    "chunk_id": "sample_docling_256",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "distilbert distilbert base cased"
+  },
+  {
+    "chunk_id": "sample_docling_257",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "Fig. 9. Evaluation of Transformer Models Based on Best F1-Scores."
+  },
+  {
+    "chunk_id": "sample_docling_258",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "dataset using a Named Entity Recognition (NER) framework. The task involved classifying each token into one of five predefined categories: Actuator, Pre-actuator, Sensor, Effector, or Others, using the BIO tagging scheme. Fine-tuning was conducted on a consistent experimental setup to allow fair comparison."
+  },
+  {
+    "chunk_id": "sample_docling_259",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "All models were trained for three epochs with a learning rate of 5e-5 and a batch size of 16. The optimization objective was to minimize the cross-entropy loss between the predicted and true token-level labels. Evaluation was performed on a held-out test set representing 10 % of the dataset. Metrics used for performance assessment included Precision, Recall, F1 Score, and Evaluation Loss. These metrics were selected to reflect both the correctness and completeness of entity detection, which are critical for downstream automation tasks."
+  },
+  {
+    "chunk_id": "sample_docling_260",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "The results clearly demonstrate that DistilBERT-Base achieved the highest performance across all evaluation metrics, with an F1 score of 0.9505, precision of 0.9476, and recall of 0.9534. Despite being the smallest model in terms of parameters, it outperformed the larger BERT models not only in accuracy but also in training stability and convergence. These findings are visually summarized in Figs. 8, 9 and Table 16 ."
+  },
+  {
+    "chunk_id": "sample_docling_261",
+    "source": "sample.pdf",
+    "page": 17,
+    "type": "text",
+    "content": "The results confirm that the AutoFactory dataset is well-suited for training transformer models to recognize key control components in industrial requirement specifications. The fine-tuned models achieved high accuracy and demonstrated the potential for integrating such approaches into intelligent automation workflows."
+  },
+  {
+    "chunk_id": "sample_docling_262",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "Table 16 Performance Comparison of Transformer Models Fine-Tuned on the AutoFactory Dataset."
+  },
+  {
+    "chunk_id": "sample_docling_263",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "The current version of the AutoFactory dataset includes a limited number of requirement specifications, covering approximately 3 out of 21 available scenarios from Factory I/O. While it addresses a range of manufacturing systems, the diversity of scenarios and components could be significantly expanded. Future updates will aim to include a broader variety of manufacturing systems and more comprehensive coverage of industrial processes. The dataset is currently available in CSV and XLSX formats. To enhance accessibility and usability, future versions will include additional file formats, such as JSON and XML, to accommodate different user preferences and requirements"
+  },
+  {
+    "chunk_id": "sample_docling_264",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": ". All updates will be published on the same Hugging Face page mentioned in the 'Data Accessibility' section of the table above. These updates will help the dataset grow and better support AI research in manufacturing."
+  },
+  {
+    "chunk_id": "sample_docling_265",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "The authors have read and adhere to the ethical requirements for publication in Data in Brief. This work does not involve human subjects, animal experiments, or any data collected from social media platforms. It focuses solely on the creation and use of a dataset derived from synthetic requirement specifications generated by large language models for manufacturing systems, which was then carefully reviewed and verified by domain experts, ensuring compliance with ethical guidelines applicable to artificial intelligence research and data publication."
+  },
+  {
+    "chunk_id": "sample_docling_266",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "AutoFactory (Original data) (Hugging Face)."
+  },
+  {
+    "chunk_id": "sample_docling_267",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors."
+  },
+  {
+    "chunk_id": "sample_docling_268",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "Declaration of Competing Interest"
+  },
+  {
+    "chunk_id": "sample_docling_269",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper."
+  },
+  {
+    "chunk_id": "sample_docling_270",
+    "source": "sample.pdf",
+    "page": 18,
+    "type": "text",
+    "content": "M. Rodriguez, N. Dhameliya, B. Patel, AI-driven programmable logic controllers: enhancing automation in industrial processes, Robot. Xplore USA Tech. Dig. 1 (1) (Mar. 2024) 1-14 ."
+  },
+  {
+    "chunk_id": "sample_docling_271",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "A . Boudribila, A . Tajer, Z. Boulghasoul, 'From Natural Language to Code: AI Automation in Cyber-Physical Manufacturing Systems', Proc. 2024 World Conf. Complex Syst. (WCCS) (Nov. 2024) pp. 1-6, doi: 10.1109/WCCS59409.2024. 10412345 ."
+  },
+  {
+    "chunk_id": "sample_docling_272",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "Y. Qamsane, Abdelouahed Tajer, A. Philippot, Towards an approach of synthesis, validation and implementation of distributed control for AMS by using events ordering relations, Int. J. Prod. Res. 55 (21) (Nov. 2017) 6235-6253, doi: 10.1080/00207543.2017.1333648 ."
+  },
+  {
+    "chunk_id": "sample_docling_273",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "A . Boudribila, M.-A . Chadi, A . Tajer, Z. Boulghasoul, Large Language Models and Adversarial Reinforcement Learning to Automate PLCs Programming: A Preliminary Investigation, Proc. 2023 9th Int. Conf. Control, Decision Inf. Technol. (CoDIT) (2023) 650-655, doi: 10.1109/CoDIT56788.2023.10167432 ."
+  },
+  {
+    "chunk_id": "sample_docling_274",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "A. Boudribila, 'AutoFactory' Hugging Face, 2025. [Online]. Available: https://huggingface.co/datasets/boudribila/ AutoFactory . doi:10.57967/hf/5011 ."
+  },
+  {
+    "chunk_id": "sample_docling_275",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "E.F.T.K. Sang, F.D. Meulder, Introduction to the CoNLL-2003 shared task: language-independent named entity recognition, arXiv (Jun. 12, 2003) arXiv:cs/0306050, doi: 10.48550/arXiv.cs/0306050 ."
+  },
+  {
+    "chunk_id": "sample_docling_276",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "A. Kumar, B. Starly, FabNER': information extraction from manufacturing process science domain literature using named entity recognition, J. Intell. Manuf. 33 (8) (Dec. 2022) 2393-2407, doi: 10.1007/s1084502101807x ."
+  },
+  {
+    "chunk_id": "sample_docling_277",
+    "source": "sample.pdf",
+    "page": 19,
+    "type": "text",
+    "content": "R. Li, P. Wang, L. Wang, D. Yang, D. Cai, A Corpus and Method for Chinese Named Entity Recognition in Manufacturing, Proc. 2024 Joint Int. Conf. Comput. Linguist., Lang. Resour. Eval. (LREC-COLING) (2024) 264-272 ."
+  }
+]

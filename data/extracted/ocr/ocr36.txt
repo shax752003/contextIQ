@@ -1,0 +1,50 @@
+10 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938
+
+Fig. 5. Example of a manufacturing system: Sorting Station composed of multiple components working together.
+
+public datasets built for this purpose. Without such data, it becomes difficult to develop models
+that can detect and classify the main components used in automated systems.
+
+To solve this problem, the AutoFactory dataset was built using a structured approach based
+on industrial systems modeled in Factory I/O. These virtual systems simulate realistic automation
+scenarios and were used as a starting point to write clear and complete requirement specifica-
+tions. Each specification was manually written to describe the behavior of machines in these
+scenes.
+
+To increase variety in how requirements are expressed, large language models were used
+to generate different versions of each original specification. These versions were reviewed by
+domain experts to make sure they kept the same meaning and were technically accurate. Finally,
+the data was cleaned and organized to remove duplicates and fix any small errors, resulting in
+a well-structured and high-quality dataset for research in industrial automation.
+
+6. Baseline Data Creation
+
+The first step in creating the dataset is to write baseline requirement specifications for com-
+ponents commonly found in automated production systems. These specifications serve as the
+foundation of the dataset and provide clear and structured descriptions of how different man-
+ufacturing components operate. Since there are no publicly available datasets for this purpose,
+we manually create these specifications, following the best practices and documentation stan-
+dards used by leading global companies in industrial automation, such as Siemens (Germany),
+Schneider Electric (France), and Allen-Bradley (USA).
+
+Automated manufacturing systems are made up of many parts, or components, that work to-
+gether to complete tasks. For example, a system may have cylinders, conveyor belts, sensors, and
+motors. Each of these components has its own role, and together they form a complex system
+(see Fig. 5).
+
+A sorting station, is an example of such a system. It consists of different components, such as
+conveyors, vision sensors, and sorting mechanisms, that work together to classify and transport
+items. Each component plays a distinct role in the process, contributing to the overall system
+functionality.
+
+To capture this, each baseline requirement specification represents the full functional logic of
+a selected manufacturing system, combining multiple components into a coherent operational
+flow. Rather than isolating components, the specification explains how actuators (e.g., double-
+acting cylinders, electric motors), pre-actuators (e.g., contactors, solenoid valves), sensors (e.g.,
+inductive sensors, limit switches), and effectors (e.g., conveyor belts, pop-up sorters) interact to
+perform specific tasks.
+
+This version of the dataset includes three representative manufacturing systems modeled
+in Factory I/O: a single conveyor belt transport system, a dual conveyor belt system, and a
+dual conveyor system with a transfer cylinder. These systems were selected because they con-
+tain a wide range of commonly used industrial components, such as start buttons, contac-

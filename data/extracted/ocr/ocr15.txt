@@ -1,60 +1,25 @@
-14 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938
+A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 19
 
-9. Data Post-processing
+A. Boudribila, A. Tajer, Z. Boulghasoul, “From Natural Language to Code: AI Automation in Cyber-Physical Manufac-
+turing Systems”, Proc. 2024 World Conf. Complex Syst. (WCCS) (Nov. 2024) pp. 1-6, doi:10.1109/WCCS59409.2024.
+10412345,
 
-After generating multiple versions of the requirement specifications using large language
-models (LLMs), a post-processing step was necessary to ensure the quality and consistency of
-the dataset. This phase aimed to remove duplicated content, correct potential inconsistencies,
-and prepare the data for annotation.
+Y. Qamsane, Abdelouahed Tajer, A. Philippot, Towards an approach of synthesis, validation and implementation of
+distributed control for AMS by using events ordering relations, Int. J. Prod. Res. 55 (21) (Nov. 2017) 6235-6253,
+doi: 10.1080/00207543.2017.1333648.
 
-LLMs sometimes produce identical or nearly identical outputs, and in some cases, introduce
-small errors, unclear phrasing, or deviations from the original specification. To address this, we
-applied an automated filtering step to remove exact and near-duplicate texts. A Python script
-was used to compare all generated outputs and retain only unique formulations, helping pre-
-serve linguistic diversity while eliminating unnecessary repetition.
+A. Boudribila, M.-A. Chadi, A. Tajer, Z. Boulghasoul, Large Language Models and Adversarial Reinforcement Learning
+to Automate PLCs Programming: A Preliminary Investigation, Proc. 2023 9th Int. Conf. Control, Decision Inf. Technol.
+(CoDIT) (2023) 650-655, doi: 10.1109/CoDIT56788.2023.10167432.
 
-In addition to duplication, some generated specifications included errors or deviated from
-the required format. To resolve this, a manual review was conducted on a representative sample
-of the dataset. Three domain experts reviewed the selected entries to check that each require-
-ment specification was grammatically correct, followed the intended structure, and accurately
-described the system behavior. Any texts containing unclear descriptions, factual errors, or for-
-matting issues were either corrected or excluded.
+A. Boudribila, “AutoFactory” Hugging Face, 2025. [Online]. Available: https://huggingface.co/datasets/boudribila/
+AutoFactory. doi:10.57967/hf/5011.
 
-To verify that the LLM-generated specifications remained semantically aligned with the orig-
-inal descriptions, we also performed a quantitative analysis using cosine similarity on sentence
-embeddings. Table 11 summarizes the similarity scores across the three systems and the over-
-all dataset. The average similarity was 0.9275, with a minimum of 0.7105 and a maximum of
-0.9924, indicating that the rewritten specifications preserved the original meaning while intro-
-ducing useful variation.
+E.FT.K. Sang, F.D. Meulder, Introduction to the CoNLL-2003 shared task: language-independent named entity recog-
+nition, arXiv (Jun. 12, 2003) arXiv:cs/0306050, doi: 10.48550/arXiv.cs/0306050.
 
-After filtering and reviewing the generated texts, the dataset was clean and diverse but re-
-mained unstructured. Although each requirement specification described the full behavior of a
-manufacturing system, it did not explicitly indicate which terms referred to specific components.
-To make the data suitable for supervised learning, a final step was required to add structure
-through annotation. This involved identifying and labeling relevant terms so that AI models
-could learn to detect them automatically. The next section explains how this was done using
-Named Entity Recognition (NER) to assign labels to key elements within each specification.
+A. Kumar, B. Starly, FabNER’: information extraction from manufacturing process science domain literature using
+named entity recognition, J. Intell. Manuf. 33 (8) (Dec. 2022) 2393-2407, doi: 10.1007/s10845-021-01807-x.
 
-10. Data Labeling
-
-To make the dataset usable for supervised learning, each requirement specification must be
-structured in a way that allows machines to detect and classify key elements, such as the in-
-put and output components of a manufacturing system. Although the generated texts describe
-system behavior clearly, they do not explicitly indicate which words refer to physical compo-
-nents. To address this, we manually labeled the dataset using Named Entity Recognition (NER),
-following a consistent and interpretable annotation format.
-
-Annotation was carried out by our research team, composed of three domain experts. The
-process was conducted entirely manually using our offline labeling tool, AutoLabel-NER, devel-
-oped to support annotation of technical texts. As shown in Fig. 7, the tool provides a simple
-interface that allows annotators to assign a label to each token in a requirement specification.
-Each token is categorized into one of five NER classes: Sensor, Actuator, Pre-actuator, Effector, or
-Others. To ensure structural clarity, we used the standard BIO tagging scheme, where multi-word
-component names such as double acting cylinder are encoded as B-ACTUATOR, I-ACTUATOR, I-
-ACTUATOR. This format is widely used in NER applications to distinguish the beginning and
-continuation of entity spans.
-
-The full dataset includes 2358 annotated requirement specifications. To ensure a manage-
-able and high-quality review process, a subset of 300 specifications was selected for cross-
-verification. The dataset was equally divided among the three annotators. Each expert labeled
-approximately one-third of the total (around 786 specifications), and a rotational review pro-
+R. Li, P. Wang, L. Wang, D. Yang, D. Cai, A Corpus and Method for Chinese Named Entity Recognition in Manufactur-
+ing, Proc. 2024 Joint Int. Conf. Comput. Linguist., Lang. Resour. Eval. (LREC-COLING) (2024) 264-272.
