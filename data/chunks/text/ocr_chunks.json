@@ -1,0 +1,1938 @@
+[
+  {
+    "chunk_id": "sample_ocr_ocr0_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 9\n\nDeka Si\n\nFig. 4. Structured Workflow for the Construction of the AutoFactory Dataset.\n\nThe dataset integrates multiple layers of annotation including part-of-speech tags, named en-\ntity labels and syntactic parse depth which support both surface-level and structural language\nanalysis. These features make AutoFactory a valuable resource for developing models that can\nunderstand and extract control-relevant information from textual specifications. To further vali-\ndate this potential, the next section presents baseline experiments for named entity recognition\nusing transformer-based models.\n\n4. Experimental Design, Materials and Methods",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr0_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset was developed to address a pressing limitation in the field of ar-\ntificial intelligence for industrial automation. While recent advances in automation have trans-\nformed manufacturing systems, there remains a lack of publicly available datasets that support\nthe automatic interpretation of requirement specifications and the generation of Programmable\nLogic Controller (PLC) code. Most existing natural language processing datasets are designed for\ngeneral-purpose tasks, such as recognizing names, locations, or organizations. These resources\nare insufficient for industrial applications, which require the identification and interpretation\nof technical components, including actuators, valves, sensors, and control behaviors. AutoFactory",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr0_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "of technical components, including actuators, valves, sensors, and control behaviors. AutoFactory\nwas created to fill this gap by offering a domain-specific, annotated dataset grounded in realistic\nmanufacturing scenarios.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr0_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The dataset construction followed a structured three-phase methodology: specification gen-\neration, component annotation, and dataset preparation. The complete process is illustrated in\nFig. 4.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr0_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In the first phase, a set of initial requirement specifications was manually written to describe\nthe behavior of three manufacturing systems modeled in Factory I/O. These specifications were\nthen expanded using large language models to produce linguistically diverse variants that pre-\nserve the same functional meaning. In the second phase, domain experts manually annotated the\nspecifications using a BIO tagging scheme to identify key industrial components, including actua-\ntors, pre-actuators, sensors, and effectors. In the third phase, the annotated data was structured\nand exported in multiple formats (CSV, XLSX), ensuring compatibility with machine learning\ntools and facilitating its use for training and evaluating AI models in industrial automation tasks.\n\n5. Dataset Construction",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr0_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "5. Dataset Construction\n\nTo train AI systems that can understand requirement specifications, it is important to have\ndata that reflects how real manufacturing systems are described. However, there are currently no",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "2 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To facilitate the annotation process, a custom labeling tool\nwas developed. It runs locally to preserve data privacy and\nprovides a user-friendly interface. The tool is adaptable to a\nwide range of NER tasks and allows researchers to customize\nlabels for different domains by adding or modifying tags.\nTo assess the practical value of the dataset, transformer-\nbased models such as BERT and DistiIBERT were fine-tuned\non the annotated requirement specifications. The highest-\nperforming model reached an F1-score of 0.95, confirming\nthe dataset\u2019s ability to support accurate identification of key\ncomponents in manufacturing systems.\nThis combination of human expertise and Al-based augmen-\ntation provides a robust foundation for training Al systems",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "tation provides a robust foundation for training Al systems\nto interpret manufacturing behaviors from text. AutoFactory\ncontributes to ongoing research efforts aimed at enabling in-\ntelligent systems to assist in generating control code from\nrequirement specifications, reducing reliance on manual pro-\ngramming in industrial automation.\n\u00a9 2025 The Author(s). Published by Elsevier Inc.\nThis is an open access article under the CC BY license\n(http://creativecommons.org/licenses/by/4.0/)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Specifications Table\n\nSubject\n\nSpecific subject area\nType of data\n\nData collection\n\nData source location\n\nData accessibility\n\nRelated research article\n\nEngineering & Materials science\n\nArtificial intelligence for automated code generation in manufacturing systems\nTable, Processed, Annotated\n\nThe dataset was created by manually drafting baseline requirement specifications\nfor manufacturing systems. These specifications were expanded into multiple\nvariations using large language models (ChatGPT Pro, Claude Pro, and Mistral Pro).\nAfter expert validation, each specification was formally annotated using a custom\nlabeling tool with BIO tags (Begin, Inside, Outside) for Named Entity Recognition\n(NER).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Systems Engineering and Applications Laboratory, Cadi Ayyad University, ENSA, BP\n2390, Marrakech, 40,000, Marrakech-Safi, Morocco.\n\nThe dataset is publicly available on Hugging Face:\n\nhttps: //huggingface.co/datasets/boudribila/AutoFactory DOI:\n\n(13:italic )10.57967/hf/5011 (/13: italic)\n\nRepository name: Hugging Face\n\nData identification number: (13:italic )10.57967/hf/5011 (/13:italic)\n\nDirect URL to data: https://huggingface.co/datasets/boudribila/AutoFactory\n\nThe dataset can be freely accessed and downloaded directly via the provided\nURL without restrictions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr1_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Boudribila, A., Chadi, M.A., Tajer, A. and Boulghasoul, Z., 2023, July. Large language\nmodels and adversarial reinforcement learning to automate PLCs programming: A\npreliminary investigation. In 2023 9th International Conference on Control,\nDecision and Information Technologies (CoDIT) (pp. 650-655). IEEE.\n\n1. Value of the Data\n\n+ The dataset provides clearly annotated manufacturing requirements specifications, address-\ning the absence of publicly available datasets for industrial automation. This allows re-\nsearchers to train Al models capable of interpreting manufacturing instructions and sup-\nports research into methods for generating control logic, with the potential to reduce human\n\nintervention.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 3\n\n+ Researchers can reuse these data to build models that identify critical components, such as\nactuators, pre-actuators, sensors, and effectors, enabling more effective transformation of tex-\ntual specifications into executable control programs.\n\n+ Annotations use the standard BIO tagging format (Begin, Inside, Outside), ensuring compat-\nibility with widely adopted NLP and machine learning frameworks, and simplifying integra-\ntion into existing pipelines.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ The dataset includes scenes of 3D real manufacturing systems built using Factory I/O, a sim-\nulation platform for industrial automation. Each system is accompanied by tag tables and\nscreenshots from multiple camera angles, as well as the corresponding 3D scene file, the\nbaseline requirement specification, its augmented versions, and a similarity analysis using\nsentence embeddings to ensure both linguistic diversity and semantic consistency.\n\n+ The dataset serves as a reliable benchmark to evaluate and compare AI methodologies. It\nincludes realistic manufacturing examples originally written or reviewed by domain experts\nthen reformulated using large language models (ChatGPT Pro, Claude Pro, Mistral Pro) to in-\ntroduce controlled linguistic diversity while preserving technical meaning.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ All annotations were reviewed and validated by human experts during the labeling process,\nensuring high accuracy and reliability. This makes the dataset suitable for both academic\nresearch and industrial applications.\n\n+ The dataset is hosted publicly on Hugging Face with a permanent DOI, ensuring long-term\naccess for researchers, developers and educators.\n\n2. Background",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "2. Background\n\nAutomated manufacturing systems rely on Programmable Logic Controllers (PLCs) to control\nand monitor industrial processes [1]. In practice, engineers use two main strategies to program\nPLCs. The first is a heuristic approach [2,3], where engineers read the requirement specifications\nand directly write the control program based on their experience and intuition. The second is\na formal approach [2], where engineers first create mathematical models of the system behav-\nior and its operational constraints before generating the program. Although both methods are\nwell established, they are time-consuming, prone to human error, and require strong technical\nexpertise.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In our work, we aim to move beyond these traditional methods by using artificial intelligence\n(Al) to automate the generation of PLC programs directly from textual requirement specifications.\nHowever, during a pilot study, we found that no public datasets existed to train Al models for\nthis specific task. To overcome this challenge, we manually wrote realistic requirement specifi-\ncations based on systems modeled in Factory I/O. We then expanded these specifications using\nlarge language models (LLMs), rewriting them with different words while keeping the original\nmeaning. Each version was verified by human experts to ensure accuracy, and similarity metrics\nwere used to confirm that the reformulations preserved the original intent.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This dataset complements our previous research [4] and provides a structured, domain-\nspecific resource for advancing Al-based automation in manufacturing.\n\n3. Data Description",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr10_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "3. Data Description\n\nIn automated manufacturing systems, engineers, students, and system designers often de-\nscribe the intended behavior of machines using natural language before writing any control\ncode. These requirement specifications typically indicate what the system should do (e.g., ex-\ntend a cylinder), what it must avoid (e.g., exceed a safety limit), and which components are\ninvolved (e.g., sensors, valves, or actuators). The purpose of the AutoFactory dataset is to en-\nable machines to take such natural language as input, understand its meaning, identify the key\ncomponents mentioned, and then support the automatic generation of control logic that would\nnormally be written manually by engineers.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 3\n\n+ Researchers can reuse these data to build models that identify critical components, such as\nactuators, pre-actuators, sensors, and effectors, enabling more effective transformation of tex-\ntual specifications into executable control programs.\n\n+ Annotations use the standard BIO tagging format (Begin, Inside, Outside), ensuring compat-\nibility with widely adopted NLP and machine learning frameworks, and simplifying integra-\ntion into existing pipelines.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ The dataset includes scenes of 3D real manufacturing systems built using Factory I/O, a sim-\nulation platform for industrial automation. Each system is accompanied by tag tables and\nscreenshots from multiple camera angles, as well as the corresponding 3D scene file, the\nbaseline requirement specification, its augmented versions, and a similarity analysis using\nsentence embeddings to ensure both linguistic diversity and semantic consistency.\n\n+ The dataset serves as a reliable benchmark to evaluate and compare AI methodologies. It\nincludes realistic manufacturing examples originally written or reviewed by domain experts\nthen reformulated using large language models (ChatGPT Pro, Claude Pro, Mistral Pro) to in-\ntroduce controlled linguistic diversity while preserving technical meaning.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ All annotations were reviewed and validated by human experts during the labeling process,\nensuring high accuracy and reliability. This makes the dataset suitable for both academic\nresearch and industrial applications.\n\n+ The dataset is hosted publicly on Hugging Face with a permanent DOI, ensuring long-term\naccess for researchers, developers and educators.\n\n2. Background",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "2. Background\n\nAutomated manufacturing systems rely on Programmable Logic Controllers (PLCs) to control\nand monitor industrial processes [1]. In practice, engineers use two main strategies to program\nPLCs. The first is a heuristic approach [2,3], where engineers read the requirement specifications\nand directly write the control program based on their experience and intuition. The second is\na formal approach [2], where engineers first create mathematical models of the system behav-\nior and its operational constraints before generating the program. Although both methods are\nwell established, they are time-consuming, prone to human error, and require strong technical\nexpertise.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In our work, we aim to move beyond these traditional methods by using artificial intelligence\n(Al) to automate the generation of PLC programs directly from textual requirement specifications.\nHowever, during a pilot study, we found that no public datasets existed to train Al models for\nthis specific task. To overcome this challenge, we manually wrote realistic requirement specifi-\ncations based on systems modeled in Factory I/O. We then expanded these specifications using\nlarge language models (LLMs), rewriting them with different words while keeping the original\nmeaning. Each version was verified by human experts to ensure accuracy, and similarity metrics\nwere used to confirm that the reformulations preserved the original intent.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This dataset complements our previous research [4] and provides a structured, domain-\nspecific resource for advancing Al-based automation in manufacturing.\n\n3. Data Description",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr11_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "3. Data Description\n\nIn automated manufacturing systems, engineers, students, and system designers often de-\nscribe the intended behavior of machines using natural language before writing any control\ncode. These requirement specifications typically indicate what the system should do (e.g., ex-\ntend a cylinder), what it must avoid (e.g., exceed a safety limit), and which components are\ninvolved (e.g., sensors, valves, or actuators). The purpose of the AutoFactory dataset is to en-\nable machines to take such natural language as input, understand its meaning, identify the key\ncomponents mentioned, and then support the automatic generation of control logic that would\nnormally be written manually by engineers.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "16\n\nA. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 14",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 14\n\nSample of NER-Annotated Requirements with POS Tags and Tokenization.\nSentences Tokens Part of speech tags NER labels\nThe system operates [\u2018The\u2019, \u2018system\u2019, \u2018operates\u2019, [\u2018DT\u2019,, \u2018NN\u2019, \u2018VBZ\u2019, \u2018IN\u2019, [\u20180\u2019, \u20180\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019,\nwith two conveyor \u2018with\u2019, \u2018two\u2019, \u2018conveyor\u2019, \u2018CD\u2019, \u2018NN\u2019, \u2018NNS\u2019, \u201c \u2018I-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019, \u20180\u2019,\nbelts, named Conveyor \u2018belts\u2019, *\u2019, \u2018named\u2019, \u201cVBN', \u2018NNP\u2019, \u2018CD\u2019, \u2018CC\u2019, \u2018O\u2019\", \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\nOne and Conveyor Two, \u2018Conveyor\u2019, \u2018One\u2019, \u2018and\u2019, \u201c\u2018NNP\u2019, \u2018CD\u2019, \u2018\u2019, \u2018DT\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\neach driven by an \u2018Conveyor\u2019, \u2018Two\u2019, \u2018\u2019, \u2018each\u2019, \u2018VBN\u2019, \u2018IN\u2019, \u2018DT\u2019, \u2018JJ\u2019, \u20180\u2019, \u20180\u2019, 0\u2019, \u20180\u2019, \u2018O\u2019\",\nelectric motor. \u2018driven\u2019, \u2018by\u2019, \u2018an\u2019, \u2018electric\u2019, \u2018NN\u2019, \u201c\u2019] \u201cB-ACTUATOR\u2019, \u2018I-ACTUATOR\u2019,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\u2018motor\u2019, \u2018.\"] \u2018O'}\nThe cycle is initiated by [\u2018The\u2019, \u2018cycle\u2019, \u2018is\u2019, \u2018initiated\u2019, [\u2018DT\u2019, \u2018NN\u2019, \u2018VBZ\u2019, \u2018VBN\u2019, __[\u2018O\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019,\npressing the start \u2018by\u2019, \u2018pressing\u2019, \u2018the\u2019, \u2018start\u2019, \u2018IN\u2019, \u2018VBG\u2019, \u2018DT\u2019, \u2018NN\u2019, *B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u2018O']\nbutton. \u2018button\u2019, *.\u2019] \u2018NN\u2019, \u201c\"]\nThis causes the start [\u2018This\u2019, \u2018causes\u2019, \u2018the\u2019, \u2018start\u2019, [\u2018DT\u2019, \u2018VBZ\u2019, \u2018DT\u2019, \u2018NN\u2019, [\u20180\u2019, \u20180\u2019, \u20180\u2019, \u2018B-ACTUATOR\u2019,\nlight to come on and \u2018light\u2019, \u2018to\u2019, \u2018come\u2019, \u2018on\u2019, \u2018NN\u2019, \u2018TO\u2019, \u2018VB\u2019, \u2018IN\u2019, \u2018CC\u2019, \u2018I-ACTUATOR\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019,\nConveyor One to begin \u2018and\u2019, \u2018Conveyor\u2019, \u2018One\u2019, \u2018to\u2019, \u2018NNP\u2019, \u2018NNP\u2019, \u2018TO\u2019, \u2018VB\u2019, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019, \u20180\u2019,\nmoving. \u2018begin\u2019, \u2018moving\u2019, \u2018.\u2019] \u201cVBG\u2019, \u201c.\"] \u20180\u2019, \u20180\u2019, \u20180']\nThe box moves along [\u2018The\u2019, \u2018box\u2019, \u2018moves\u2019, [\u2018DT, \u2018NN\u2019, \u2018VBZ\u2019, \u2018RB\u2019, [\u20180\u2019, \u2018O\u2019, \u2018O\u2019, \u2018O\u2019, \u2018B-EFFECTOR\u2019,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Conveyor One until it is \u2018along\u2019, \u2018Conveyor\u2019, \u2018One\u2019, \u2018NNP\u2019, \u2018CD\u2019, \u2018IN\u2019, \u2018PRP\u2019, *[-EFFECTOR'\ndetected by Sensor A. \u2018until\u2019, \u2018it\u2019, \u2018is\u2019, \u2018detected\u2019, \u2018VBZ\u2019, \u2018VBN\u2019, \u2018IN\u2019, \u2018NNP\u2019, \u2018B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u2018O']\n\u2018by\u2019, \u2018Sensor\u2019, \u2018A\u2019, \u2018.\u2019] \u2018NNP\u2019, \u201c']\nWhen Sensor A [\u2018When\u2019, \u2018Sensor\u2019, \u2018A\u2019, [\u2018WRB\u2019, \u2018NNP\u2019, \u2018NNP\u2019, [\u20180\u2019\", \u2018B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u20180\u2019,\ntriggers, Conveyor One \u2018triggers\u2019, \u2018,\u2019, \u2018Conveyor\u2019, \u201c\u2018NNS\u2019, \u2018\u2019, \u2018NNP\u2019, \u2018NNP\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\nstops and Conveyor \u2018One\u2019, \u2018stops\u2019, \u2018and\u2019, \u2018NN\u2019, \u2018CC\u2019, \u2018NNP\u2019, \u2018CD\u2019, \u2018O\u2019\u201d, \u20180\u2019, \u2018B-EFFECTOR\u2019,\nTwo is started. \u2018Conveyor\u2019, \u2018Two\u2019, \u201cVBZ\u2019, \u2018VBN\u2019, *.\u2019] \u2018I-EFFECTOR\u2019, \u2018O\u2019, \u20180\u2019, \u2018O\"]\n\u2018started\u2019, \u2018\nTable 15\nArchitectural Comparison of the Transformer Models.\nModel Configuration Parameters Layers Hidden Size Attention Heads Developed By",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Model Configuration Parameters Layers Hidden Size Attention Heads Developed By\nBERT Base 110M 12 768 12 Google Al\nLarge 340M 24 1024 16\nDistilIBERT Base 66M 6 768 12 Hugging Face",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "(LLMs) on this labeled data to evaluate their ability to extract components and understand sys-\ntem behavior from natural language.\n\n10.1. Benchmarking and Model Fine-tuning\n\nThe transformer models selected for this study were chosen to provide a representative sam-\n\nciency on d\n\nheads, amo\nwith 1024\nIn contrast,\n\nheads, yield\nThese di!\n\nimited.\n\nple of architectures commonly used in sequence labeling tasks (Table 15). Three models were\nevaluated: BERT-Base, BERT-Large, and DistilIBERT-Base. These models differ in size, depth, and\ncomputational requirements, allowing for a comparative analysis of performance versus effi-\n\nlomain-specific Named Entity Recognition (NER) tasks.\n\nBERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "BERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention\n\nunting to 110 million parameters. BERT-Large expands this architecture to 24 layers\nhidden units and 16 attention heads, resulting in a total of 340 million parameters.\nDistiIBERT-Base is a lighter model designed for faster training and inference. It com-\n\npresses BERT-Base to 6 layers while retaining the same hidden size and number of attention\n\ning a total of 66 million parameters.\nfferences provide useful contrasts when assessing model suitability for industrial lan-\n\nguage processing, especially in scenarios where deployment constraints or training resources are\n\nTo enab!\n\nle automatic identification of control components from natural language requirement",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr12_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To enab!\n\nle automatic identification of control components from natural language requirement\n\nspecifications, the selected transformer models were fine-tuned on the annotated AutoFactory",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr13_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data in Brief 62 (2025) 111938\n\nContents lists available at ScienceDirect Ls\nData in Brief Data\nin Brief\nELSEVIER journal homepage: www.elsevier.com/locate/dib i\n\nData Article\n\nAutoFactory Dataset to Support AI in\n\nManufacturing Systems\n\nCheck for\n|_ Updates |\n\nAbderrahmane Boudribila\u00ae>*, Abdelouahed Tajer?,\n\nZakaria Boulghasoul?\n\n* Systems Engineering and Applications Laboratory, Cadi Ayyad University, ENSA, BP 2390, Marrakech, 40000,\n\nMarrakech-Safi, Morocco\n\n> LAMIGEP, Moroccan School of Engineering Sciences, Avenue Hassan II, Marrakech, 40000, Marrakech-Safi, Morocco\n\nARTICLE INFO\n\nABSTRACT\n\nArticle history:\n\nReceived 3 April 2025\nRevised 9 July 2025\nAccepted 23 July 2025\nAvailable online 31 July 2025\n\nDataset link: AutoFactory (Original data)\n\nKeywords:",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr13_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dataset link: AutoFactory (Original data)\n\nKeywords:\n\nArtificial intelligence\nNamed entity recognition\nManufacturing systems\nDataset development\nCode automation\n\nLarge language models\n\n* Corresponding author.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr13_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Automating code generation in manufacturing systems re-\nquires Artificial Intelligence (Al) models capable of inter-\npreting textual requirement specifications. One of the main\nchallenges is the absence of publicly available, domain-\nspecific datasets suitable for training such models. This ar-\nticle presents AutoFactory, an open-source dataset that in-\ncludes manually written and LLM-augmented requirement\nspecifications, annotated by domain experts for Named En-\ntity Recognition (NER) tasks using the BIO format.\nAutoFactory enables the extraction and classification of key\nindustrial components, including actuators, pre-actuators,\nsensors, effectors, and others. These elements correspond to\nreal-world input and output signals in manufacturing sys-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr13_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "real-world input and output signals in manufacturing sys-\ntems. The dataset is grounded in realistic scenarios built with\nFactory I/O and includes 3D scenes, tag tables, and screen-\nshots captured from multiple camera perspectives. To en-\nhance linguistic diversity while preserving semantic intent,\nall specifications were expanded using large language mod-\nels and evaluated through semantic similarity analysis (aver-\nage cosine similarity above 0.92), complemented by manual\nvalidation to ensure consistency.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr13_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "E-mail address: a.boudribila.ced@uca.ac.ma (A. Boudribila).\n\nSocial media: a @Boudribila97 (A. Boudribila)\n\nhttps://doi.org/10.1016/j.dib.2025.111938\n\n2352-3409/\u00a9 2025 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY license\n\n(http://creativecommons.org/licenses/by/4.0/)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "12 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTo introduce this variation, large language models (LLMs) are used to rewrite each baseline\nrequirement specification into multiple versions. The goal is to generate linguistically diverse ex-\namples while preserving the original technical meaning. LLMs have demonstrated strong capabil-\nities across various domains, including engineering, and can be guided to produce high-quality\nparaphrases when given clear instructions.\n\nFor each baseline requirement specification, the model is asked to produce three distinct for-\nmulations. To ensure consistency and accuracy, the generation process is guided by a structured\nprompt:",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\"Rewrite the following requirement specification in three different ways. Keep the technical\ndetails the same, but use different wording and sentence structures.\"\n\nThis prompt encourages the model to retain the functional content of the specification while\nvarying its surface form. By applying this method, the dataset captures the natural variability\nin how requirement specifications are written. This enhances the model's ability to understand\ntechnical content expressed in different ways, making it more robust when applied to real-world\nindustrial texts.\n\n8. Large Language Model (LLM) Selection",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "8. Large Language Model (LLM) Selection\n\nOnce the prompts were designed, the next step involved selecting large language models ca-\npable of rewriting requirement specifications while preserving their technical meaning. The re-\nliability and usefulness of the dataset depend directly on the ability of these models to produce\naccurate and readable variants of the original specifications. Not all language models meet these\ncriteria. Some may omit key details, alter the intended logic, or produce output that lacks tech-\nnical clarity. It is therefore essential to carefully select models that can maintain both syntactic\ncoherence and semantic fidelity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To address this, we selected three high-performance models: ChatGPT Pro, Claude Pro, and\nMistral Pro. These models were chosen for their ability to generate structured and technically\naccurate language. Unlike basic paraphrasing tools that rely on synonym replacement, these ad-\nvanced models can restructure entire sentences and vary lexical choices while preserving the\ncore information. This capacity is essential for building a dataset that reflects the natural vari-\nability observed in how different engineers describe the same system.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Each model was applied to the same set of baseline specifications to produce multiple re-\nformulations. The outputs were collected and organized as unlabeled text variants to increase\nlinguistic diversity in the dataset. By using multiple models, we reduce the risk of stylistic bias\nand improve the generalizability of future Al systems trained on this data.\n\nTable 10 presents an example of a baseline requirement specification followed by three\nrewritten versions generated by the selected LLMs. These examples illustrate how the same\ntechnical content can be expressed differently across models while preserving its meaning and\nstructure.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To make sure that the requirement specifications generated by large language models (LLMs)\nkeep the same meaning as the original ones, we performed a similarity check. This is an impor-\ntant step, because while the goal is to create different versions using new words and sentence\nstructures, the meaning of the requirement must not change. In industrial systems, even small\nchanges in meaning can lead to incorrect behavior, so it is essential to verify that the informa-\ntion is still correct.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr14_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "We used cosine similarity to compare each rewritten specification to the original. This\nmethod works by converting sentences into numbers (called embeddings) and then measuring\nhow close they are. A high score means that the two sentences are very similar in meaning,\neven if they are written differently.\n\nThe results show that the rewritten specifications are very close to the original ones. Across\nthe entire dataset, the average similarity score was 0.9275, and the median score was 0.9389.\nEven the lowest score was 0.7105, which means that no rewritten version introduced major",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr15_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 19\n\nA. Boudribila, A. Tajer, Z. Boulghasoul, \u201cFrom Natural Language to Code: AI Automation in Cyber-Physical Manufac-\nturing Systems\u201d, Proc. 2024 World Conf. Complex Syst. (WCCS) (Nov. 2024) pp. 1-6, doi:10.1109/WCCS59409.2024.\n10412345,\n\nY. Qamsane, Abdelouahed Tajer, A. Philippot, Towards an approach of synthesis, validation and implementation of\ndistributed control for AMS by using events ordering relations, Int. J. Prod. Res. 55 (21) (Nov. 2017) 6235-6253,\ndoi: 10.1080/00207543.2017.1333648.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr15_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, M.-A. Chadi, A. Tajer, Z. Boulghasoul, Large Language Models and Adversarial Reinforcement Learning\nto Automate PLCs Programming: A Preliminary Investigation, Proc. 2023 9th Int. Conf. Control, Decision Inf. Technol.\n(CoDIT) (2023) 650-655, doi: 10.1109/CoDIT56788.2023.10167432.\n\nA. Boudribila, \u201cAutoFactory\u201d Hugging Face, 2025. [Online]. Available: https://huggingface.co/datasets/boudribila/\nAutoFactory. doi:10.57967/hf/5011.\n\nE.FT.K. Sang, F.D. Meulder, Introduction to the CoNLL-2003 shared task: language-independent named entity recog-\nnition, arXiv (Jun. 12, 2003) arXiv:cs/0306050, doi: 10.48550/arXiv.cs/0306050.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr15_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Kumar, B. Starly, FabNER\u2019: information extraction from manufacturing process science domain literature using\nnamed entity recognition, J. Intell. Manuf. 33 (8) (Dec. 2022) 2393-2407, doi: 10.1007/s10845-021-01807-x.\n\nR. Li, P. Wang, L. Wang, D. Yang, D. Cai, A Corpus and Method for Chinese Named Entity Recognition in Manufactur-\ning, Proc. 2024 Joint Int. Conf. Comput. Linguist., Lang. Resour. Eval. (LREC-COLING) (2024) 264-272.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr16_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data in Brief 62 (2025) 111938\n\nContents lists available at ScienceDirect Ls\nData in Brief Data\nin Brief\nELSEVIER journal homepage: www.elsevier.com/locate/dib i\n\nData Article\n\nAutoFactory Dataset to Support AI in\n\nManufacturing Systems\n\nCheck for\n|_ Updates |\n\nAbderrahmane Boudribila\u00ae>*, Abdelouahed Tajer?,\n\nZakaria Boulghasoul?\n\n* Systems Engineering and Applications Laboratory, Cadi Ayyad University, ENSA, BP 2390, Marrakech, 40000,\n\nMarrakech-Safi, Morocco\n\n> LAMIGEP, Moroccan School of Engineering Sciences, Avenue Hassan II, Marrakech, 40000, Marrakech-Safi, Morocco\n\nARTICLE INFO\n\nABSTRACT\n\nArticle history:\n\nReceived 3 April 2025\nRevised 9 July 2025\nAccepted 23 July 2025\nAvailable online 31 July 2025\n\nDataset link: AutoFactory (Original data)\n\nKeywords:",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr16_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dataset link: AutoFactory (Original data)\n\nKeywords:\n\nArtificial intelligence\nNamed entity recognition\nManufacturing systems\nDataset development\nCode automation\n\nLarge language models\n\n* Corresponding author.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr16_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Automating code generation in manufacturing systems re-\nquires Artificial Intelligence (Al) models capable of inter-\npreting textual requirement specifications. One of the main\nchallenges is the absence of publicly available, domain-\nspecific datasets suitable for training such models. This ar-\nticle presents AutoFactory, an open-source dataset that in-\ncludes manually written and LLM-augmented requirement\nspecifications, annotated by domain experts for Named En-\ntity Recognition (NER) tasks using the BIO format.\nAutoFactory enables the extraction and classification of key\nindustrial components, including actuators, pre-actuators,\nsensors, effectors, and others. These elements correspond to\nreal-world input and output signals in manufacturing sys-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr16_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "real-world input and output signals in manufacturing sys-\ntems. The dataset is grounded in realistic scenarios built with\nFactory I/O and includes 3D scenes, tag tables, and screen-\nshots captured from multiple camera perspectives. To en-\nhance linguistic diversity while preserving semantic intent,\nall specifications were expanded using large language mod-\nels and evaluated through semantic similarity analysis (aver-\nage cosine similarity above 0.92), complemented by manual\nvalidation to ensure consistency.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr16_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "E-mail address: a.boudribila.ced@uca.ac.ma (A. Boudribila).\n\nSocial media: a @Boudribila97 (A. Boudribila)\n\nhttps://doi.org/10.1016/j.dib.2025.111938\n\n2352-3409/\u00a9 2025 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY license\n\n(http://creativecommons.org/licenses/by/4.0/)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr17_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 5\n\nin\n\n80%\n\nTraining Set Validation Set Test Set\n\nFig. 1. Dataset Split - Training, Validation, and Test Sets.\n\nTable 2\n\nSummary Statistics of Specifications, Tokens, and Named Entities in AutoFactory.\nDataset Specifications Sentences Tokens Actuators Pre-Actuators Sensors Effectors Others\nTraining 1886 13,686 223,003 15,838 4645 20,492 21,133 160,895\nValidation 236 1728 28,759 2030 684 2634 2785 20,626\nTest 236 1720 28,068 1983 584 2569 2722 20,210\nTotal 2358 17,134 279,830 19,851 5913 25,695 26,640 201,731",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr17_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 2 summarizes the dataset\u2019s structure and semantic annotations. It includes 2358\nrequirement specifications, segmented into 17,134 sentences and comprising 279,830 tokens.\nAmong these tokens, 7.09 % are labeled as ACTUATOR, 2.11 % as PRE-ACTUATOR, 9.18 % as SEN-\nSOR, and 9.52 % as EFFECTOR. The remaining 72.09 % of tokens are labeled as OTHER, indicating\nthey do not refer to system components but contribute to grammatical structure and contextual\nclarity. These proportions reflect the natural language composition of industrial specifications,\nwhere functional terms are embedded within descriptive text.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr17_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further illustrate the component distribution, Fig. 2 visualizes the relative frequency of\neach label category. Actuator and sensor mentions are most prevalent, consistent with their key\nrole in control system logic. Pre-actuators and effectors appear less frequently but remain essen-\ntial for modeling system transitions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr17_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset is designed not only for engineers in industrial automation but\nalso for researchers, developers, and students working in natural language processing and Al.\nIt serves as a high-quality benchmark for tasks such as named entity recognition, information\nextraction, and the automatic generation of control logic from textual specifications. The dataset\noffers a structured, modular format that is both accessible and extensible, making it suitable for\nacademic research and industrial applications alike.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr17_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Despite significant progress in Named Entity Recognition (NER), existing datasets have not\naddressed the specific challenges of understanding requirement specifications in industrial au-\ntomation. Most NER corpora, such as CoNLL-2003 [6], FabNER [7], and MS-NERC [8], focus on\ngeneral-purpose or scientific language, but none are structured to represent how engineers de-\nscribe the behavior of components in manufacturing systems. AutoFactory fills this gap by pro-\n\nFig. 2. Distribution of Labeled Entities in the AutoFactory Dataset.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "2 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To facilitate the annotation process, a custom labeling tool\nwas developed. It runs locally to preserve data privacy and\nprovides a user-friendly interface. The tool is adaptable to a\nwide range of NER tasks and allows researchers to customize\nlabels for different domains by adding or modifying tags.\nTo assess the practical value of the dataset, transformer-\nbased models such as BERT and DistiIBERT were fine-tuned\non the annotated requirement specifications. The highest-\nperforming model reached an F1-score of 0.95, confirming\nthe dataset\u2019s ability to support accurate identification of key\ncomponents in manufacturing systems.\nThis combination of human expertise and Al-based augmen-\ntation provides a robust foundation for training Al systems",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "tation provides a robust foundation for training Al systems\nto interpret manufacturing behaviors from text. AutoFactory\ncontributes to ongoing research efforts aimed at enabling in-\ntelligent systems to assist in generating control code from\nrequirement specifications, reducing reliance on manual pro-\ngramming in industrial automation.\n\u00a9 2025 The Author(s). Published by Elsevier Inc.\nThis is an open access article under the CC BY license\n(http://creativecommons.org/licenses/by/4.0/)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Specifications Table\n\nSubject\n\nSpecific subject area\nType of data\n\nData collection\n\nData source location\n\nData accessibility\n\nRelated research article\n\nEngineering & Materials science\n\nArtificial intelligence for automated code generation in manufacturing systems\nTable, Processed, Annotated\n\nThe dataset was created by manually drafting baseline requirement specifications\nfor manufacturing systems. These specifications were expanded into multiple\nvariations using large language models (ChatGPT Pro, Claude Pro, and Mistral Pro).\nAfter expert validation, each specification was formally annotated using a custom\nlabeling tool with BIO tags (Begin, Inside, Outside) for Named Entity Recognition\n(NER).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Systems Engineering and Applications Laboratory, Cadi Ayyad University, ENSA, BP\n2390, Marrakech, 40,000, Marrakech-Safi, Morocco.\n\nThe dataset is publicly available on Hugging Face:\n\nhttps: //huggingface.co/datasets/boudribila/AutoFactory DOI:\n\n(13:italic )10.57967/hf/5011 (/13: italic)\n\nRepository name: Hugging Face\n\nData identification number: (13:italic )10.57967/hf/5011 (/13:italic)\n\nDirect URL to data: https://huggingface.co/datasets/boudribila/AutoFactory\n\nThe dataset can be freely accessed and downloaded directly via the provided\nURL without restrictions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr18_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Boudribila, A., Chadi, M.A., Tajer, A. and Boulghasoul, Z., 2023, July. Large language\nmodels and adversarial reinforcement learning to automate PLCs programming: A\npreliminary investigation. In 2023 9th International Conference on Control,\nDecision and Information Technologies (CoDIT) (pp. 650-655). IEEE.\n\n1. Value of the Data\n\n+ The dataset provides clearly annotated manufacturing requirements specifications, address-\ning the absence of publicly available datasets for industrial automation. This allows re-\nsearchers to train Al models capable of interpreting manufacturing instructions and sup-\nports research into methods for generating control logic, with the potential to reduce human\n\nintervention.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr19_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 15\n\nFig. 7. User Interface of Our Custom Labeling Tool.\n\nTable 12\n\nToken Counts per NER Label Across 300 Reviewed Requirement Specifications.\nLabel Annotator 1 Annotator 2 Annotator 3 Total\noO 7078 7162 6975 21,215\nB-EFFECTOR 597 585 618 1800\nI-EFFECTOR 492 485 539 1516\nB-ACTUATOR 480 502 473 1455\nI-ACTUATOR 343 369 355 1067\nB-SENSOR 457 463 457 1377\nI-SENSOR 630 633 618 1881\nB-PREACTUATOR 116 136 116 368\nI-PREACTUATOR 126 154 136 416\nTotal Tokens 10,319 10,489 10,287 31,095\n\nTable 13\n\nInter-annotator agreement scores (Cohen's Kappa).\nAnnotator Pair Kappa Score\nAnnotator 1 & 2 0.856\nAnnotator 2 & 3 0.789\nAnnotator 1 & 3 0.924\nAverage 0.856",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr19_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "cedure was implemented. Annotator 1 reviewed 100 examples from Annotator 2, Annotator 2\nreviewed 100 from Annotator 3, and Annotator 3 reviewed 100 from Annotator 1. This process\nsupported consistency checking across the team.\n\nThis review process helped identify disagreements and guided harmonization of annotation\npractices. Using this shared subset, Cohen\u2019s Kappa was computed to measure inter-annotator\nagreement. The final average kappa score was 0.856, which indicates strong agreement.\n\nThe distribution of token-level annotations within the reviewed sample is provided in\nTable 12, while Table 13 presents the computed inter-annotator agreement scores.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr19_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This manual annotation process transformed the dataset from unstructured text into a la-\nbeled resource suitable for training Al systems to identify and extract relevant entities (Table 14).\nThe NER labels directly support the detection of input and output components in requirement\nspecifications, which is essential for downstream applications in control logic synthesis and in-\ndustrial automation.\n\nThis initial version of the AutoFactory dataset represents a significant contribution to the field\nof AI for manufacturing. By releasing it to the research community, the objective is to accelerate\nprogress in systems that can interpret natural language requirement specifications and convert\nthem into executable control logic. The next stage involves fine-tuning large language models",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "10 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nFig. 5. Example of a manufacturing system: Sorting Station composed of multiple components working together.\n\npublic datasets built for this purpose. Without such data, it becomes difficult to develop models\nthat can detect and classify the main components used in automated systems.\n\nTo solve this problem, the AutoFactory dataset was built using a structured approach based\non industrial systems modeled in Factory I/O. These virtual systems simulate realistic automation\nscenarios and were used as a starting point to write clear and complete requirement specifica-\ntions. Each specification was manually written to describe the behavior of machines in these\nscenes.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To increase variety in how requirements are expressed, large language models were used\nto generate different versions of each original specification. These versions were reviewed by\ndomain experts to make sure they kept the same meaning and were technically accurate. Finally,\nthe data was cleaned and organized to remove duplicates and fix any small errors, resulting in\na well-structured and high-quality dataset for research in industrial automation.\n\n6. Baseline Data Creation",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "6. Baseline Data Creation\n\nThe first step in creating the dataset is to write baseline requirement specifications for com-\nponents commonly found in automated production systems. These specifications serve as the\nfoundation of the dataset and provide clear and structured descriptions of how different man-\nufacturing components operate. Since there are no publicly available datasets for this purpose,\nwe manually create these specifications, following the best practices and documentation stan-\ndards used by leading global companies in industrial automation, such as Siemens (Germany),\nSchneider Electric (France), and Allen-Bradley (USA).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Automated manufacturing systems are made up of many parts, or components, that work to-\ngether to complete tasks. For example, a system may have cylinders, conveyor belts, sensors, and\nmotors. Each of these components has its own role, and together they form a complex system\n(see Fig. 5).\n\nA sorting station, is an example of such a system. It consists of different components, such as\nconveyors, vision sensors, and sorting mechanisms, that work together to classify and transport\nitems. Each component plays a distinct role in the process, contributing to the overall system\nfunctionality.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To capture this, each baseline requirement specification represents the full functional logic of\na selected manufacturing system, combining multiple components into a coherent operational\nflow. Rather than isolating components, the specification explains how actuators (e.g., double-\nacting cylinders, electric motors), pre-actuators (e.g., contactors, solenoid valves), sensors (e.g.,\ninductive sensors, limit switches), and effectors (e.g., conveyor belts, pop-up sorters) interact to\nperform specific tasks.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr2_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This version of the dataset includes three representative manufacturing systems modeled\nin Factory I/O: a single conveyor belt transport system, a dual conveyor belt system, and a\ndual conveyor system with a transfer cylinder. These systems were selected because they con-\ntain a wide range of commonly used industrial components, such as start buttons, contac-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr20_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "18 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 16\nPerformance Comparison of Transformer Models Fine-Tuned on the AutoFactory Dataset.\nModel Epochs Learning Batch Eval Fl Precision Recall Training Duration\nRate Size Loss Time (s)\nBERT-Base 3 5,00E-05 16 0.3342 0.8039 0.7877 0.8208 1840.37\nBERT-Large 3 5,00E-05 16 0.3757 0.8000 =\u2014-0.7967 0.8034 2857.11\nDistiIBERT-Base 3 5,00E-05 16 0.0983 0.9505 0.9476 0.9534 1804.41\nLimitations",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr20_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The current version of the AutoFactory dataset includes a limited number of requirement\nspecifications, covering approximately 3 out of 21 available scenarios from Factory I/O. While it\naddresses a range of manufacturing systems, the diversity of scenarios and components could\nbe significantly expanded. Future updates will aim to include a broader variety of manufactur-\ning systems and more comprehensive coverage of industrial processes. The dataset is currently\navailable in CSV and XLSX formats. To enhance accessibility and usability, future versions will in-\nclude additional file formats, such as JSON and XML, to accommodate different user preferences\nand requirements. All updates will be published on the same Hugging Face page mentioned in",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr20_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "and requirements. All updates will be published on the same Hugging Face page mentioned in\nthe \u201cData Accessibility\u201d section of the table above. These updates will help the dataset grow and\nbetter support AI research in manufacturing.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr20_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Ethics Statement\n\nThe authors have read and adhere to the ethical requirements for publication in Data in\nBrief. This work does not involve human subjects, animal experiments, or any data collected\nfrom social media platforms. It focuses solely on the creation and use of a dataset derived from\nsynthetic requirement specifications generated by large language models for manufacturing sys-\n\ntems, which was then carefully reviewed and verified by domain experts, ensuring compliance\nwith ethical guidelines applicable to artificial intelligence research and data publication.\n\nData Availability\n\nAutoFactory (Original data) (Hugging Face).\n\nAcknowledgements",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr20_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data Availability\n\nAutoFactory (Original data) (Hugging Face).\n\nAcknowledgements\n\nThis research did not receive any specific grant from funding agencies in the public, commer-\ncial, or not-for-profit sectors.\nDeclaration of Competing Interest\n\nThe authors declare that they have no known competing financial interests or personal rela-\ntionships that could have appeared to influence the work reported in this paper.\n\nReferences\n\n[1] M. Rodriguez, N. Dhameliya, B. Patel, Al-driven programmable logic controllers: enhancing automation in industrial\nprocesses, Robot. Xplore USA Tech. Dig. 1 (1) (Mar. 2024) 1-14.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 al\n\nTable 9\n\nBaseline Requirement Specifications for Selected Factory I/O Systems.\nSystem Name Requirement Specification\nSingle Conveyor The system consists of a conveyor belt driven by an electric motor. A normally open\nBelt Transport start button is used to initiate the transport cycle. When the start button is pressed,\nSystem. the start light is turned on and the conveyor motor is activated. A photoelectric exit\n\nsensor is installed at the end of the conveyor. When the sensor detects the presence of\na box, the conveyor motor stops and the start light turns off. The system waits for the\nnext press of the start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor: Conveyor\n\nTransport System One and Conveyor Two. A start button is used to initiate the cycle. When the start\nbutton is pressed, the start light turns on, and Conveyor One is activated. The box\nmoves forward until it reaches Sensor A. Once Sensor A is triggered, Conveyor One\nstops, and Conveyor Two is activated. The box continues moving until it reaches\nSensor B, which stops Conveyor Two. The start light then turns off. The system is now\nidle and waits for the next press of the start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor and\nSystem with controlled by contactors KM1 and KM2. A double-acting cylinder is used to transfer\nTransfer Cylinder boxes between the conveyors. The cylinder is controlled by a 5/2-way solenoid valve. A",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "start button is used to initiate the cycle. When the start button is pressed, the start\nlight turns on. At the same time, Conveyor One and Conveyor Two are both activated.\nThe box on Conveyor One moves forward until it reaches the entry sensor. Once the\nentry sensor is triggered, Conveyor One stops. The double-acting cylinder then extends\nforward. It continues moving until it activates the front limit switch. When the front\nlimit switch is triggered, the solenoid valve is reversed, and the cylinder retracts. The\ncylinder moves back until the back limit switch is triggered. Conveyor Two continues\nrunning during the entire process. When the exit sensor detects the presence of the\nbox at the end of Conveyor Two, and the cylinder has fully retracted, the system",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "box at the end of Conveyor Two, and the cylinder has fully retracted, the system\nrestarts the cycle. Conveyor One is activated again to bring the next box forward.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "tors, electric motors, photoelectric sensors, and double-acting cylinders. Each system reflects\nrealistic operational logic typically implemented in programmable logic controller (PLC)-based\nenvironments.\n\nEach requirement specification captures the functional behavior of a complete manufactur-\ning system. The descriptions include triggering conditions, sequences of component activations,\nand terminal states. This structure ensures that the specifications not only reflect the vocabu-\nlary of industrial automation but also convey the relationships between sensors, actuators, pre-\nactuators, and effectors within each operational cycle. Such modeling is essential for training Al\nsystems to identify entities and understand control logic in natural language.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To illustrate the nature of the specifications, Table 9 provides examples of the baseline manu-\nfacturing systems included in the dataset. Each specification offers a coherent narrative describ-\ning how the system responds to external inputs and internal conditions to achieve its intended\nfunctionality.\n\nEach system is also accompanied by its Factory I/O scene file, tag documentation, and multi-\nangle screenshots to support reproducibility. These baseline specifications serve as the core data\nfrom which further linguistic variants are generated in the following stage.\n\n7. Prompt Design",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr21_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "7. Prompt Design\n\nTo train AI models that can understand requirement specifications, it is important to provide\nthem with a large amount of varied data. In real industrial settings, different engineers often\ndescribe the same system in different ways. They may use different words, sentence structures,\nor levels of detail, depending on their experience and writing style. These differences do not\nchange the meaning but affect how the information is presented. For Al models to perform well,\nthey must be trained on examples that reflect this diversity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr22_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "18 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 16\nPerformance Comparison of Transformer Models Fine-Tuned on the AutoFactory Dataset.\nModel Epochs Learning Batch Eval Fl Precision Recall Training Duration\nRate Size Loss Time (s)\nBERT-Base 3 5,00E-05 16 0.3342 0.8039 0.7877 0.8208 1840.37\nBERT-Large 3 5,00E-05 16 0.3757 0.8000 =\u2014-0.7967 0.8034 2857.11\nDistiIBERT-Base 3 5,00E-05 16 0.0983 0.9505 0.9476 0.9534 1804.41\nLimitations",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr22_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The current version of the AutoFactory dataset includes a limited number of requirement\nspecifications, covering approximately 3 out of 21 available scenarios from Factory I/O. While it\naddresses a range of manufacturing systems, the diversity of scenarios and components could\nbe significantly expanded. Future updates will aim to include a broader variety of manufactur-\ning systems and more comprehensive coverage of industrial processes. The dataset is currently\navailable in CSV and XLSX formats. To enhance accessibility and usability, future versions will in-\nclude additional file formats, such as JSON and XML, to accommodate different user preferences\nand requirements. All updates will be published on the same Hugging Face page mentioned in",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr22_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "and requirements. All updates will be published on the same Hugging Face page mentioned in\nthe \u201cData Accessibility\u201d section of the table above. These updates will help the dataset grow and\nbetter support AI research in manufacturing.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr22_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Ethics Statement\n\nThe authors have read and adhere to the ethical requirements for publication in Data in\nBrief. This work does not involve human subjects, animal experiments, or any data collected\nfrom social media platforms. It focuses solely on the creation and use of a dataset derived from\nsynthetic requirement specifications generated by large language models for manufacturing sys-\n\ntems, which was then carefully reviewed and verified by domain experts, ensuring compliance\nwith ethical guidelines applicable to artificial intelligence research and data publication.\n\nData Availability\n\nAutoFactory (Original data) (Hugging Face).\n\nAcknowledgements",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr22_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data Availability\n\nAutoFactory (Original data) (Hugging Face).\n\nAcknowledgements\n\nThis research did not receive any specific grant from funding agencies in the public, commer-\ncial, or not-for-profit sectors.\nDeclaration of Competing Interest\n\nThe authors declare that they have no known competing financial interests or personal rela-\ntionships that could have appeared to influence the work reported in this paper.\n\nReferences\n\n[1] M. Rodriguez, N. Dhameliya, B. Patel, Al-driven programmable logic controllers: enhancing automation in industrial\nprocesses, Robot. Xplore USA Tech. Dig. 1 (1) (Mar. 2024) 1-14.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "6 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 3\nComparison of AutoFactory with existing domain-specific and general-purpose NER datasets.\n\nFeature AutoFactory CoNLL-2003 FabNER MS-NERC\n\nDomain Requirement General news articles Scientific abstracts in Aerospace\nspecifications for (Reuters Corpus) manufacturing research manufacturing\nmanufacturing systems specifications\n(industrial automation)\n\nLanguage English English and German English Chinese\n\nNER Tags 5 categories, including 4 categories, including 12 categories, including 16 categories,\n(ACTUATOR, (PERSON, LOCATION, (MATERIAL, including (PART,\nPRE-ACTUATOR, ORGANIZATION, MANUFACTURING PART_ID, MATERIAL,\nSENSOR, EFFECTOR, MISCELLANEOUS) PROCESS, MACHINE, ATTRIBUTE, etc.)\nOTHER) APPLICATION,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "ENGINEERING\nFEATURES, etc.)\n\nTag Format BIO BIO BIOES (Begin-Inside- BIOE (Begin-Inside-\n(Begin-Inside-Outside) | (Begin-Inside-Outside) | Outside-End-Single) Outside-End)\n\nData Source Manually written News articles from Scientific abstracts Chinese aerospace\nrequirement Reuters (English) and from manufacturing manufacturing\nspecifications expanded Frankfurter Rundschau \u2014_ journals and textbooks, _ specifications,\nby large language (German), manually manually labeled for annotated manually\nmodels and annotated \u2014_ annotated for named technical terms by domain experts\nby experts entities",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "NER Purpose Supports Al systems Supports AI systems for Supports Al systems Supports Al systems\nthat generate control testing and comparing __ that extract scientific that identify\ncode for industrial named entity concepts from technical\nproduction systems recognition methods on manufacturing process components in\n\nnews articles research aerospace\n\nmanufacturing\nspecifications\n\nUse Case Training Al models to Evaluating and Extracting technical Identifying technical\nextract components benchmarking knowledge from entities to support\nand generate control general-purpose Named manufacturing research information\nprograms for industrial Entity Recognition for information extraction in\nautomation (NER) systems retrieval and topic aerospace\n\nmodeling manufacturing\nspecifications",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "modeling manufacturing\nspecifications\n\nAvailability Open access Open access Open access Restricted access\n\n(on request)\n\nviding fine-grained annotations aligned with how control engineers express system behavior.\nEach annotated specification represents a full operational scenario modeled in Factory I/O, cov-\nering input/output components, event sequences, and safety constraints. This alignment with\nexecutable industrial scenarios enables researchers to train models that not only recognize enti-\nties, but also learn to infer control logic structures from language.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "As shown in Table 3, AutoFactory is currently the only open-access dataset that provides\nlinguistically and semantically annotated manufacturing requirements grounded in system be-\nhavior modeled using Factory I/O. This contributes to developing AI models that can interpret\nrequirement specifications and support the generation of control code in industrial automation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To evaluate the structural complexity of the dataset, we analyzed sentence length across all\nannotated specifications. Sentence length provides a basic yet informative indicator of linguistic\nvariation and syntactic richness. As shown in Fig. 3, lengths range from 5 to over 40 tokens, with\na concentration around 14 to 16 tokens. While many sentences are relatively short, the distribu-\ntion includes a substantial number of longer sequences, reflecting more detailed or compound\nrequirement descriptions. This variation supports the development of models that can process\nboth simple and complex expressions of control behavior, and it demonstrates that the dataset\ncaptures the range of natural language found in real industrial contexts.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr23_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In addition to sentence length, we examined the diversity of part-of-speech (POS) tag se-\nquences to assess structural variability beyond surface-level token counts. Table 4 summarizes",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr24_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 19\n\nA. Boudribila, A. Tajer, Z. Boulghasoul, \u201cFrom Natural Language to Code: AI Automation in Cyber-Physical Manufac-\nturing Systems\u201d, Proc. 2024 World Conf. Complex Syst. (WCCS) (Nov. 2024) pp. 1-6, doi:10.1109/WCCS59409.2024.\n10412345,\n\nY. Qamsane, Abdelouahed Tajer, A. Philippot, Towards an approach of synthesis, validation and implementation of\ndistributed control for AMS by using events ordering relations, Int. J. Prod. Res. 55 (21) (Nov. 2017) 6235-6253,\ndoi: 10.1080/00207543.2017.1333648.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr24_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, M.-A. Chadi, A. Tajer, Z. Boulghasoul, Large Language Models and Adversarial Reinforcement Learning\nto Automate PLCs Programming: A Preliminary Investigation, Proc. 2023 9th Int. Conf. Control, Decision Inf. Technol.\n(CoDIT) (2023) 650-655, doi: 10.1109/CoDIT56788.2023.10167432.\n\nA. Boudribila, \u201cAutoFactory\u201d Hugging Face, 2025. [Online]. Available: https://huggingface.co/datasets/boudribila/\nAutoFactory. doi:10.57967/hf/5011.\n\nE.FT.K. Sang, F.D. Meulder, Introduction to the CoNLL-2003 shared task: language-independent named entity recog-\nnition, arXiv (Jun. 12, 2003) arXiv:cs/0306050, doi: 10.48550/arXiv.cs/0306050.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr24_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Kumar, B. Starly, FabNER\u2019: information extraction from manufacturing process science domain literature using\nnamed entity recognition, J. Intell. Manuf. 33 (8) (Dec. 2022) 2393-2407, doi: 10.1007/s10845-021-01807-x.\n\nR. Li, P. Wang, L. Wang, D. Yang, D. Cai, A Corpus and Method for Chinese Named Entity Recognition in Manufactur-\ning, Proc. 2024 Joint Int. Conf. Comput. Linguist., Lang. Resour. Eval. (LREC-COLING) (2024) 264-272.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "14 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\n9. Data Post-processing\n\nAfter generating multiple versions of the requirement specifications using large language\nmodels (LLMs), a post-processing step was necessary to ensure the quality and consistency of\nthe dataset. This phase aimed to remove duplicated content, correct potential inconsistencies,\nand prepare the data for annotation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "LLMs sometimes produce identical or nearly identical outputs, and in some cases, introduce\nsmall errors, unclear phrasing, or deviations from the original specification. To address this, we\napplied an automated filtering step to remove exact and near-duplicate texts. A Python script\nwas used to compare all generated outputs and retain only unique formulations, helping pre-\nserve linguistic diversity while eliminating unnecessary repetition.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In addition to duplication, some generated specifications included errors or deviated from\nthe required format. To resolve this, a manual review was conducted on a representative sample\nof the dataset. Three domain experts reviewed the selected entries to check that each require-\nment specification was grammatically correct, followed the intended structure, and accurately\ndescribed the system behavior. Any texts containing unclear descriptions, factual errors, or for-\nmatting issues were either corrected or excluded.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To verify that the LLM-generated specifications remained semantically aligned with the orig-\ninal descriptions, we also performed a quantitative analysis using cosine similarity on sentence\nembeddings. Table 11 summarizes the similarity scores across the three systems and the over-\nall dataset. The average similarity was 0.9275, with a minimum of 0.7105 and a maximum of\n0.9924, indicating that the rewritten specifications preserved the original meaning while intro-\nducing useful variation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "After filtering and reviewing the generated texts, the dataset was clean and diverse but re-\nmained unstructured. Although each requirement specification described the full behavior of a\nmanufacturing system, it did not explicitly indicate which terms referred to specific components.\nTo make the data suitable for supervised learning, a final step was required to add structure\nthrough annotation. This involved identifying and labeling relevant terms so that AI models\ncould learn to detect them automatically. The next section explains how this was done using\nNamed Entity Recognition (NER) to assign labels to key elements within each specification.\n\n10. Data Labeling",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "10. Data Labeling\n\nTo make the dataset usable for supervised learning, each requirement specification must be\nstructured in a way that allows machines to detect and classify key elements, such as the in-\nput and output components of a manufacturing system. Although the generated texts describe\nsystem behavior clearly, they do not explicitly indicate which words refer to physical compo-\nnents. To address this, we manually labeled the dataset using Named Entity Recognition (NER),\nfollowing a consistent and interpretable annotation format.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Annotation was carried out by our research team, composed of three domain experts. The\nprocess was conducted entirely manually using our offline labeling tool, AutoLabel-NER, devel-\noped to support annotation of technical texts. As shown in Fig. 7, the tool provides a simple\ninterface that allows annotators to assign a label to each token in a requirement specification.\nEach token is categorized into one of five NER classes: Sensor, Actuator, Pre-actuator, Effector, or\nOthers. To ensure structural clarity, we used the standard BIO tagging scheme, where multi-word\ncomponent names such as double acting cylinder are encoded as B-ACTUATOR, I-ACTUATOR, I-\nACTUATOR. This format is widely used in NER applications to distinguish the beginning and\ncontinuation of entity spans.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr25_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The full dataset includes 2358 annotated requirement specifications. To ensure a manage-\nable and high-quality review process, a subset of 300 specifications was selected for cross-\nverification. The dataset was equally divided among the three annotators. Each expert labeled\napproximately one-third of the total (around 786 specifications), and a rotational review pro-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr26_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 17\n\nModel Comparison Across Evaluation Metrics\nEvaluation Loss | Precision |\n20\n\nEvaluation Loss\n\noso 1000 ~\u2014~v6o0 \u00abooo \u2014=\u00ab500~\u2014=\u2014\u00ab OO a )\nTraining Step Training Step\nFi Score\n\n\u00b0 a woo 16002000 P wooo 1600 ato\nTraining Step Training Step\n\n\u2014s- tenbarteseurenieg \u2014o\u2014 tenberistopuncases banshee sed\n\nFig. 8. Model Performance Comparison Across Evaluation Metrics.\n\nBost Evaluation Metrics Across Models\n\nFt Sere Predeon Recall Evalustion Loss\n\nFig. 9. Evaluation of Transformer Models Based on Best F1-Scores.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr26_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Fig. 9. Evaluation of Transformer Models Based on Best F1-Scores.\n\ndataset using a Named Entity Recognition (NER) framework. The task involved classifying each\ntoken into one of five predefined categories: Actuator, Pre-actuator, Sensor, Effector, or Others,\nusing the BIO tagging scheme. Fine-tuning was conducted on a consistent experimental setup to\nallow fair comparison.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr26_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "All models were trained for three epochs with a learning rate of 5e-5 and a batch size of 16.\nThe optimization objective was to minimize the cross-entropy loss between the predicted and\ntrue token-level labels. Evaluation was performed on a held-out test set representing 10 % of\nthe dataset. Metrics used for performance assessment included Precision, Recall, F1 Score, and\nEvaluation Loss. These metrics were selected to reflect both the correctness and completeness of\nentity detection, which are critical for downstream automation tasks.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr26_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The results clearly demonstrate that DistiIBERT-Base achieved the highest performance across\nall evaluation metrics, with an F1 score of 0.9505, precision of 0.9476, and recall of 0.9534. De-\nspite being the smallest model in terms of parameters, it outperformed the larger BERT models\nnot only in accuracy but also in training stability and convergence. These findings are visually\nsummarized in Figs. 8, 9 and Table 16.\n\nThe results confirm that the AutoFactory dataset is well-suited for training transformer mod-\nels to recognize key control components in industrial requirement specifications. The fine-tuned\nmodels achieved high accuracy and demonstrated the potential for integrating such approaches\ninto intelligent automation workflows.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "14 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\n9. Data Post-processing\n\nAfter generating multiple versions of the requirement specifications using large language\nmodels (LLMs), a post-processing step was necessary to ensure the quality and consistency of\nthe dataset. This phase aimed to remove duplicated content, correct potential inconsistencies,\nand prepare the data for annotation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "LLMs sometimes produce identical or nearly identical outputs, and in some cases, introduce\nsmall errors, unclear phrasing, or deviations from the original specification. To address this, we\napplied an automated filtering step to remove exact and near-duplicate texts. A Python script\nwas used to compare all generated outputs and retain only unique formulations, helping pre-\nserve linguistic diversity while eliminating unnecessary repetition.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In addition to duplication, some generated specifications included errors or deviated from\nthe required format. To resolve this, a manual review was conducted on a representative sample\nof the dataset. Three domain experts reviewed the selected entries to check that each require-\nment specification was grammatically correct, followed the intended structure, and accurately\ndescribed the system behavior. Any texts containing unclear descriptions, factual errors, or for-\nmatting issues were either corrected or excluded.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To verify that the LLM-generated specifications remained semantically aligned with the orig-\ninal descriptions, we also performed a quantitative analysis using cosine similarity on sentence\nembeddings. Table 11 summarizes the similarity scores across the three systems and the over-\nall dataset. The average similarity was 0.9275, with a minimum of 0.7105 and a maximum of\n0.9924, indicating that the rewritten specifications preserved the original meaning while intro-\nducing useful variation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "After filtering and reviewing the generated texts, the dataset was clean and diverse but re-\nmained unstructured. Although each requirement specification described the full behavior of a\nmanufacturing system, it did not explicitly indicate which terms referred to specific components.\nTo make the data suitable for supervised learning, a final step was required to add structure\nthrough annotation. This involved identifying and labeling relevant terms so that AI models\ncould learn to detect them automatically. The next section explains how this was done using\nNamed Entity Recognition (NER) to assign labels to key elements within each specification.\n\n10. Data Labeling",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "10. Data Labeling\n\nTo make the dataset usable for supervised learning, each requirement specification must be\nstructured in a way that allows machines to detect and classify key elements, such as the in-\nput and output components of a manufacturing system. Although the generated texts describe\nsystem behavior clearly, they do not explicitly indicate which words refer to physical compo-\nnents. To address this, we manually labeled the dataset using Named Entity Recognition (NER),\nfollowing a consistent and interpretable annotation format.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Annotation was carried out by our research team, composed of three domain experts. The\nprocess was conducted entirely manually using our offline labeling tool, AutoLabel-NER, devel-\noped to support annotation of technical texts. As shown in Fig. 7, the tool provides a simple\ninterface that allows annotators to assign a label to each token in a requirement specification.\nEach token is categorized into one of five NER classes: Sensor, Actuator, Pre-actuator, Effector, or\nOthers. To ensure structural clarity, we used the standard BIO tagging scheme, where multi-word\ncomponent names such as double acting cylinder are encoded as B-ACTUATOR, I-ACTUATOR, I-\nACTUATOR. This format is widely used in NER applications to distinguish the beginning and\ncontinuation of entity spans.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr27_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The full dataset includes 2358 annotated requirement specifications. To ensure a manage-\nable and high-quality review process, a subset of 300 specifications was selected for cross-\nverification. The dataset was equally divided among the three annotators. Each expert labeled\napproximately one-third of the total (around 786 specifications), and a rotational review pro-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "8 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 6\n\nToken Diversity Metrics Across Individual Systems and the Full Dataset.\nMetric System 1 System 2 System 3 AutoFactory (All)\nTotal Tokens 81,784 80,428 117,198 279,830\nUnique Tokens 398 308 368 629\nTIR 0.00487 0.00383 0.00314 0.00225\nDistinct-1 0.00487 0.00383 0.00314 0.00225\nDistinct-2 0.02120 0.01350 0.01382 0.01179\n\nTable 7\n\nSelf-BLEU Evaluation Across Individual Systems and the Full Dataset.\nStatistic System 1 System 2 System 3 AutoFactory (All)\nAverage Self-BLEU 0.9970 0.9983 0.9982 0.9984\nMinimum 0.9448 0.9551 0.9678 0.9510\nStandard Deviation 0.0066 0.0054 0.0043 0.0045\n\nTable 8",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 8\n\nSyntactic parse tree depth statistics Across Individual Systems and the Full Dataset.\nStatistic System 1 System 2 System 3 AutoFactory (All)\nNumber of Sentences 899 748 711 2358\nAverage Depth 15.15, 21.04 33.36 22.51\nMinimum Depth 1 13 20 a\nMaximum Depth 21 38 59 59\nStandard Deviation 1.73 3.71 6.58 8.68\n25th Percentile 14.0 19.0 28.0 16.0\nMedian Depth 15.0 21.0 33.0 20.0\n75th Percentile 16.0 23.0 37.0 28.0\n\ncorporated, we expect greater lexical diversity due to the introduction of new components and\nsystem behaviors.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further evaluate linguistic diversity, we measured Self-BLEU scores across the dataset. Self-\nBLEU quantifies how similar each sentence is to others within the same set, with lower scores\nindicating higher diversity. As shown in Table 7, the average Self-BLEU score for AutoFactory is\n0.9984, with a minimum of 0.9510 and a standard deviation of 0.0045. These high values re-\nflect the dataset\u2019s design, where each set of specifications reformulates the same base scenario\nusing consistent technical components. Despite this structural consistency, LLM-generated re-\nformulations still produce varied sentence constructions, preserving diversity in expression. As\nAutoFactory expands to include more Factory I/O systems, the range of sentence patterns and",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "AutoFactory expands to include more Factory I/O systems, the range of sentence patterns and\ninter-sentence variability is expected to increase accordingly.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To assess syntactic complexity, we measured the depth of syntactic parse trees for each\nsentence. A deeper tree generally indicates a more complex sentence structure. As shown in\nTable 8, the average parse depth in AutoFactory is 22.51, with System 3 having the highest\naverage at 33.36. The depth ranges from 11 to 59, showing that the dataset includes both\nsimple and complex sentence constructions. These variations reflect the natural differences in\nhow requirements can be expressed, even when describing the same system. The inclusion\nof multiple sentence types supports the development of models that can handle a range of\nsyntactic forms. As more systems are added in future versions, the variety of sentence structures\nis expected to grow further.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr28_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset combines consistent semantic content with diverse linguistic expres-\nsions grounded in real Factory I/O scenarios. Although this initial version includes only 3 out of\n21 available systems, it already reflects a wide range of sentence structures, grammatical pat-\nterns, and technical components. This variation is not the result of random or superficial refor-\nmulation, but reflects the different ways engineers naturally express similar control behaviors.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "4 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 1\n\nExample of Token-Level Annotation in the AutoFactory Dataset.\nToken POS POS_numeric NER Label NER_numeric\nThe DT 5 fe) 0\nsystem NN 10 fe} 0\nconsists VBZ 25 fe} 0\nof IN 7 fe) 0\na DT 5 fe) 0\nconveyor NN 10 B-EFFECTOR 7\nbelt NN 10 I-EFFECTOR 8\ndriven VBN 23 fe} 0\nby IN 7 fe) 0\nan DT 5 fe) 0\nelectric J 8 B-ACTUATOR 1\nmotor NN 10 I-ACTUATOR 2",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To support this goal, AutoFactory [5] provides 2358 manually annotated requirement specifi-\ncations based on realistic industrial scenarios modeled in Factory I/O. Each specification repre-\nsents a complete industrial process, including operation sequences, safety conditions and inter-\nactions between system components. The dataset consists of 17,134 segmented sentences and a\ntotal of 279,830 tokens. Each token is annotated and structured into five columns, following a\nformat adapted from the CoNLL-2003 standard for Named Entity Recognition (NER) tasks:\n\n+ Token text: the word or punctuation (e.g., Cylinder, Controlled)\n\n+ POS tag: the part-of-speech label (e.g., noun [NN], verb [VB], determiner [DT])\n\n+ POS index: the numeric code for the POS tag (e.g., NN = 10)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ POS index: the numeric code for the POS tag (e.g., NN = 10)\n\n+ NER label: the named entity tag identifying the component type (e.g., ACTUATOR, SENSOR)\n+ NER index: the numeric code for the NER label (e.g., B-ACTUATOR = 1)\n\nThe NER labels follow the BIO tagging scheme:\n\n- B (Beginning): marks the first word of an entity (e.g., B-ACTUATOR)\n+ I (Inside): marks the continuation of the same entity (e.g., I-ACTUATOR)\n+ O (Outside): indicates tokens that do not belong to any labeled entity\n\nThis format allows the model to recognize multi-word technical components. For example, in\nthe phrase \u201cdouble-acting cylinder,\u201d \u201cdouble-acting\u201d is labeled as B-ACTUATOR and \u201ccylinder\u201d as\nI-ACTUATOR, forming a single entity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 1 shows an example of a token-level annotation from a requirement specification in\nthe dataset.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Each requirement specification consists of multiple sentences, with empty lines marking sen-\ntence boundaries. All annotations were created and reviewed manually by domain experts to\nensure accuracy and consistency. The dataset includes both POS and NER labels, each mapped\nto a numeric index for compatibility with standard machine learning frameworks. The POS tag-\nging helps models understand grammatical structure, and NER labeling helps identify technical\ncomponents, such as ACTUATOR (e.g., cylinders, motors), PREACTUATOR (e.g., valves, contactors),\nSENSOR (e.g., limit switches, detectors), EFFECTOR (e.g., conveyor belt, lights), and OTHER (to-\nkens not linked to physical control elements).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr29_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The dataset is provided in both Excel (.xlsx) and CSV (.csv) formats, encoded in UTF-8 to en-\nsure compatibility with standard natural language processing and machine learning frameworks.\nIt follows a conventional 80-10-10 split: 80 % of the data is allocated to the training set, 10 %\nto the validation set, and 10 % to the test set. Fig. 1 illustrates this partitioning.\n\n+ Training Set (80 %): used to train the models\n+ Validation Set (10 %): used for hyperparameter tuning\n+ Test Set (10 %): used for final model evaluation",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr3_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 17\n\nModel Comparison Across Evaluation Metrics\nEvaluation Loss | Precision |\n20\n\nEvaluation Loss\n\noso 1000 ~\u2014~v6o0 \u00abooo \u2014=\u00ab500~\u2014=\u2014\u00ab OO a )\nTraining Step Training Step\nFi Score\n\n\u00b0 a woo 16002000 P wooo 1600 ato\nTraining Step Training Step\n\n\u2014s- tenbarteseurenieg \u2014o\u2014 tenberistopuncases banshee sed\n\nFig. 8. Model Performance Comparison Across Evaluation Metrics.\n\nBost Evaluation Metrics Across Models\n\nFt Sere Predeon Recall Evalustion Loss\n\nFig. 9. Evaluation of Transformer Models Based on Best F1-Scores.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr3_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Fig. 9. Evaluation of Transformer Models Based on Best F1-Scores.\n\ndataset using a Named Entity Recognition (NER) framework. The task involved classifying each\ntoken into one of five predefined categories: Actuator, Pre-actuator, Sensor, Effector, or Others,\nusing the BIO tagging scheme. Fine-tuning was conducted on a consistent experimental setup to\nallow fair comparison.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr3_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "All models were trained for three epochs with a learning rate of 5e-5 and a batch size of 16.\nThe optimization objective was to minimize the cross-entropy loss between the predicted and\ntrue token-level labels. Evaluation was performed on a held-out test set representing 10 % of\nthe dataset. Metrics used for performance assessment included Precision, Recall, F1 Score, and\nEvaluation Loss. These metrics were selected to reflect both the correctness and completeness of\nentity detection, which are critical for downstream automation tasks.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr3_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The results clearly demonstrate that DistiIBERT-Base achieved the highest performance across\nall evaluation metrics, with an F1 score of 0.9505, precision of 0.9476, and recall of 0.9534. De-\nspite being the smallest model in terms of parameters, it outperformed the larger BERT models\nnot only in accuracy but also in training stability and convergence. These findings are visually\nsummarized in Figs. 8, 9 and Table 16.\n\nThe results confirm that the AutoFactory dataset is well-suited for training transformer mod-\nels to recognize key control components in industrial requirement specifications. The fine-tuned\nmodels achieved high accuracy and demonstrated the potential for integrating such approaches\ninto intelligent automation workflows.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 13\n\nTable 10\n\nReformulated Requirement Specifications Generated by LLMs.\n\nSource\n\nReformulated Requirement Specification\n\nOriginal\n\nChatGPT\n(Pro Version)\n\nClaude\n(Pro Version)\n\nMistral\n(Pro Version)\n\nThe system consists of a conveyor belt driven by an electric motor. A normally open start\nbutton is used to initiate the transport cycle. When the start button is pressed, the start\nlight is turned on and the conveyor motor is activated. A photoelectric exit sensor is\ninstalled at the end of the conveyor. When the sensor detects the presence of a box, the\nconveyor motor stops and the start light turns off. The system waits for the next press of\nthe start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This automated system includes a conveyor belt driven by a motor. A normally open start\nbutton is provided to launch the transport cycle. Once pressed, the system powers on the\nstart light and sets the motor in motion to drive the conveyor. A photoelectric presence\nsensor installed at the discharge point detects incoming boxes. When a box is detected, the\nmotor stops and the start light is turned off. The system then resets and waits for the next\ncycle to be initiated by pressing the start button.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In this system, a conveyor belt is driven by an electric motor. The transport cycle is initiated\nby pressing a normally open start button. Once pressed, the start light is activated and the\nmotor powers the conveyor. At the end of the conveyor, a photoelectric exit sensor monitors\nfor boxes. When a box is detected, the motor is stopped and the start light is turned off.\nThe system then waits for another start button press to begin the next operation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This system uses an electric motor to drive a conveyor belt. The transport process is\ntriggered by a normally open push button start. Pressing this button switches on the start\nlight and activates the conveyor motor. At the end of the belt, a photoelectric sensor is\ninstalled to monitor for the presence of boxes. When the sensor detects a box, the motor is\nstopped and the start light is turned off. The cycle is then paused until the operator presses\nthe start button again.\n\nTable 11",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 11\n\nSemantic Similarity Metrics between Original and Augmented Specifications.\nMetric System 1 System 2 System 3 AutoFactory (All)\nAverage + Std. Dev 0.9172 + 0.0566 0.9546 + 0.0295 0.9107 + 0.0337 0.9275 + 0.0399\nMin / Max Similarity 0.7105 | 0.9879 0.8461 / 0.9924 0.7951 | 0.9849 0.7105 | 0.9924\nMedian Similarity 0.9363 0.9646 0.9158 0.9389\n25th / 75th Percentiles 0.8959 | 0.9576 0.9395 | 0.9768 0.8903 | 0.9352 0.9086 | 0.9565\n\nFig. 6. Distribution of similarity scores across all rewritten requirement specifications.\n\nchanges. These findings are summarized in Table 11, and the distribution of similarity scores is\n\nvisualized in Fig. 6.\nThese results co!\n\nnfirm that the rewritten requirement specifications maintain the original",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr30_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "nfirm that the rewritten requirement specifications maintain the original\n\nmeaning while introducing variation in wording and sentence structure. This validation step\nis essential to ensure that the augmented data is both diverse and technically accurate. Such\nconsistency is necessary to support effective training of Al models on real-world industrial in-\n\nstructions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 9\n\nDeka Si\n\nFig. 4. Structured Workflow for the Construction of the AutoFactory Dataset.\n\nThe dataset integrates multiple layers of annotation including part-of-speech tags, named en-\ntity labels and syntactic parse depth which support both surface-level and structural language\nanalysis. These features make AutoFactory a valuable resource for developing models that can\nunderstand and extract control-relevant information from textual specifications. To further vali-\ndate this potential, the next section presents baseline experiments for named entity recognition\nusing transformer-based models.\n\n4. Experimental Design, Materials and Methods",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset was developed to address a pressing limitation in the field of ar-\ntificial intelligence for industrial automation. While recent advances in automation have trans-\nformed manufacturing systems, there remains a lack of publicly available datasets that support\nthe automatic interpretation of requirement specifications and the generation of Programmable\nLogic Controller (PLC) code. Most existing natural language processing datasets are designed for\ngeneral-purpose tasks, such as recognizing names, locations, or organizations. These resources\nare insufficient for industrial applications, which require the identification and interpretation\nof technical components, including actuators, valves, sensors, and control behaviors. AutoFactory",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "of technical components, including actuators, valves, sensors, and control behaviors. AutoFactory\nwas created to fill this gap by offering a domain-specific, annotated dataset grounded in realistic\nmanufacturing scenarios.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The dataset construction followed a structured three-phase methodology: specification gen-\neration, component annotation, and dataset preparation. The complete process is illustrated in\nFig. 4.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In the first phase, a set of initial requirement specifications was manually written to describe\nthe behavior of three manufacturing systems modeled in Factory I/O. These specifications were\nthen expanded using large language models to produce linguistically diverse variants that pre-\nserve the same functional meaning. In the second phase, domain experts manually annotated the\nspecifications using a BIO tagging scheme to identify key industrial components, including actua-\ntors, pre-actuators, sensors, and effectors. In the third phase, the annotated data was structured\nand exported in multiple formats (CSV, XLSX), ensuring compatibility with machine learning\ntools and facilitating its use for training and evaluating AI models in industrial automation tasks.\n\n5. Dataset Construction",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr31_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "5. Dataset Construction\n\nTo train AI systems that can understand requirement specifications, it is important to have\ndata that reflects how real manufacturing systems are described. However, there are currently no",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr32_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 5\n\nin\n\n80%\n\nTraining Set Validation Set Test Set\n\nFig. 1. Dataset Split - Training, Validation, and Test Sets.\n\nTable 2\n\nSummary Statistics of Specifications, Tokens, and Named Entities in AutoFactory.\nDataset Specifications Sentences Tokens Actuators Pre-Actuators Sensors Effectors Others\nTraining 1886 13,686 223,003 15,838 4645 20,492 21,133 160,895\nValidation 236 1728 28,759 2030 684 2634 2785 20,626\nTest 236 1720 28,068 1983 584 2569 2722 20,210\nTotal 2358 17,134 279,830 19,851 5913 25,695 26,640 201,731",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr32_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 2 summarizes the dataset\u2019s structure and semantic annotations. It includes 2358\nrequirement specifications, segmented into 17,134 sentences and comprising 279,830 tokens.\nAmong these tokens, 7.09 % are labeled as ACTUATOR, 2.11 % as PRE-ACTUATOR, 9.18 % as SEN-\nSOR, and 9.52 % as EFFECTOR. The remaining 72.09 % of tokens are labeled as OTHER, indicating\nthey do not refer to system components but contribute to grammatical structure and contextual\nclarity. These proportions reflect the natural language composition of industrial specifications,\nwhere functional terms are embedded within descriptive text.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr32_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further illustrate the component distribution, Fig. 2 visualizes the relative frequency of\neach label category. Actuator and sensor mentions are most prevalent, consistent with their key\nrole in control system logic. Pre-actuators and effectors appear less frequently but remain essen-\ntial for modeling system transitions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr32_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset is designed not only for engineers in industrial automation but\nalso for researchers, developers, and students working in natural language processing and Al.\nIt serves as a high-quality benchmark for tasks such as named entity recognition, information\nextraction, and the automatic generation of control logic from textual specifications. The dataset\noffers a structured, modular format that is both accessible and extensible, making it suitable for\nacademic research and industrial applications alike.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr32_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Despite significant progress in Named Entity Recognition (NER), existing datasets have not\naddressed the specific challenges of understanding requirement specifications in industrial au-\ntomation. Most NER corpora, such as CoNLL-2003 [6], FabNER [7], and MS-NERC [8], focus on\ngeneral-purpose or scientific language, but none are structured to represent how engineers de-\nscribe the behavior of components in manufacturing systems. AutoFactory fills this gap by pro-\n\nFig. 2. Distribution of Labeled Entities in the AutoFactory Dataset.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 al\n\nTable 9\n\nBaseline Requirement Specifications for Selected Factory I/O Systems.\nSystem Name Requirement Specification\nSingle Conveyor The system consists of a conveyor belt driven by an electric motor. A normally open\nBelt Transport start button is used to initiate the transport cycle. When the start button is pressed,\nSystem. the start light is turned on and the conveyor motor is activated. A photoelectric exit\n\nsensor is installed at the end of the conveyor. When the sensor detects the presence of\na box, the conveyor motor stops and the start light turns off. The system waits for the\nnext press of the start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor: Conveyor\n\nTransport System One and Conveyor Two. A start button is used to initiate the cycle. When the start\nbutton is pressed, the start light turns on, and Conveyor One is activated. The box\nmoves forward until it reaches Sensor A. Once Sensor A is triggered, Conveyor One\nstops, and Conveyor Two is activated. The box continues moving until it reaches\nSensor B, which stops Conveyor Two. The start light then turns off. The system is now\nidle and waits for the next press of the start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dual Conveyor Belt The system consists of two conveyor belts, each driven by an electric motor and\nSystem with controlled by contactors KM1 and KM2. A double-acting cylinder is used to transfer\nTransfer Cylinder boxes between the conveyors. The cylinder is controlled by a 5/2-way solenoid valve. A",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "start button is used to initiate the cycle. When the start button is pressed, the start\nlight turns on. At the same time, Conveyor One and Conveyor Two are both activated.\nThe box on Conveyor One moves forward until it reaches the entry sensor. Once the\nentry sensor is triggered, Conveyor One stops. The double-acting cylinder then extends\nforward. It continues moving until it activates the front limit switch. When the front\nlimit switch is triggered, the solenoid valve is reversed, and the cylinder retracts. The\ncylinder moves back until the back limit switch is triggered. Conveyor Two continues\nrunning during the entire process. When the exit sensor detects the presence of the\nbox at the end of Conveyor Two, and the cylinder has fully retracted, the system",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "box at the end of Conveyor Two, and the cylinder has fully retracted, the system\nrestarts the cycle. Conveyor One is activated again to bring the next box forward.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "tors, electric motors, photoelectric sensors, and double-acting cylinders. Each system reflects\nrealistic operational logic typically implemented in programmable logic controller (PLC)-based\nenvironments.\n\nEach requirement specification captures the functional behavior of a complete manufactur-\ning system. The descriptions include triggering conditions, sequences of component activations,\nand terminal states. This structure ensures that the specifications not only reflect the vocabu-\nlary of industrial automation but also convey the relationships between sensors, actuators, pre-\nactuators, and effectors within each operational cycle. Such modeling is essential for training Al\nsystems to identify entities and understand control logic in natural language.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To illustrate the nature of the specifications, Table 9 provides examples of the baseline manu-\nfacturing systems included in the dataset. Each specification offers a coherent narrative describ-\ning how the system responds to external inputs and internal conditions to achieve its intended\nfunctionality.\n\nEach system is also accompanied by its Factory I/O scene file, tag documentation, and multi-\nangle screenshots to support reproducibility. These baseline specifications serve as the core data\nfrom which further linguistic variants are generated in the following stage.\n\n7. Prompt Design",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr34_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "7. Prompt Design\n\nTo train AI models that can understand requirement specifications, it is important to provide\nthem with a large amount of varied data. In real industrial settings, different engineers often\ndescribe the same system in different ways. They may use different words, sentence structures,\nor levels of detail, depending on their experience and writing style. These differences do not\nchange the meaning but affect how the information is presented. For Al models to perform well,\nthey must be trained on examples that reflect this diversity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "10 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nFig. 5. Example of a manufacturing system: Sorting Station composed of multiple components working together.\n\npublic datasets built for this purpose. Without such data, it becomes difficult to develop models\nthat can detect and classify the main components used in automated systems.\n\nTo solve this problem, the AutoFactory dataset was built using a structured approach based\non industrial systems modeled in Factory I/O. These virtual systems simulate realistic automation\nscenarios and were used as a starting point to write clear and complete requirement specifica-\ntions. Each specification was manually written to describe the behavior of machines in these\nscenes.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To increase variety in how requirements are expressed, large language models were used\nto generate different versions of each original specification. These versions were reviewed by\ndomain experts to make sure they kept the same meaning and were technically accurate. Finally,\nthe data was cleaned and organized to remove duplicates and fix any small errors, resulting in\na well-structured and high-quality dataset for research in industrial automation.\n\n6. Baseline Data Creation",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "6. Baseline Data Creation\n\nThe first step in creating the dataset is to write baseline requirement specifications for com-\nponents commonly found in automated production systems. These specifications serve as the\nfoundation of the dataset and provide clear and structured descriptions of how different man-\nufacturing components operate. Since there are no publicly available datasets for this purpose,\nwe manually create these specifications, following the best practices and documentation stan-\ndards used by leading global companies in industrial automation, such as Siemens (Germany),\nSchneider Electric (France), and Allen-Bradley (USA).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Automated manufacturing systems are made up of many parts, or components, that work to-\ngether to complete tasks. For example, a system may have cylinders, conveyor belts, sensors, and\nmotors. Each of these components has its own role, and together they form a complex system\n(see Fig. 5).\n\nA sorting station, is an example of such a system. It consists of different components, such as\nconveyors, vision sensors, and sorting mechanisms, that work together to classify and transport\nitems. Each component plays a distinct role in the process, contributing to the overall system\nfunctionality.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To capture this, each baseline requirement specification represents the full functional logic of\na selected manufacturing system, combining multiple components into a coherent operational\nflow. Rather than isolating components, the specification explains how actuators (e.g., double-\nacting cylinders, electric motors), pre-actuators (e.g., contactors, solenoid valves), sensors (e.g.,\ninductive sensors, limit switches), and effectors (e.g., conveyor belts, pop-up sorters) interact to\nperform specific tasks.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr36_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This version of the dataset includes three representative manufacturing systems modeled\nin Factory I/O: a single conveyor belt transport system, a dual conveyor belt system, and a\ndual conveyor system with a transfer cylinder. These systems were selected because they con-\ntain a wide range of commonly used industrial components, such as start buttons, contac-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 13\n\nTable 10\n\nReformulated Requirement Specifications Generated by LLMs.\n\nSource\n\nReformulated Requirement Specification\n\nOriginal\n\nChatGPT\n(Pro Version)\n\nClaude\n(Pro Version)\n\nMistral\n(Pro Version)\n\nThe system consists of a conveyor belt driven by an electric motor. A normally open start\nbutton is used to initiate the transport cycle. When the start button is pressed, the start\nlight is turned on and the conveyor motor is activated. A photoelectric exit sensor is\ninstalled at the end of the conveyor. When the sensor detects the presence of a box, the\nconveyor motor stops and the start light turns off. The system waits for the next press of\nthe start button to repeat the cycle.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This automated system includes a conveyor belt driven by a motor. A normally open start\nbutton is provided to launch the transport cycle. Once pressed, the system powers on the\nstart light and sets the motor in motion to drive the conveyor. A photoelectric presence\nsensor installed at the discharge point detects incoming boxes. When a box is detected, the\nmotor stops and the start light is turned off. The system then resets and waits for the next\ncycle to be initiated by pressing the start button.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In this system, a conveyor belt is driven by an electric motor. The transport cycle is initiated\nby pressing a normally open start button. Once pressed, the start light is activated and the\nmotor powers the conveyor. At the end of the conveyor, a photoelectric exit sensor monitors\nfor boxes. When a box is detected, the motor is stopped and the start light is turned off.\nThe system then waits for another start button press to begin the next operation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This system uses an electric motor to drive a conveyor belt. The transport process is\ntriggered by a normally open push button start. Pressing this button switches on the start\nlight and activates the conveyor motor. At the end of the belt, a photoelectric sensor is\ninstalled to monitor for the presence of boxes. When the sensor detects a box, the motor is\nstopped and the start light is turned off. The cycle is then paused until the operator presses\nthe start button again.\n\nTable 11",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 11\n\nSemantic Similarity Metrics between Original and Augmented Specifications.\nMetric System 1 System 2 System 3 AutoFactory (All)\nAverage + Std. Dev 0.9172 + 0.0566 0.9546 + 0.0295 0.9107 + 0.0337 0.9275 + 0.0399\nMin / Max Similarity 0.7105 | 0.9879 0.8461 / 0.9924 0.7951 | 0.9849 0.7105 | 0.9924\nMedian Similarity 0.9363 0.9646 0.9158 0.9389\n25th / 75th Percentiles 0.8959 | 0.9576 0.9395 | 0.9768 0.8903 | 0.9352 0.9086 | 0.9565\n\nFig. 6. Distribution of similarity scores across all rewritten requirement specifications.\n\nchanges. These findings are summarized in Table 11, and the distribution of similarity scores is\n\nvisualized in Fig. 6.\nThese results co!\n\nnfirm that the rewritten requirement specifications maintain the original",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr37_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "nfirm that the rewritten requirement specifications maintain the original\n\nmeaning while introducing variation in wording and sentence structure. This validation step\nis essential to ensure that the augmented data is both diverse and technically accurate. Such\nconsistency is necessary to support effective training of Al models on real-world industrial in-\n\nstructions.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "6 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 3\nComparison of AutoFactory with existing domain-specific and general-purpose NER datasets.\n\nFeature AutoFactory CoNLL-2003 FabNER MS-NERC\n\nDomain Requirement General news articles Scientific abstracts in Aerospace\nspecifications for (Reuters Corpus) manufacturing research manufacturing\nmanufacturing systems specifications\n(industrial automation)\n\nLanguage English English and German English Chinese\n\nNER Tags 5 categories, including 4 categories, including 12 categories, including 16 categories,\n(ACTUATOR, (PERSON, LOCATION, (MATERIAL, including (PART,\nPRE-ACTUATOR, ORGANIZATION, MANUFACTURING PART_ID, MATERIAL,\nSENSOR, EFFECTOR, MISCELLANEOUS) PROCESS, MACHINE, ATTRIBUTE, etc.)\nOTHER) APPLICATION,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "ENGINEERING\nFEATURES, etc.)\n\nTag Format BIO BIO BIOES (Begin-Inside- BIOE (Begin-Inside-\n(Begin-Inside-Outside) | (Begin-Inside-Outside) | Outside-End-Single) Outside-End)\n\nData Source Manually written News articles from Scientific abstracts Chinese aerospace\nrequirement Reuters (English) and from manufacturing manufacturing\nspecifications expanded Frankfurter Rundschau \u2014_ journals and textbooks, _ specifications,\nby large language (German), manually manually labeled for annotated manually\nmodels and annotated \u2014_ annotated for named technical terms by domain experts\nby experts entities",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "NER Purpose Supports Al systems Supports AI systems for Supports Al systems Supports Al systems\nthat generate control testing and comparing __ that extract scientific that identify\ncode for industrial named entity concepts from technical\nproduction systems recognition methods on manufacturing process components in\n\nnews articles research aerospace\n\nmanufacturing\nspecifications\n\nUse Case Training Al models to Evaluating and Extracting technical Identifying technical\nextract components benchmarking knowledge from entities to support\nand generate control general-purpose Named manufacturing research information\nprograms for industrial Entity Recognition for information extraction in\nautomation (NER) systems retrieval and topic aerospace\n\nmodeling manufacturing\nspecifications",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "modeling manufacturing\nspecifications\n\nAvailability Open access Open access Open access Restricted access\n\n(on request)\n\nviding fine-grained annotations aligned with how control engineers express system behavior.\nEach annotated specification represents a full operational scenario modeled in Factory I/O, cov-\nering input/output components, event sequences, and safety constraints. This alignment with\nexecutable industrial scenarios enables researchers to train models that not only recognize enti-\nties, but also learn to infer control logic structures from language.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "As shown in Table 3, AutoFactory is currently the only open-access dataset that provides\nlinguistically and semantically annotated manufacturing requirements grounded in system be-\nhavior modeled using Factory I/O. This contributes to developing AI models that can interpret\nrequirement specifications and support the generation of control code in industrial automation.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To evaluate the structural complexity of the dataset, we analyzed sentence length across all\nannotated specifications. Sentence length provides a basic yet informative indicator of linguistic\nvariation and syntactic richness. As shown in Fig. 3, lengths range from 5 to over 40 tokens, with\na concentration around 14 to 16 tokens. While many sentences are relatively short, the distribu-\ntion includes a substantial number of longer sequences, reflecting more detailed or compound\nrequirement descriptions. This variation supports the development of models that can process\nboth simple and complex expressions of control behavior, and it demonstrates that the dataset\ncaptures the range of natural language found in real industrial contexts.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr38_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "In addition to sentence length, we examined the diversity of part-of-speech (POS) tag se-\nquences to assess structural variability beyond surface-level token counts. Table 4 summarizes",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "4 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 1\n\nExample of Token-Level Annotation in the AutoFactory Dataset.\nToken POS POS_numeric NER Label NER_numeric\nThe DT 5 fe) 0\nsystem NN 10 fe} 0\nconsists VBZ 25 fe} 0\nof IN 7 fe) 0\na DT 5 fe) 0\nconveyor NN 10 B-EFFECTOR 7\nbelt NN 10 I-EFFECTOR 8\ndriven VBN 23 fe} 0\nby IN 7 fe) 0\nan DT 5 fe) 0\nelectric J 8 B-ACTUATOR 1\nmotor NN 10 I-ACTUATOR 2",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To support this goal, AutoFactory [5] provides 2358 manually annotated requirement specifi-\ncations based on realistic industrial scenarios modeled in Factory I/O. Each specification repre-\nsents a complete industrial process, including operation sequences, safety conditions and inter-\nactions between system components. The dataset consists of 17,134 segmented sentences and a\ntotal of 279,830 tokens. Each token is annotated and structured into five columns, following a\nformat adapted from the CoNLL-2003 standard for Named Entity Recognition (NER) tasks:\n\n+ Token text: the word or punctuation (e.g., Cylinder, Controlled)\n\n+ POS tag: the part-of-speech label (e.g., noun [NN], verb [VB], determiner [DT])\n\n+ POS index: the numeric code for the POS tag (e.g., NN = 10)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "+ POS index: the numeric code for the POS tag (e.g., NN = 10)\n\n+ NER label: the named entity tag identifying the component type (e.g., ACTUATOR, SENSOR)\n+ NER index: the numeric code for the NER label (e.g., B-ACTUATOR = 1)\n\nThe NER labels follow the BIO tagging scheme:\n\n- B (Beginning): marks the first word of an entity (e.g., B-ACTUATOR)\n+ I (Inside): marks the continuation of the same entity (e.g., I-ACTUATOR)\n+ O (Outside): indicates tokens that do not belong to any labeled entity\n\nThis format allows the model to recognize multi-word technical components. For example, in\nthe phrase \u201cdouble-acting cylinder,\u201d \u201cdouble-acting\u201d is labeled as B-ACTUATOR and \u201ccylinder\u201d as\nI-ACTUATOR, forming a single entity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 1 shows an example of a token-level annotation from a requirement specification in\nthe dataset.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Each requirement specification consists of multiple sentences, with empty lines marking sen-\ntence boundaries. All annotations were created and reviewed manually by domain experts to\nensure accuracy and consistency. The dataset includes both POS and NER labels, each mapped\nto a numeric index for compatibility with standard machine learning frameworks. The POS tag-\nging helps models understand grammatical structure, and NER labeling helps identify technical\ncomponents, such as ACTUATOR (e.g., cylinders, motors), PREACTUATOR (e.g., valves, contactors),\nSENSOR (e.g., limit switches, detectors), EFFECTOR (e.g., conveyor belt, lights), and OTHER (to-\nkens not linked to physical control elements).",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr39_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The dataset is provided in both Excel (.xlsx) and CSV (.csv) formats, encoded in UTF-8 to en-\nsure compatibility with standard natural language processing and machine learning frameworks.\nIt follows a conventional 80-10-10 split: 80 % of the data is allocated to the training set, 10 %\nto the validation set, and 10 % to the test set. Fig. 1 illustrates this partitioning.\n\n+ Training Set (80 %): used to train the models\n+ Validation Set (10 %): used for hyperparameter tuning\n+ Test Set (10 %): used for final model evaluation",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr4_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 7\n\nFig. 3. Histogram of Sentence Lengths (in Tokens) Across the AutoFactory Dataset.\n\nTable 4\nPOS Tag Sequence Diversity Across Individual Systems and the Full Dataset.\nMetric System 1 System 2 System 3 AutoFactory (All)\nTotal Sentences 5335 5168 6602 17,134\nUnique POS Sequences 1791 1108 1883 4778\nDiversity Ratio (%) 33.57 % 21.44 % 28.52 % 27.89 %\nTable 5\nN-gram Diversity and Entropy Across Individual Systems and the Full Dataset.\nN-gram Metric System 1 System 2 System 3 AutoFactory (All)\nUnique Bigrams 1734 1086 1620 3300\nBigram Entropy 8.4113 7.8143 8.5357 9.1402\nUnique Trigrams 3883 2144 3527 8078\nTrigram Entropy 9.7597 8.8655 9.5719 10.5591",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr4_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "the number of unique POS patterns identified across the three systems and the full dataset. Aut-\noFactory contains 4778 distinct POS tag sequences across 17,134 sentences, corresponding to a\ndiversity ratio of 27.89 %. This metric reflects the proportion of unique syntactic structures rel-\native to total sentences. System 1 and System 3 show particularly high diversity, with ratios\nexceeding 28 %, indicating greater variability in how requirements are phrased. These findings\nconfirm that the dataset includes a wide range of grammatical constructions, which can help Al\nmodels learn robust generalizations across different linguistic forms of technical specifications.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr4_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further evaluate lexical variability, we measured n-gram diversity and entropy across the\ndataset. Table 5 reports the number of unique bigrams and trigrams, as well as their corre-\nsponding entropy scores. The full AutoFactory dataset contains 8078 distinct trigrams and 3300\nbigrams, with trigram entropy reaching 10.56. These values indicate a high level of lexical diver-\nsity and reduced repetition across specifications. Among individual systems, System 3 exhibits\nthe highest bigram and trigram entropy, consistent with its longer and more structurally varied\nsentences. High entropy values suggest that the dataset avoids rigid or repetitive phrasing, offer-\ning a broader lexical space for training models to generalize across different ways of expressing\nfunctional requirements.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr4_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To assess lexical diversity, we computed the type-token ratio (TTR) and distinct-n metrics,\nwhich measure vocabulary variety and repetition. As shown in Table 6, AutoFactory contains\n279,830 tokens and 629 unique token types, resulting in a TTR of 0.00225. These values are\nconsistent with the dataset\u2019s current structure, which includes only 3 out of the 21 Factory I/O\nsystems. Each reformulated specification describes the same system using a consistent set of\ncomponent names. As a result, the vocabulary reflects technical consistency rather than linguis-\ntic redundancy. The distinct-1 and distinct-2 scores further confirm that the dataset maintains\nmeaningful variation in phrasing across reformulations. As additional Factory I/O systems are in-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr40_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "350\n\n300\n\n250\n\nSeay\n\n150\n\n100\n\n50\n\n0.70\n\n0.75\n\n0.80\n\n0.85\nSimilarity Score\n\n0.90\n\n0.95\n\n1.00",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr42_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "(rn\n\n80%\n\nTraining Set Validation Set Test Set",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr43_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Entity Type\n\nothers\n\neffectors\n\nSensors\n\nPre-Actuators:\n\nActuators\n\n201,731,\n\nEntity Types\n1 Actuators\nTE Pre-Actuators\n1 Sensors\nam Effectors\na Others\n\n'50000\n\n100000\nEntity Count\n\n150000",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr45_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\u2018Tre abie.actng ents cares 9 SB RAANANE. The cinder owes ova i each be FLRRMSAE acen eacts ohe GLE\n\n\u2018he coneyor bet system varspotsmateals om ene porta acter Bi cooky\n\n\u2018eva setae. causng he betta mow Pres be\n\nTee es creda\n\u2018fe ae ngpyandteracong te cnt\n\nTerantanany sem cessing tet corte a a Sema Thence mae oar techs FLSA een es\n\nScars Raa\n\npresse, taciaiesa fat rgaes ot KM, cua conveyor Bett ben moma. CON\ncutng power omar and bing te conver betta ha\n\ndatas\n\ncorto 9\n\"nen\n\nToggesees am eae cone et ered\ncove\n\n\u2018Tre gytemtcanes ogee:\n\ninde and eenat wel traces\n\n\u2018etactiobe BLAMED\n\nast\n|e neues mat MT, scp Be bet\n\nTe onder exes traces te FERRER when De olen ae acted and eva De\nnurpzes ecole abowingjas to oconaie cen Presse SEB BMA\n\nraters om one lation te ante. This stem seperated sig a",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr45_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "raters om one lation te ante. This stem seperated sig a\n\n3\u00bb SEBAES Pressing te SE eerie ote\n\nenn BARBIE presse, sleoi ae is ewrpze, sowing ao Bow io te\nis pressed he sour vave's earuied, cog fe at app andeacany De Gd\n\ndouble-actng cylinder {ACTUATOR] (Tokens: 2)(1.4-1.26)\nSr2-way solenoid valve [PREACTUATOR] (Tokens: 3) (1.46-1.68)\nFL it switeh [SENSOR] (Tokens: 3) (1.1181.133)\n\nBL limit switch [SENSOR] (Tokens: 3) (1.159-1.174)\n\nstart push button [SENSOR] (Tokens: 3) (3.95-3.112)\n\n\u2018stop push button [SENSOR] (Tokens: 3) (3.119-3.135)\n\n\u2018start button [SENSOR] (Tokens: 2) (3.150-9.162)\n\nKM (ACTUATOR] (Tokens: 1) (3.170-3.182)\n\n\u2018contactor [PREACTUATOR] (Tokens: 1) (3.189-3.198)\n\n\u2018stop bution [SENSOR] (Tokens: 2) (9.239-3.250)\n\nKM (ACTUATOR] (Tokens: 1) (3.270-3.273)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr45_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\u2018stop bution [SENSOR] (Tokens: 2) (9.239-3.250)\n\nKM (ACTUATOR] (Tokens: 1) (3.270-3.273)\n\n\u2018single-acting cylinder {ACTUATOR] (Tokens: 2) (5.45.26)\n3/2-way solenoid valve [PREACTUATOR] (Tokens: 2)(5.46-5.68)\nFL imt switch [SENSOR] (Tokens: 3) (5.112-5.127)\n\nBL iit switeh [SENSOR] (Tokens: 3) (5.185-5 200)\n\nstart button [SENSOR] (Tokens: 2) (6.232524)\n\n\u2018stop button [SENSOR] (Tokens: 2) (6.325-5.336)\n\n<ouble-actng cylinder [ACTUATOR] (Tokens: 2)(7.36-7 58)\nSr2-way solenoid vale [PREACTUATOR] (Tokens: 3)(7.75-7.87)\nFL imit switch [SENSOR] (Tokens: 3) (7.147-7.162)\n\nBL limit switch [SENSOR] (Tokens: 3) (7.188-7.203)\n\nstart push button [SENSOR] (Tokens: 3) (2.144-9.161)\n\nstop push button [SENSOR] (Tokens: 3) (9.168-9.164)\n\n\u2018art button [SENSOR] (Tokens: 2)(0.195-9.207)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr45_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "stop push button [SENSOR] (Tokens: 3) (9.168-9.164)\n\n\u2018art button [SENSOR] (Tokens: 2)(0.195-9.207)\n\n\u2018contactor (PREACTUATOR] (Tokens: 1) (9.236-8.244)\n\nKM [ACTUATOR] (Tokens: 1) (9.266-9.269)\n\n\u2018stop button [SENSOR] (Tokens: 2) (9.399-0.350)\n\n\u2018contactor (PREACTUATOR] (Tokens: 1) (9.367-9.376)\n\nKM ACTUATOR] (Tokens: 1) (@.401-9.404)\n\n\u2018ingle-acting cylinder (ACTUATOR] (Tokens: 2)(11.22-11.44)\nSi2-way solenoid valve [PREACTUATOR] (Tokens: 3) (11.61-11.8,\nstart button [SENSOR] (Tokens: 2) (11.04-11.106)\n\nFL imit switch [SENSOR] (Tokens: 3) (11,226-11.241)\n\n\u201ctop button [SENSOR] (Tokens: 2) (11.252-11.263)\n\nBi limit etch [SENSOR (Tokens: 20(44 389-14 287)\n\nee as)",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Phase 1: Data Generation Phase 2: Requirement Labeling Phase 3: Dataset Export\n\nBaseline Data Creation\n\nIn the first step, different requirement specifications are manually\nwritten to describe the behavior of components commonly used\njn automated monufacturing systems. These specifications ore\ncreated following the best practices and documentation\nstandards of industry leaders such as Siemens, Schneider\nElectric, and Allen-Bradley. This baseline dataset provides a solid\nfoundation that will later be expanded through automatic\n\u2018generation using large language models,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Prompt Design\nIn this step. prompts are designed to guide large language\n\u2018models in rewriting the baseline requirement specications. The\n\u2018prompt clearly instructs the model te keep the same technical\nContent while expressing it differently by changing the wording.\nsentence structures, and style. This method ensures thot the\n\u2018meaning remains identical while generating new variations of\nthe original specifications\n\nLarge Language Model (LLM) Selection",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Large Language Model (LLM) Selection\n\nAfter designing the prompts, large language models are selected\nto rewrite the requirement specifications while keeping their\ntechnical meaning unchanged. We choose high-quality models\nsuch as ChatGPT Pro, Claude Pro, and Mistral Pro because they\ncon produce accurate, well-structured variations without altering\nthe original information. Using multiple LLMs helps to envich the\ndotaset by introducing natural diversity in writing styles.\n\nData Post-Processing",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data Post-Processing\n\n\u2018After generation, \u00ab Python scripts used to automatically remove\nduplicate requirement specifications. To ensure the quaity of the\ndotaset, sampling approach is applied, where a selected\nportion of the generated data is manually reviewed to verity\n\u2018occurocy, consistency, and techaicol correctness. This process\ncombines automation and human validation to deliver @ clean\nCond reliable dataset forthe labeling phose.\n\nDataset Importation into the Labeling Tool",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dataset Importation into the Labeling Tool\n\nAfter post-processing, the validated requirement specifications\n\u2018re imported into @ custom offine labeling tool developed\nspecifically for this project The tool is designed to support\n\u2018manual annotation while ensuring data privacy and flexibility in\ncreating domain-specific labels. Organizing the dataset within\nthe tool prepares it for systematic component identification and\nprecise labeling,\n\nComponent Identification and Tagging",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Component Identification and Tagging\n\nAt this stage, the requirement specifications are still\nUnstructured, containing descriptions without explicit\nidentification of components. Through manual labeling, key\nelements such os actuators, pre-actuators, ond sensors ore\nidentified and tagged within the text. This transformation from\nUnstructured to structured data is essential to prepare the\ndataset for training Al models capable of recognizing and\n\u2018extracting technical components cutomaticelly,\n\nApplication of the BIO Tagging Scheme",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Application of the BIO Tagging Scheme\n\nTo stondordize the labeling process, the BIO (Begin, Inside,\nOutside) tagging scheme is applied to al icentified components.\nEach word in the texts assigned a tag indicating whether itis ct\nthe beginning of a component name, insce a component name,\nor outside any labeled entity. Using the 810 format ensures that\nthe dataset is compatible with standard Nomed Entity\nRecognition models used in Al\n\nManual Annotation Verification",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Manual Annotation Verification\n\nTo ensure the quaity of the annotations, a human validation\nstep is opplied after automatic labeling. A selected portion of the\ndataset is manually reviewed to verity that each component is\ncorrectly labeled according to Its roe in the system. This human\nintervention is essentil to quorantee that the final dataset is not\nPurely synthetic, but combines automated generation with\nexpert manual verification.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_8",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Dataset Splitting\nOnce the labeling process is completed, the dataset is divided\ninto three subsets: troining, validation, ond testing, This step\nensures thot Al models can leam from one port of the date,\n\u2018ogjust their settings with another port, and finally be evaluated\ncon new data they have never seen before. Spitting the dataset\nin this way is important to train models that work correctly and\navoid overfiting.\n\nData Formatting",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_9",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Data Formatting\n\nAer splitting, the dataset is formotted following the CoNLL-\n2003 standard. which is commonly used for Named Entity\nRecognition tasks. This format organizes each word. its\ncorresponding label, and its position in the text in a clear and.\nstructured way. Formatting the dataset ensures that it can be\neasily used with standard Al models ond natural language\nprocessing frameworks,\n\nDocumentation Preparation\n\n\u2018A dear ond detoiled documentation is prepared to explain how\nthe dataset was created, labeled, ond formatted. It also gives\ninstructions on how to use the dataset correctly for research and,\nindustrial applications. To make it easly accessible, the dataset\ncond its documentation are shared openly with the research,\ncommunity on the Hugging Face platform.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr46_10",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Final Dataset Export\n\nIn the final step. the labeled dataset and its documentation are\n{grouped together and prepared for sharing. Using our labeling\n\u2018ool, the dataset can be exported in several formats, including\nCSV, JSON, Excel XLSX), and TXT, to make it easier for itferent\nusers, The complete version is then mode openly aveiloble $0\nthot researchers ond engineers can directly use it for Al model\ndevelopmentin manufacturing systems.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr47_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Evaluation Loss\nsop RP Pp ge\nBe\u00bb FS uo Ss\n\n\u00a9\n\n\u00a9\n6\n\n08\n\n06\n\nRecall\n\n04\n\n02\n\nModel Comparison Across Evaluation Metrics\n\nEvaluation Loss | 10 Precision t\n+= bert bert base uncased \u201c\n\u2014\u00bb\u2014 bert bert large uncased 08 .\n\u2014e~ distilbert distlbert base cased 08 x SO ne a)\no7\n\u00a7\nS06\nS05\n\u00ab\n04\n03 === bert bert base uncased\neBags apg gti agnte hate tT 02 \u2014*\u2014 bert bert large uncased\nih hm ial atc ai i \u2014e~ distiber distibert base cased\n0 500 1000 1500 2000 += 2500-3000 500 1000 1500-2000 2500 3000\nTraining Step Training Step\nRecall + F1 Score t\na aera PNUD eS CES TY oe\nstQeen chy 08\no7\nS06\n8\n\u2014 08\ni\n04\n\u2018=*\u2014 bert bert base uncased 03 === bert bert base uncased\n<= bert bert large uncased 02 += bert bert large uncased\n~ distiber distlbert base cased \u2014e~ distiber distlbert base cased\non",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr47_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "0 500 1000 1500 2000 2500 3000\n\nTraining Step\n\nbert bert base uncased\n\n\u2014e\u2014 bert bert large uncased \u2014*\u2014 di\n\n500 1000 1500 2000 2500 3000\nTraining Step\n\ntilbert distilbert base cased",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr49_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Metric Value\n\n10\n\n08\n\n06\n\n04\n\n02\n\n00\n\nBest Evaluation Metrics Across Models\n\n(0.9505\n\n0.8039 0.8000\n\n0.9476\n\n0.7877 0.7967\n\nS054. Model\nBERT Base\nBERT Large\n\nDistilBERT Base\n0.8208 say\n\n03757\n0.3342\n\n0.0983\n\nFa Score.\n\nas ae\n\nRecall Sigiulian Tieet",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "16\n\nA. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 14",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 14\n\nSample of NER-Annotated Requirements with POS Tags and Tokenization.\nSentences Tokens Part of speech tags NER labels\nThe system operates [\u2018The\u2019, \u2018system\u2019, \u2018operates\u2019, [\u2018DT\u2019,, \u2018NN\u2019, \u2018VBZ\u2019, \u2018IN\u2019, [\u20180\u2019, \u20180\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019,\nwith two conveyor \u2018with\u2019, \u2018two\u2019, \u2018conveyor\u2019, \u2018CD\u2019, \u2018NN\u2019, \u2018NNS\u2019, \u201c \u2018I-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019, \u20180\u2019,\nbelts, named Conveyor \u2018belts\u2019, *\u2019, \u2018named\u2019, \u201cVBN', \u2018NNP\u2019, \u2018CD\u2019, \u2018CC\u2019, \u2018O\u2019\", \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\nOne and Conveyor Two, \u2018Conveyor\u2019, \u2018One\u2019, \u2018and\u2019, \u201c\u2018NNP\u2019, \u2018CD\u2019, \u2018\u2019, \u2018DT\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\neach driven by an \u2018Conveyor\u2019, \u2018Two\u2019, \u2018\u2019, \u2018each\u2019, \u2018VBN\u2019, \u2018IN\u2019, \u2018DT\u2019, \u2018JJ\u2019, \u20180\u2019, \u20180\u2019, 0\u2019, \u20180\u2019, \u2018O\u2019\",\nelectric motor. \u2018driven\u2019, \u2018by\u2019, \u2018an\u2019, \u2018electric\u2019, \u2018NN\u2019, \u201c\u2019] \u201cB-ACTUATOR\u2019, \u2018I-ACTUATOR\u2019,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\u2018motor\u2019, \u2018.\"] \u2018O'}\nThe cycle is initiated by [\u2018The\u2019, \u2018cycle\u2019, \u2018is\u2019, \u2018initiated\u2019, [\u2018DT\u2019, \u2018NN\u2019, \u2018VBZ\u2019, \u2018VBN\u2019, __[\u2018O\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019,\npressing the start \u2018by\u2019, \u2018pressing\u2019, \u2018the\u2019, \u2018start\u2019, \u2018IN\u2019, \u2018VBG\u2019, \u2018DT\u2019, \u2018NN\u2019, *B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u2018O']\nbutton. \u2018button\u2019, *.\u2019] \u2018NN\u2019, \u201c\"]\nThis causes the start [\u2018This\u2019, \u2018causes\u2019, \u2018the\u2019, \u2018start\u2019, [\u2018DT\u2019, \u2018VBZ\u2019, \u2018DT\u2019, \u2018NN\u2019, [\u20180\u2019, \u20180\u2019, \u20180\u2019, \u2018B-ACTUATOR\u2019,\nlight to come on and \u2018light\u2019, \u2018to\u2019, \u2018come\u2019, \u2018on\u2019, \u2018NN\u2019, \u2018TO\u2019, \u2018VB\u2019, \u2018IN\u2019, \u2018CC\u2019, \u2018I-ACTUATOR\u2019, \u20180\u2019, \u20180\u2019, \u20180\u2019,\nConveyor One to begin \u2018and\u2019, \u2018Conveyor\u2019, \u2018One\u2019, \u2018to\u2019, \u2018NNP\u2019, \u2018NNP\u2019, \u2018TO\u2019, \u2018VB\u2019, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019, \u20180\u2019,\nmoving. \u2018begin\u2019, \u2018moving\u2019, \u2018.\u2019] \u201cVBG\u2019, \u201c.\"] \u20180\u2019, \u20180\u2019, \u20180']\nThe box moves along [\u2018The\u2019, \u2018box\u2019, \u2018moves\u2019, [\u2018DT, \u2018NN\u2019, \u2018VBZ\u2019, \u2018RB\u2019, [\u20180\u2019, \u2018O\u2019, \u2018O\u2019, \u2018O\u2019, \u2018B-EFFECTOR\u2019,",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Conveyor One until it is \u2018along\u2019, \u2018Conveyor\u2019, \u2018One\u2019, \u2018NNP\u2019, \u2018CD\u2019, \u2018IN\u2019, \u2018PRP\u2019, *[-EFFECTOR'\ndetected by Sensor A. \u2018until\u2019, \u2018it\u2019, \u2018is\u2019, \u2018detected\u2019, \u2018VBZ\u2019, \u2018VBN\u2019, \u2018IN\u2019, \u2018NNP\u2019, \u2018B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u2018O']\n\u2018by\u2019, \u2018Sensor\u2019, \u2018A\u2019, \u2018.\u2019] \u2018NNP\u2019, \u201c']\nWhen Sensor A [\u2018When\u2019, \u2018Sensor\u2019, \u2018A\u2019, [\u2018WRB\u2019, \u2018NNP\u2019, \u2018NNP\u2019, [\u20180\u2019\", \u2018B-SENSOR\u2019, \u2018I-SENSOR\u2019, \u20180\u2019,\ntriggers, Conveyor One \u2018triggers\u2019, \u2018,\u2019, \u2018Conveyor\u2019, \u201c\u2018NNS\u2019, \u2018\u2019, \u2018NNP\u2019, \u2018NNP\u2019, \u2018O\u2019\u201d, \u2018B-EFFECTOR\u2019, \u2018I-EFFECTOR\u2019,\nstops and Conveyor \u2018One\u2019, \u2018stops\u2019, \u2018and\u2019, \u2018NN\u2019, \u2018CC\u2019, \u2018NNP\u2019, \u2018CD\u2019, \u2018O\u2019\u201d, \u20180\u2019, \u2018B-EFFECTOR\u2019,\nTwo is started. \u2018Conveyor\u2019, \u2018Two\u2019, \u201cVBZ\u2019, \u2018VBN\u2019, *.\u2019] \u2018I-EFFECTOR\u2019, \u2018O\u2019, \u20180\u2019, \u2018O\"]\n\u2018started\u2019, \u2018\nTable 15\nArchitectural Comparison of the Transformer Models.\nModel Configuration Parameters Layers Hidden Size Attention Heads Developed By",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Model Configuration Parameters Layers Hidden Size Attention Heads Developed By\nBERT Base 110M 12 768 12 Google Al\nLarge 340M 24 1024 16\nDistilIBERT Base 66M 6 768 12 Hugging Face",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "(LLMs) on this labeled data to evaluate their ability to extract components and understand sys-\ntem behavior from natural language.\n\n10.1. Benchmarking and Model Fine-tuning\n\nThe transformer models selected for this study were chosen to provide a representative sam-\n\nciency on d\n\nheads, amo\nwith 1024\nIn contrast,\n\nheads, yield\nThese di!\n\nimited.\n\nple of architectures commonly used in sequence labeling tasks (Table 15). Three models were\nevaluated: BERT-Base, BERT-Large, and DistilIBERT-Base. These models differ in size, depth, and\ncomputational requirements, allowing for a comparative analysis of performance versus effi-\n\nlomain-specific Named Entity Recognition (NER) tasks.\n\nBERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "BERT-Base includes 12 transformer layers, each with 768 hidden units and 12 self-attention\n\nunting to 110 million parameters. BERT-Large expands this architecture to 24 layers\nhidden units and 16 attention heads, resulting in a total of 340 million parameters.\nDistiIBERT-Base is a lighter model designed for faster training and inference. It com-\n\npresses BERT-Base to 6 layers while retaining the same hidden size and number of attention\n\ning a total of 66 million parameters.\nfferences provide useful contrasts when assessing model suitability for industrial lan-\n\nguage processing, especially in scenarios where deployment constraints or training resources are\n\nTo enab!\n\nle automatic identification of control components from natural language requirement",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr5_7",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To enab!\n\nle automatic identification of control components from natural language requirement\n\nspecifications, the selected transformer models were fine-tuned on the annotated AutoFactory",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr50_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "2500\n\n2000\n\nFrequency\n\n1000\n\n500\n\nlal.\n=\n\nsi]\n\n10\n\n15\n\n20 25\nSentence Length (Tokens)\n\n30\n\n40",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "12 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTo introduce this variation, large language models (LLMs) are used to rewrite each baseline\nrequirement specification into multiple versions. The goal is to generate linguistically diverse ex-\namples while preserving the original technical meaning. LLMs have demonstrated strong capabil-\nities across various domains, including engineering, and can be guided to produce high-quality\nparaphrases when given clear instructions.\n\nFor each baseline requirement specification, the model is asked to produce three distinct for-\nmulations. To ensure consistency and accuracy, the generation process is guided by a structured\nprompt:",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "\"Rewrite the following requirement specification in three different ways. Keep the technical\ndetails the same, but use different wording and sentence structures.\"\n\nThis prompt encourages the model to retain the functional content of the specification while\nvarying its surface form. By applying this method, the dataset captures the natural variability\nin how requirement specifications are written. This enhances the model's ability to understand\ntechnical content expressed in different ways, making it more robust when applied to real-world\nindustrial texts.\n\n8. Large Language Model (LLM) Selection",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "8. Large Language Model (LLM) Selection\n\nOnce the prompts were designed, the next step involved selecting large language models ca-\npable of rewriting requirement specifications while preserving their technical meaning. The re-\nliability and usefulness of the dataset depend directly on the ability of these models to produce\naccurate and readable variants of the original specifications. Not all language models meet these\ncriteria. Some may omit key details, alter the intended logic, or produce output that lacks tech-\nnical clarity. It is therefore essential to carefully select models that can maintain both syntactic\ncoherence and semantic fidelity.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To address this, we selected three high-performance models: ChatGPT Pro, Claude Pro, and\nMistral Pro. These models were chosen for their ability to generate structured and technically\naccurate language. Unlike basic paraphrasing tools that rely on synonym replacement, these ad-\nvanced models can restructure entire sentences and vary lexical choices while preserving the\ncore information. This capacity is essential for building a dataset that reflects the natural vari-\nability observed in how different engineers describe the same system.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Each model was applied to the same set of baseline specifications to produce multiple re-\nformulations. The outputs were collected and organized as unlabeled text variants to increase\nlinguistic diversity in the dataset. By using multiple models, we reduce the risk of stylistic bias\nand improve the generalizability of future Al systems trained on this data.\n\nTable 10 presents an example of a baseline requirement specification followed by three\nrewritten versions generated by the selected LLMs. These examples illustrate how the same\ntechnical content can be expressed differently across models while preserving its meaning and\nstructure.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To make sure that the requirement specifications generated by large language models (LLMs)\nkeep the same meaning as the original ones, we performed a similarity check. This is an impor-\ntant step, because while the goal is to create different versions using new words and sentence\nstructures, the meaning of the requirement must not change. In industrial systems, even small\nchanges in meaning can lead to incorrect behavior, so it is essential to verify that the informa-\ntion is still correct.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr6_6",
+    "type": "text",
+    "modality": "ocr",
+    "content": "We used cosine similarity to compare each rewritten specification to the original. This\nmethod works by converting sentences into numbers (called embeddings) and then measuring\nhow close they are. A high score means that the two sentences are very similar in meaning,\neven if they are written differently.\n\nThe results show that the rewritten specifications are very close to the original ones. Across\nthe entire dataset, the average similarity score was 0.9275, and the median score was 0.9389.\nEven the lowest score was 0.7105, which means that no rewritten version introduced major",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "8 A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938\n\nTable 6\n\nToken Diversity Metrics Across Individual Systems and the Full Dataset.\nMetric System 1 System 2 System 3 AutoFactory (All)\nTotal Tokens 81,784 80,428 117,198 279,830\nUnique Tokens 398 308 368 629\nTIR 0.00487 0.00383 0.00314 0.00225\nDistinct-1 0.00487 0.00383 0.00314 0.00225\nDistinct-2 0.02120 0.01350 0.01382 0.01179\n\nTable 7\n\nSelf-BLEU Evaluation Across Individual Systems and the Full Dataset.\nStatistic System 1 System 2 System 3 AutoFactory (All)\nAverage Self-BLEU 0.9970 0.9983 0.9982 0.9984\nMinimum 0.9448 0.9551 0.9678 0.9510\nStandard Deviation 0.0066 0.0054 0.0043 0.0045\n\nTable 8",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "Table 8\n\nSyntactic parse tree depth statistics Across Individual Systems and the Full Dataset.\nStatistic System 1 System 2 System 3 AutoFactory (All)\nNumber of Sentences 899 748 711 2358\nAverage Depth 15.15, 21.04 33.36 22.51\nMinimum Depth 1 13 20 a\nMaximum Depth 21 38 59 59\nStandard Deviation 1.73 3.71 6.58 8.68\n25th Percentile 14.0 19.0 28.0 16.0\nMedian Depth 15.0 21.0 33.0 20.0\n75th Percentile 16.0 23.0 37.0 28.0\n\ncorporated, we expect greater lexical diversity due to the introduction of new components and\nsystem behaviors.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further evaluate linguistic diversity, we measured Self-BLEU scores across the dataset. Self-\nBLEU quantifies how similar each sentence is to others within the same set, with lower scores\nindicating higher diversity. As shown in Table 7, the average Self-BLEU score for AutoFactory is\n0.9984, with a minimum of 0.9510 and a standard deviation of 0.0045. These high values re-\nflect the dataset\u2019s design, where each set of specifications reformulates the same base scenario\nusing consistent technical components. Despite this structural consistency, LLM-generated re-\nformulations still produce varied sentence constructions, preserving diversity in expression. As\nAutoFactory expands to include more Factory I/O systems, the range of sentence patterns and",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "AutoFactory expands to include more Factory I/O systems, the range of sentence patterns and\ninter-sentence variability is expected to increase accordingly.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_4",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To assess syntactic complexity, we measured the depth of syntactic parse trees for each\nsentence. A deeper tree generally indicates a more complex sentence structure. As shown in\nTable 8, the average parse depth in AutoFactory is 22.51, with System 3 having the highest\naverage at 33.36. The depth ranges from 11 to 59, showing that the dataset includes both\nsimple and complex sentence constructions. These variations reflect the natural differences in\nhow requirements can be expressed, even when describing the same system. The inclusion\nof multiple sentence types supports the development of models that can handle a range of\nsyntactic forms. As more systems are added in future versions, the variety of sentence structures\nis expected to grow further.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr7_5",
+    "type": "text",
+    "modality": "ocr",
+    "content": "The AutoFactory dataset combines consistent semantic content with diverse linguistic expres-\nsions grounded in real Factory I/O scenarios. Although this initial version includes only 3 out of\n21 available systems, it already reflects a wide range of sentence structures, grammatical pat-\nterns, and technical components. This variation is not the result of random or superficial refor-\nmulation, but reflects the different ways engineers naturally express similar control behaviors.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr8_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 7\n\nFig. 3. Histogram of Sentence Lengths (in Tokens) Across the AutoFactory Dataset.\n\nTable 4\nPOS Tag Sequence Diversity Across Individual Systems and the Full Dataset.\nMetric System 1 System 2 System 3 AutoFactory (All)\nTotal Sentences 5335 5168 6602 17,134\nUnique POS Sequences 1791 1108 1883 4778\nDiversity Ratio (%) 33.57 % 21.44 % 28.52 % 27.89 %\nTable 5\nN-gram Diversity and Entropy Across Individual Systems and the Full Dataset.\nN-gram Metric System 1 System 2 System 3 AutoFactory (All)\nUnique Bigrams 1734 1086 1620 3300\nBigram Entropy 8.4113 7.8143 8.5357 9.1402\nUnique Trigrams 3883 2144 3527 8078\nTrigram Entropy 9.7597 8.8655 9.5719 10.5591",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr8_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "the number of unique POS patterns identified across the three systems and the full dataset. Aut-\noFactory contains 4778 distinct POS tag sequences across 17,134 sentences, corresponding to a\ndiversity ratio of 27.89 %. This metric reflects the proportion of unique syntactic structures rel-\native to total sentences. System 1 and System 3 show particularly high diversity, with ratios\nexceeding 28 %, indicating greater variability in how requirements are phrased. These findings\nconfirm that the dataset includes a wide range of grammatical constructions, which can help Al\nmodels learn robust generalizations across different linguistic forms of technical specifications.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr8_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To further evaluate lexical variability, we measured n-gram diversity and entropy across the\ndataset. Table 5 reports the number of unique bigrams and trigrams, as well as their corre-\nsponding entropy scores. The full AutoFactory dataset contains 8078 distinct trigrams and 3300\nbigrams, with trigram entropy reaching 10.56. These values indicate a high level of lexical diver-\nsity and reduced repetition across specifications. Among individual systems, System 3 exhibits\nthe highest bigram and trigram entropy, consistent with its longer and more structurally varied\nsentences. High entropy values suggest that the dataset avoids rigid or repetitive phrasing, offer-\ning a broader lexical space for training models to generalize across different ways of expressing\nfunctional requirements.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr8_3",
+    "type": "text",
+    "modality": "ocr",
+    "content": "To assess lexical diversity, we computed the type-token ratio (TTR) and distinct-n metrics,\nwhich measure vocabulary variety and repetition. As shown in Table 6, AutoFactory contains\n279,830 tokens and 629 unique token types, resulting in a TTR of 0.00225. These values are\nconsistent with the dataset\u2019s current structure, which includes only 3 out of the 21 Factory I/O\nsystems. Each reformulated specification describes the same system using a consistent set of\ncomponent names. As a result, the vocabulary reflects technical consistency rather than linguis-\ntic redundancy. The distinct-1 and distinct-2 scores further confirm that the dataset maintains\nmeaningful variation in phrasing across reformulations. As additional Factory I/O systems are in-",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr9_0",
+    "type": "text",
+    "modality": "ocr",
+    "content": "A. Boudribila, A. Tajer and Z. Boulghasoul/Data in Brief 62 (2025) 111938 15\n\nFig. 7. User Interface of Our Custom Labeling Tool.\n\nTable 12\n\nToken Counts per NER Label Across 300 Reviewed Requirement Specifications.\nLabel Annotator 1 Annotator 2 Annotator 3 Total\noO 7078 7162 6975 21,215\nB-EFFECTOR 597 585 618 1800\nI-EFFECTOR 492 485 539 1516\nB-ACTUATOR 480 502 473 1455\nI-ACTUATOR 343 369 355 1067\nB-SENSOR 457 463 457 1377\nI-SENSOR 630 633 618 1881\nB-PREACTUATOR 116 136 116 368\nI-PREACTUATOR 126 154 136 416\nTotal Tokens 10,319 10,489 10,287 31,095\n\nTable 13\n\nInter-annotator agreement scores (Cohen's Kappa).\nAnnotator Pair Kappa Score\nAnnotator 1 & 2 0.856\nAnnotator 2 & 3 0.789\nAnnotator 1 & 3 0.924\nAverage 0.856",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr9_1",
+    "type": "text",
+    "modality": "ocr",
+    "content": "cedure was implemented. Annotator 1 reviewed 100 examples from Annotator 2, Annotator 2\nreviewed 100 from Annotator 3, and Annotator 3 reviewed 100 from Annotator 1. This process\nsupported consistency checking across the team.\n\nThis review process helped identify disagreements and guided harmonization of annotation\npractices. Using this shared subset, Cohen\u2019s Kappa was computed to measure inter-annotator\nagreement. The final average kappa score was 0.856, which indicates strong agreement.\n\nThe distribution of token-level annotations within the reviewed sample is provided in\nTable 12, while Table 13 presents the computed inter-annotator agreement scores.",
+    "source": "sample.pdf",
+    "page": null
+  },
+  {
+    "chunk_id": "sample_ocr_ocr9_2",
+    "type": "text",
+    "modality": "ocr",
+    "content": "This manual annotation process transformed the dataset from unstructured text into a la-\nbeled resource suitable for training Al systems to identify and extract relevant entities (Table 14).\nThe NER labels directly support the detection of input and output components in requirement\nspecifications, which is essential for downstream applications in control logic synthesis and in-\ndustrial automation.\n\nThis initial version of the AutoFactory dataset represents a significant contribution to the field\nof AI for manufacturing. By releasing it to the research community, the objective is to accelerate\nprogress in systems that can interpret natural language requirement specifications and convert\nthem into executable control logic. The next stage involves fine-tuning large language models",
+    "source": "sample.pdf",
+    "page": null
+  }
+]
