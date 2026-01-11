@@ -1,10 +1,10 @@
-📄 ContextIQ: Multimodal RAG System
+📄 Industrial Document Multimodal-RAG
 
 Text • Tables • OCR • Citation-Grounded Answers
 
 🔍 Overview
 
-ContextIQ is a production-grade multimodal Retrieval-Augmented Generation (RAG) pipeline designed to handle complex PDFs containing tables, scanned text, and images. It accurately retrieves and answers questions by processing various modalities separately and preserving their context, preventing hallucinations common in standard RAG systems.
+industrial-document-multimodal-rag is a production-grade multimodal Retrieval-Augmented Generation (RAG) pipeline designed to handle complex PDFs containing tables, scanned text, and images. It accurately retrieves and answers questions by processing various modalities separately and preserving their context, preventing hallucinations common in standard RAG systems.
 
 The system uses advanced extraction techniques to handle real-world documents and provides reliable, citation-grounded responses.
 
@@ -17,7 +17,7 @@ Most basic RAG pipelines:
 - Hallucinate answers when definitions are missing
 - Fail on scanned or OCR-heavy documents
 
-ContextIQ solves these issues by building a structured, modality-aware RAG pipeline that treats tables and OCR content as first-class citizens.
+It solves these issues by building a structured, modality-aware RAG pipeline that treats tables and OCR content as first-class citizens.
 
 🧠 Solution Highlights
 
@@ -50,7 +50,7 @@ graph TD
 
 📁 Project Structure
 ```text
-contextIQ/
+industrial-document-multimodal-rag/
 │
 ├── notebook/
 │   ├── 01_data_ingestion.ipynb       # Raw data handling
