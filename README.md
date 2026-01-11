@@ -44,7 +44,7 @@ graph TD
     
     User[User Query] --> VectorDB
     VectorDB --> Retrieval[Top-K Retrieval]
-    Retrieval --> LLM[LLM (OpenRouter/Gemma)]
+    Retrieval --> LLM["LLM (OpenRouter/Gemma)"]
     LLM --> Answer[Grounded Answer + Citations]
 ```
 
