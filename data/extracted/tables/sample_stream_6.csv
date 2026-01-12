@@ -1,8 +1,0 @@
-"","","","Fig. 1.  Dataset Split – Training, Validation, and Test Sets.","","","","",""
-"Table 2","","","","","","","",""
-"Summary Statistics of Speciﬁcations, Tokens, and Named Entities in AutoFactory.","","","","","","","",""
-"Dataset","Speciﬁcations","Sentences","Tokens","Actuators","Pre-Actuators","Sensors","Effectors","Others"
-"Training","1886","13,686","223,003","15,838","4645","20,492","21,133","160,895"
-"Validation","236","1728","28,759","2030","684","2634","2785","20,626"
-"Test","236","1720","28,068","1983","584","2569","2722","20,210"
-"Total","2358","17,134","279,830","19,851","5913","25,695","26,640","201,731"

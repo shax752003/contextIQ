@@ -1,0 +1,29 @@
+# =====================
+# Data (generated files)
+# =====================
+data/raw/
+data/extracted/
+data/chunks/
+data/chroma_db/
+
+# =====================
+# Environment variables
+# =====================
+.env
+
+# =====================
+# Python
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+
+# =====================
+# Jupyter
+# =====================
+.ipynb_checkpoints/
+
+# =====================
+# OS files
+# =====================
+.DS_Store
