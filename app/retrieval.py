@@ -1,7 +1,8 @@
 import numpy as np
 from typing import List, Dict, Optional
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from app.config import CHROMA_DIR
+import app.config as config
 from app.embeddings import get_embedding_model
 
 def get_vectorstore():
@@ -53,7 +54,7 @@ def deduplicate_chunks(docs, threshold: float = 0.92):
         
     return unique_docs
 
-def retrieve_context(query: str, k: int = 6) -> List:
+def retrieve_context(query: str, k: int = config.RETRIEVER_K) -> List:
     """
     Retrieve relevant documents for a given query.
     """

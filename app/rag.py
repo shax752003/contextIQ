@@ -1,6 +1,7 @@
 import requests
 from typing import Dict
 from app.config import OPENROUTER_API_KEY, LLM_MODEL
+import app.config as config
 from app.retrieval import retrieve_context, deduplicate_chunks, retrieve_images_for_query
 from app.prompt import build_prompt
 
@@ -46,7 +47,7 @@ def rag_answer(query: str) -> Dict:
     """
     Main RAG pipeline entry point.
     """
-    retrieved_docs = retrieve_context(query, k=6)
+    retrieved_docs = retrieve_context(query, k=config.RETRIEVER_K)
     retrieved_docs = deduplicate_chunks(retrieved_docs)
 
     prompt = build_prompt(query, retrieved_docs)

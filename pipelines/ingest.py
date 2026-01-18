@@ -1,41 +1,11 @@
-import os
-import magic
-import fitz
 import pandas as pd
 from pathlib import Path
 from tqdm import tqdm
 from app.config import DATA_DIR
+from app.utils import is_pdf, extract_pdf_metadata
 
 RAW_DATA_DIR = DATA_DIR / "raw"
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-def is_pdf(file_path):
-    try:
-        file_type = magic.from_file(str(file_path), mime=True)
-        print(f"Detected MIME for {file_path}: {file_type}")
-        return file_type == "application/pdf"
-    except Exception as e:
-        print(f"Error checking mime type for {file_path}: {e}")
-        return False
-
-def extract_pdf_metadata(pdf_path):
-    pdf_path = Path(pdf_path)
-    try:
-        doc = fitz.open(pdf_path)
-        meta = doc.metadata
-        info = {
-            "file_name": pdf_path.name,
-            "path": str(pdf_path),
-            "pages": len(doc),
-            "title": meta.get("title", None),
-            "author": meta.get("author", None),
-            "filesize_kb": round(os.path.getsize(pdf_path) / 1024, 2),
-        }
-        doc.close()
-        return info
-    except Exception as e:
-        print(f"Error reading {pdf_path}: {e}")
-        return None
 
 def main():
     print("--- Starting Ingestion ---")

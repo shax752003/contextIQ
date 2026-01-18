@@ -32,3 +32,33 @@ def save_json(data: dict, path: Path):
     """
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+# PDF Helpers
+import magic
+import fitz
+import os
+
+def is_pdf(path: Path) -> bool:
+    try:
+        t = magic.from_file(str(path), mime=True)
+        return t == "application/pdf"
+    except Exception as e:
+        print(f"Error checking mime type for {path}: {e}")
+        return False
+
+def extract_pdf_metadata(pdf_path: Path) -> dict:
+    try:
+        doc = fitz.open(pdf_path)
+        meta = doc.metadata
+        info = {
+            "file_name": pdf_path.name,
+            "path": str(pdf_path),
+            "pages": len(doc),
+            "title": meta.get("title"),
+            "author": meta.get("author"),
+            "filesize_kb": round(os.path.getsize(pdf_path) / 1024, 2)
+        }
+        doc.close()
+        return info
+    except Exception as e:
+        return {"file_name": pdf_path.name, "error": str(e)}

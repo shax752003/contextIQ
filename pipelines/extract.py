@@ -13,7 +13,7 @@ from docling.document_converter import DocumentConverter
 from pdf2image import convert_from_path
 from PIL import Image
 from app.config import DATA_DIR
-from app.utils import save_json
+from app.utils import save_json, is_pdf, extract_pdf_metadata
 
 RAW_DIR = DATA_DIR / "raw"
 EXTRACTED_DIR = DATA_DIR / "extracted"
@@ -21,41 +21,12 @@ EXTRACTED_DIR = DATA_DIR / "extracted"
 for sub in ["json", "tables", "images", "ocr", "metadata"]:
     (EXTRACTED_DIR / sub).mkdir(parents=True, exist_ok=True)
 
-# Helpers
-def is_pdf(path: Path) -> bool:
-    try:
-        t = magic.from_file(str(path), mime=True)
-        return t == "application/pdf"
-    except Exception:
-        return False
-
-def extract_pdf_metadata(pdf_path: Path) -> dict:
-    try:
-        doc = fitz.open(pdf_path)
-        meta = doc.metadata
-        info = {
-            "file_name": pdf_path.name,
-            "path": str(pdf_path),
-            "pages": len(doc),
-            "title": meta.get("title"),
-            "author": meta.get("author"),
-            "filesize_kb": round(pdf_path.stat().st_size / 1024, 2)
-        }
-        doc.close()
-        return info
-    except Exception as e:
-        return {"file_name": pdf_path.name, "error": str(e)}
-
 def save_metadata(metadata: Dict):
     pdf_name = metadata.get("file_name", "unknown")
     output_folder = EXTRACTED_DIR / "metadata" / f"{pdf_name}_metadata.json"
-    try:
-        with open(output_folder, 'w', encoding='utf-8') as f:
-            json.dump(metadata, f, ensure_ascii=False, indent=4)
-        return output_folder
-    except IOError as e:
-        print(f"error saving the file {output_folder}:{e}")
-        return None
+    save_json(metadata, output_folder)
+    return output_folder
+
 
 def extract_text_docling(pdf_path: Path) -> dict:
     result = {

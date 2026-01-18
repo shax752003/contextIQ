@@ -7,6 +7,13 @@ from app.utils import load_chunks
 
 def build_vector_index():
     print("--- Starting Embedding & Indexing ---")
+
+    # Idempotency check
+    if (CHROMA_DIR / "chroma.sqlite3").exists():
+        print(f"Vector store already exists at {CHROMA_DIR}. Skipping.")
+        return
+    
+    CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     
     text_chunks = load_chunks(CHUNKS_DIR / "docling_text_chunks.json")
     table_chunks = load_chunks(CHUNKS_DIR / "table_chunks.json")

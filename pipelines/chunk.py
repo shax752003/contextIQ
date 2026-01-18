@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import List, Dict
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from app.config import DATA_DIR, CHUNKS_DIR, EXTRACTED_DIR
+import app.config as config
 from app.embeddings import get_embedding_model
 
 CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
@@ -43,7 +44,9 @@ def chunk_docling_json(json_path: Path) -> List[Dict]:
     paragraphs = extract_paragraphs(raw)
     
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=700, chunk_overlap=100, separators=["\n\n", "\n", ". ", " ", ""]
+        chunk_size=config.CHUNK_SIZE, 
+        chunk_overlap=config.CHUNK_OVERLAP, 
+        separators=["\n\n", "\n", ". ", " ", ""]
     )
     embedding_model = get_embedding_model()
 
