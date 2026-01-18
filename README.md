@@ -1,38 +1,58 @@
-📄 Industrial Document Multimodal-RAG
+# 📄 Industrial Document Multimodal-RAG
 
-Text • Tables • OCR • Citation-Grounded Answers
+**Text • Tables • OCR • Citation-Grounded Answers**
 
-🔍 Overview
+## 🔍 Overview
 
-industrial-document-multimodal-rag is a production-grade multimodal Retrieval-Augmented Generation (RAG) pipeline designed to handle complex PDFs containing tables, scanned text, and images. It accurately retrieves and answers questions by processing various modalities separately and preserving their context, preventing hallucinations common in standard RAG systems.
+**industrial-document-multimodal-rag** is a production-grade multimodal Retrieval-Augmented Generation (RAG) pipeline designed to handle complex PDFs containing tables, scanned text, and images. It accurately retrieves and answers questions by processing various modalities separately and preserving their context, preventing hallucinations common in standard RAG systems.
 
-The system uses advanced extraction techniques to handle real-world documents and provides reliable, citation-grounded responses.
+## 🚀 Quick Start
 
-🎯 Problem Statement
+### 1. Installation
 
-Most basic RAG pipelines:
+```bash
+# Clone the repository
+git clone https://github.com/shax752003/industrial-document-multimodal-rag.git
+cd industrial-document-multimodal-rag
 
-- Flatten tables into unreadable text
-- Lose context across pages
-- Hallucinate answers when definitions are missing
-- Fail on scanned or OCR-heavy documents
+# Install dependencies
+pip install -r requirements.txt
+```
 
-It solves these issues by building a structured, modality-aware RAG pipeline that treats tables and OCR content as first-class citizens.
+### 2. Configuration
 
-🧠 Solution Highlights
+Create a `.env` file from the example and add your OpenRouter API Key:
 
-- **Multimodal extraction**: Extracts text, tables (using Camelot), images, and OCR content (using Tesseract/Docling).
-- **Specialized Chunking**: Separate handling for text, tables, and images to preserve structure.
-- **Citation-grounded generation**: Answers are strictly based on retrieved context with page references.
-- **Vector-based retrieval**: Uses ChromaDB with HuggingFace embeddings for precise semantic search.
-- **Open Model Support**: Integrates with OpenRouter (using Gemma-3-27b or compatible models) for generation.
+```bash
+cp .env.example .env
+# Edit .env and add OPENROUTER_API_KEY=your_key_here
+```
 
-🏗️ Architecture
+### 3. Run the Pipeline
+
+To process documents, extract data, chunk, and build the index:
+
+```bash
+python -m pipelines.run_all
+```
+
+### 4. Query the System
+
+To run a RAG query:
+
+```bash
+python main.py
+```
+
+---
+
+## 🏗️ Architecture
+
 ```mermaid
 graph TD
     PDF[PDF Document] --> Extraction
     subgraph Extraction
-        Docling[Docling/PyMuPDF] --> Text
+        Docling[Docling] --> Text
         Camelot[Camelot] --> Tables
         OCR[Tesseract] --> ScannedText
         Images[PDF2Image] --> Visuals
@@ -48,76 +68,78 @@ graph TD
     LLM --> Answer[Grounded Answer + Citations]
 ```
 
-📁 Project Structure
+## 📁 Project Structure
+
 ```text
 industrial-document-multimodal-rag/
 │
-├── notebook/
-│   ├── 01_data_ingestion.ipynb       # Raw data handling
-│   ├── 02_data_extraction.ipynb      # Docling, Camelot, OCR extraction
-│   ├── 03_chunking.ipynb             # Text and table chunking strategies
-│   ├── 04_embedding_vectorstore.ipynb # Embedding generation & ChromaDB indexing
-│   └── 05_retrieval.ipynb            # RAG pipeline with OpenRouter
+├── app/                  # Application Logic
+│   ├── config.py         # Centralized configuration & environment variables
+│   ├── rag.py            # RAG pipeline & LLM interaction
+│   ├── retrieval.py      # Vector retrieval & deduplication logic
+│   ├── embeddings.py     # Embedding model wrapper
+│   ├── prompt.py         # Prompt engineering
+│   └── utils.py          # Shared utilities (PDF helpers, file I/O)
 │
-├── data/
-│   ├── raw/          # Original PDFs
-│   ├── extracted/    # Parsed text, tables, images, OCR
-│   ├── chunks/       # JSON chunk files
-│   └── chroma_db/    # Persisted vector database
+├── pipelines/            # Data Processing Pipelines (1:1 with notebooks)
+│   ├── ingest.py         # Metadata extraction
+│   ├── extract.py        # Multimodal extraction (Text, Tables, OCR, Images)
+│   ├── chunk.py          # Semantic & recursive chunking
+│   ├── embed.py          # Vector embedding & indexing
+│   └── run_all.py        # Pipeline orchestrator
 │
-├── src/              # Source code (modularized)
-├── README.md         # Project documentation
-├── requirements.txt  # Python dependencies
-└── .gitignore
+├── notebook/             # Original Jupyter Notebooks
+│   ├── 01_data_ingestion.ipynb
+│   ├── 02_data_extraction.ipynb
+│   ├── 03_chunking.ipynb
+│   ├── 04_embedding_vectorstore.ipynb
+│   └── 05_retrieval.ipynb
+│
+├── data/                 # Data Directory
+│   ├── raw/              # Input PDFs
+│   ├── extracted/        # Intermediate extracted artifacts
+│   ├── chunks/           # Processed JSON chunks
+│   └── chroma_db/        # Persisted VectorDB
+│
+├── main.py               # Main Entry Point for User Queries
+├── .env.example          # Environment variable template
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation
 ```
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 - **Language**: Python
 - **LLM Framework**: LangChain
 - **Vector Database**: ChromaDB
-- **Embeddings**: HuggingFace Transformers (`all-MiniLM-L6-v2`)
+- **Embeddings**: HuggingFace (`all-MiniLM-L6-v2`)
 - **LLM Provider**: OpenRouter (Gemma-3-27b / compatible models)
-- **PDF Parsing**: Docling, PyMuPDF (Fitz), PDFPlumber
+- **PDF Parsing**: Docling, PyMuPDF (Fitz)
 - **Table Extraction**: Camelot
-- **OCR**: Pytesseract
-- **Data Processing**: Pandas, NumPy
+- **OCR**: Pytesseract / Tesseract
+- **Visuals**: PDF2Image
 
-🔄 Pipeline Breakdown
-1️⃣ PDF Extraction
-- Extracts structured text using **Docling** and **PyMuPDF**.
-- Extracts tabular data using **Camelot** (Lattice/Stream modes).
-- Captures images and performs OCR on scanned pages using **Tesseract**.
-- Preserves page-level metadata for accurate citations.
+## 🔄 Pipeline Details
 
-2️⃣ Cleaning & Normalization
-- Removes OCR artifacts and noise.
-- Normalizes whitespace and encoding.
-- Separates tables from plain text to prevent structural loss.
+1.  **Ingestion (`pipelines/ingest.py`)**: Validates PDF mimetypes and extracts metadata.
+2.  **Extraction (`pipelines/extract.py`)**:
+    -   Extracts text via Docling.
+    -   Extracts tables via Camelot (CSV).
+    -   Extracts images via PyMuPDF (embedded) and PDF2Image (renders).
+    -   Runs OCR on extracted images.
+    -   *Idempotent*: Skips already processed files.
+3.  **Chunking (`pipelines/chunk.py`)**:
+    -   Recursive character splitting for text.
+    -   Row-based chunking for tables.
+4.  **Embedding (`pipelines/embed.py`)**:
+    -   Embeds all chunks using Sentence Transformers.
+    -   Indexes into ChromaDB.
+    -   *Efficient*: Checks if index exists before rebuilding.
 
-3️⃣ Chunking Strategy
-- **Text**: Recursive/semantic chunking for context preservation.
-- **Tables**: Stored as atomic units to prevent splitting rows/columns.
-- **OCR**: Processed as text chunks with metadata indicating origin.
+## 🤝 Contributing
 
-4️⃣ Embedding & Indexing
-- Converts chunks into dense vector embeddings using **HuggingFace (`all-MiniLM-L6-v2`)**.
-- Stores vectors in **ChromaDB** for fast similarity search.
-- Persists metadata including page numbers and modality type.
-
-5️⃣ Retrieval & Generation
-- Retrieves top-K relevant chunks using cosine similarity.
-- **Multi-query expansion** to improve search recall.
-- **Deduplication** to remove redundant chunks.
-- Builds a context-only prompt to ensure answers are derived *only* from the documents.
-- Generates answers via **OpenRouter** with strict strict prompt discipline.
-
-🧪 Example Query
-
-**Question:**
-> Which five Named Entity Recognition (NER) categories are used in the AutoFactory dataset, and what do they represent?
-
-**Answer (Generated):**
-> The five NER categories in the AutoFactory dataset are: ACTUATOR, PRE-ACTUATOR, SENSOR, EFFECTOR, and OTHER. They represent requirement specifications for manufacturing systems (industrial automation).
-
-**Source:** Page 19
+1.  Fork the repo
+2.  Create your feature branch (`git checkout -b feature/amazing-feature`)
+3.  Commit your changes (`git commit -m 'Add some amazing feature'`)
+4.  Push to the branch (`git push origin feature/amazing-feature`)
+5.  Open a Pull Request
