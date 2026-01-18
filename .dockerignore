@@ -1,0 +1,28 @@
+# Data folders
+data/
+chroma_db/
+extracted/
+chunks/
+
+# PDFs and large assets
+*.pdf
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Environment files
+.env
+
+# Git
+.git/
+.gitignore
+
+# Notebooks
+notebooks/
+
+# OS files
+.DS_Store

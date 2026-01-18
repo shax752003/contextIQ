@@ -1,0 +1,134 @@
+INDUSTRIAL DOCUMENT MULTIMODAL RAG SYSTEM
+=========================================
+Generated Documentation Report
+
+1. EXECUTIVE SUMMARY
+--------------------
+This project implements a production-grade functional Retrieval-Augmented Generation (RAG) system specifically optimized for complex industrial documents. Unlike standard RAG implementations that treat PDF content as a single stream of text, this system recognizes and processes different modalities—text, tables, images, and scanned OCR content—independently to preserve semantic structure and context.
+
+The system has been hardened for production environments with features like data versioning, idempotent execution pipelines, deterministic chunk hashing, and strict read-only application logic.
+
+2. PROBLEM STATEMENT
+--------------------
+Standard RAG pipelines fail on industrial technical documents (e.g., datasheets, manuals) because:
+- Tables are flattened into incoherent strings, losing row/column relationships.
+- Images and diagrams (crucial for technical context) are ignored.
+- Scanned pages (OCR) introduce noise and are often chunked poorly.
+- Duplicate processing wastes compute and storage.
+- Lack of strict separation between "training/indexing" and "serving" leads to production risks.
+
+3. SOLUTION ARCHITECTURE
+------------------------
+The system is divided into two strict logical domains:
+1. PIPELINES (Write Access): Heavy-duty offline processing to ingest, extract, chunk, and index data.
+2. APP (Read-Only): Lightweight online service to query the index and generate answers.
+
+[ ARCHITECTURE DIAGRAM ]
+
+   [ Raw PDF Data ]
+          |
+          v
+   +------------------+
+   |  INGEST PIPELINE |  <-- Validates Mime-types & Metadata
+   +------------------+
+          |
+          v
+   +------------------+
+   | EXTRACT PIPELINE |  <-- 1. Text (Docling)
+   | (Idempotent)     |      2. Tables (Camelot)
+   +------------------+      3. Images (PyMuPDF/PDF2Image)
+          |                  4. OCR (Tesseract)
+          v
+   +------------------+
+   |  CHUNK PIPELINE  |  <-- Deterministic Hashing (SHA-256)
+   | (Multi-modal)    |      Preserves Table Structure
+   +------------------+
+          |
+          v
+   +------------------+
+   |  EMBED PIPELINE  |  <-- Deduplication (Skip existing hashes)
+   | (Manifest Log)   |      HuggingFace Embeddings -> ChromaDB
+   +------------------+
+          |
+      [ Vector DB ]
+          |
+          |  (Read-Only Access)
+          v
+   +------------------+
+   |   RAG APP / API  |  <-- 1. Retrieve (Top-K)
+   | (main.py / Web)  |      2. Deduplicate
+   +------------------+      3. Generate (OpenRouter/Gemma)
+          |
+          v
+     [ User Answer ]
+
+4. KEY FEATURES & IMPLEMENTATION DETAILS
+----------------------------------------
+
+A. Multi-Modal Extraction (pipelines/extract.py)
+   - Text: Extracted via `Docling` for high-fidelity structural understanding.
+   - Tables: Processed via `Camelot` to retain CSV-like structure, preventing "table soup."
+   - Images: Extracted via `PyMuPDF` and `PDF2Image`.
+   - OCR: Scanned pages processed via `Tesseract`.
+   - Idempotency: The extractor checks for existing artifacts (`_docling.json`) to skip unnecessary re-processing.
+
+B. Deterministic Chunking & Deduplication (pipelines/chunk.py, pipelines/embed.py)
+   - Every chunk is assigned a purely deterministic SHA-256 hash based on its content, source file, and page number.
+   - The Embedding pipeline checks the Vector DB for existing hashes before calculating embeddings.
+   - Result: Zero duplicate vectors, 100% stable index even after re-runs.
+
+C. Production Hardening (Phase 3 & 4)
+   - Data Versioning: Data stored in `data/{version}/` (controlled via `DATASET_VERSION` env var).
+   - Manifest Tracking: `pipeline_metadata.json` records every pipeline run, status, and configuration.
+   - Configuration: Centralized in `app/config.py`, powered by `.env` (python-dotenv).
+   - Read-Only App: `app/retrieval.py` enforces a strict check to ensure it never attempts to write to the Vector DB or create indices, preventing concurrency issues in execution.
+
+D. Deployment
+   - Dockerized: Full support via `Dockerfile` for reproducible builds.
+   - Entry Point: `main.py` serves as a clean CLI entry point that handles secure API key injection (loading `.env` or prompting user).
+
+5. TECH STACK
+-------------
+- Language: Python 3.10+
+- Orchestration: Custom Modules (`pipelines/run_all.py`)
+- LLM: OpenRouter API (Google Gemma 2 27B / compatible)
+- Embeddings: HuggingFace (sentence-transformers/all-MiniLM-L6-v2)
+- Vector DB: ChromaDB (Persistent)
+- PDF Engines: Docling, PyMuPDF, PDF2Image
+- OCR Engine: Tesseract
+- Table Engine: Camelot
+
+6. FILE STRUCTURE
+-----------------
+/app
+  /config.py       - Configuration center
+  /manifest.py     - Pipeline execution tracking
+  /hashing.py      - Deterministic ID generation
+  /rag.py          - RAG logic
+  /retrieval.py    - Vector DB interaction
+/pipelines
+  /ingest.py       - Data intake
+  /extract.py      - PDF processing
+  /chunk.py        - Content segmentation
+  /embed.py        - Indexing
+  /run_all.py      - Master orchestrator
+/data
+  /{v1}            - Versioned datasets
+    /raw           - Input PDFs
+    /extracted     - Intermediate files
+    /chunks        - JSON Chunks
+    /chroma_db     - Vector Index
+main.py            - User Entry Point
+Dockerfile         - Container definition
+
+7. HOW TO RUN
+-------------
+1. Setup Environment:
+   cp .env.example .env
+   (Add OPENROUTER_API_KEY)
+
+2. Run Pipeline (Ingest -> Extract -> Chunk -> Embed):
+   python -m pipelines.run_all
+
+3. Query System:
+   python main.py
