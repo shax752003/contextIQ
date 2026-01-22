@@ -13,3 +13,5 @@ langchain-chroma
 sentence-transformers
 camelot-py[cv]
 opencv-python
+fastapi
+uvicorn

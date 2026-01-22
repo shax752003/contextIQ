@@ -27,3 +27,10 @@ __pycache__/
 # OS files
 # =====================
 .DS_Store
+
+.project_documentation.txt
+
+docs/
+
+# Docker
+*.log
