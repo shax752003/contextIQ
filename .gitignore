@@ -5,6 +5,7 @@ data/raw/
 data/extracted/
 data/chunks/
 data/chroma_db/
+vectorstore/
 
 # =====================
 # Environment variables
@@ -17,6 +18,13 @@ data/chroma_db/
 __pycache__/
 *.pyc
 *.pyo
+.venv/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+.coverage
 
 # =====================
 # Jupyter
@@ -24,13 +32,23 @@ __pycache__/
 .ipynb_checkpoints/
 
 # =====================
+# IDEs
+# =====================
+.vscode/
+.idea/
+
+# =====================
 # OS files
 # =====================
 .DS_Store
 
-.project_documentation.txt
-
+# =====================
+# Documentation
+# =====================
+project_documentation.txt
 docs/
 
+# =====================
 # Docker
+# =====================
 *.log

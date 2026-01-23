@@ -76,3 +76,18 @@ def retrieve_images_for_query(query: str):
     """
     # placeholder for future CLIP / vision ranking
     return []
+
+def get_vector_stats():
+    try:
+        vectorstore = get_vectorstore()
+        collection = vectorstore._collection
+
+        return {
+            "vector_count": collection.count(),
+            "collection_name": collection.name
+        }
+    except Exception:
+        return {
+            "vector_count": 0,
+            "collection_name": None
+        }
