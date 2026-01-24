@@ -36,12 +36,21 @@ To process documents, extract data, chunk, and build the index:
 python -m pipelines.run_all
 ```
 
-### 4. Query the System
+### 4. Run the Application
 
-To run a RAG query:
+You can run the application locally or via Docker.
+
+**Local (FastAPI):**
 
 ```bash
-python main.py
+uvicorn app.api:app --reload
+```
+The API will be available at `http://localhost:8000`.
+
+**Docker:**
+
+```bash
+docker-compose up --build
 ```
 
 ---
@@ -62,8 +71,8 @@ graph TD
     Chunking --> Embedding[HuggingFace Embeddings]
     Embedding --> VectorDB[(ChromaDB)]
     
-    User[User Query] --> VectorDB
-    VectorDB --> Retrieval[Top-K Retrieval]
+    User[User Query] --> API[FastAPI /query]
+    API --> Retrieval[Top-K Retrieval]
     Retrieval --> LLM["LLM (OpenRouter/Gemma)"]
     LLM --> Answer[Grounded Answer + Citations]
 ```
@@ -74,6 +83,7 @@ graph TD
 industrial-document-multimodal-rag/
 │
 ├── app/                  # Application Logic
+│   ├── api.py            # FastAPI Endpoints
 │   ├── config.py         # Centralized configuration & environment variables
 │   ├── rag.py            # RAG pipeline & LLM interaction
 │   ├── retrieval.py      # Vector retrieval & deduplication logic
@@ -101,7 +111,10 @@ industrial-document-multimodal-rag/
 │   ├── chunks/           # Processed JSON chunks
 │   └── chroma_db/        # Persisted VectorDB
 │
-├── main.py               # Main Entry Point for User Queries
+├── vectorstore/          # Docker volume mount for VectorDB persistence
+├── main.py               # Main Entry Point / Script
+├── Dockerfile            # Docker image definition
+├── docker-compose.yml    # Docker services definition
 ├── .env.example          # Environment variable template
 ├── requirements.txt      # Dependencies
 └── README.md             # Documentation
@@ -110,6 +123,8 @@ industrial-document-multimodal-rag/
 ## ⚙️ Tech Stack
 
 - **Language**: Python
+- **API Framework**: FastAPI
+- **Containerization**: Docker, Docker Compose
 - **LLM Framework**: LangChain
 - **Vector Database**: ChromaDB
 - **Embeddings**: HuggingFace (`all-MiniLM-L6-v2`)
@@ -118,6 +133,36 @@ industrial-document-multimodal-rag/
 - **Table Extraction**: Camelot
 - **OCR**: Pytesseract / Tesseract
 - **Visuals**: PDF2Image
+
+## 🔌 API Endpoints
+
+The FastAPI application exposes the following endpoints:
+
+-   **`POST /query`**: Process a natural language query and return a RAG-generated answer with citations.
+    ```json
+    {
+      "query": "What is the conclusion of the audit?"
+    }
+    ```
+-   **`GET /health`**: Check the health status of the API.
+-   **`GET /stats`**: Retrieval statistics about the vector store and chunks.
+
+Documentation is available at `/docs` when the app is running (e.g., `http://localhost:8000/docs`).
+
+## 🐳 Docker Deployment
+
+To build and run the application in a containerized environment (ensuring reproducibility):
+
+1.  **Build the Image**:
+    ```bash
+    docker build -t industrial-document-multimodal-rag .
+    ```
+
+2.  **Run with Docker Compose** (Recommended):
+    ```bash
+    docker-compose up
+    ```
+    This mounts the `data/` and `vectorstore/` directories to persist data and embeddings.
 
 ## 🔄 Pipeline Details
 
